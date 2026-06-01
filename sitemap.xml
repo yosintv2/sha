@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://singhyogendra.com.np/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- CRC -->
+  <url><loc>https://singhyogendra.com.np/hash/crc.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- MD Family -->
+  <url><loc>https://singhyogendra.com.np/hash/md2.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/md2-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/md4.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/md4-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/md5.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/md5-file.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- SHA-1 -->
+  <url><loc>https://singhyogendra.com.np/hash/sha1.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha1-file.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- SHA-2 -->
+  <url><loc>https://singhyogendra.com.np/hash/sha224.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha224-file.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha256.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha256-file.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/double-sha256.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha384.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha384-file.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha512.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha512-file.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha512-224.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha512-224-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha512-256.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha512-256-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- SHA-3 -->
+  <url><loc>https://singhyogendra.com.np/hash/sha3-224.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha3-224-file.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha3-256.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha3-256-file.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha3-384.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha3-384-file.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha3-512.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/sha3-512-file.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Keccak -->
+  <url><loc>https://singhyogendra.com.np/hash/keccak-224.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/keccak-224-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/keccak-256.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/keccak-256-file.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/keccak-384.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/keccak-384-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/keccak-512.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/keccak-512-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- SHAKE -->
+  <url><loc>https://singhyogendra.com.np/hash/shake128.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/shake128-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/shake256.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/shake256-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- cSHAKE -->
+  <url><loc>https://singhyogendra.com.np/hash/cshake128.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/cshake128-file.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/cshake256.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/cshake256-file.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- KMAC -->
+  <url><loc>https://singhyogendra.com.np/hash/kmac128.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/kmac128-file.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/kmac256.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/kmac256-file.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- RIPEMD -->
+  <url><loc>https://singhyogendra.com.np/hash/ripemd-128.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/ripemd-128-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/ripemd-160.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/ripemd-160-file.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/ripemd-256.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/ripemd-256-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/ripemd-320.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/ripemd-320-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- BLAKE2 -->
+  <url><loc>https://singhyogendra.com.np/hash/blake2b.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/blake2b-file.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/blake2s.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://singhyogendra.com.np/hash/blake2s-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+</urlset>
