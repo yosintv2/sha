@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Minifier — Compress JSON Online | YoSin Tools</title>
+<meta name="description" content="Minify and compress JSON online. Remove all whitespace and make JSON as compact as possible. Free and browser-based.">
+<link rel="canonical" href="https://singhyogendra.com.np/format/json-minifier.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JSON Minifier — Compress JSON Online | YoSin Tools">
+<meta property="og:description" content="Minify and compress JSON online. Remove all whitespace and make JSON as compact as possible. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/format/json-minifier.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><span>Formatters</span><span class="sep">›</span><span>JSON Minifier</span></nav>
+      <h1>JSON Minifier</h1>
+      <p>Remove all whitespace and compress JSON to the smallest valid representation. Nothing uploaded.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Paste JSON here…" data-share="input" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Result appears here…" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Run</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+      <section class="ys-section"><h2 class="ys-section-title">Related Tools</h2><div class="tools-grid"><a class="tool-card" href="json-formatter.html"><span class="tc-name">JSON Formatter</span><span class="tc-desc">Beautify JSON</span></a><a class="tool-card" href="json-validator.html"><span class="tc-name">JSON Validator</span><span class="tc-desc">Check validity</span></a></div></section>
+      <section class="ys-section"><h2 class="ys-section-title">Frequently Asked Questions</h2><div class="faq-list"><details class="faq-item"><summary>Why minify JSON?</summary><div class="faq-body">Minified JSON reduces file size and network transfer time. It is commonly used in production APIs and web apps where bandwidth matters.</div></details>
+<details class="faq-item"><summary>Is minified JSON still valid?</summary><div class="faq-body">Yes. Minified JSON is identical in meaning to formatted JSON — whitespace is not significant in JSON syntax.</div></details>
+</div></section>
+      <div class="seo-content"><h2>About JSON Minifier</h2><p>JSON minification strips all non-essential whitespace (spaces, tabs, newlines) without changing the data structure. A typical JSON file can be reduced by 20–40% through minification.</p></div>
+    </main>
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Formatters</h4><ul>
+          <li><a href="json-formatter.html">JSON Formatter</a></li>
+          <li><a href="json-minifier.html">JSON Minifier</a></li>
+          <li><a href="json-validator.html">JSON Validator</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2025 YoSin Tools · singhyogendra.com.np</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>
+function _method(input){
+  try{return JSON.stringify(JSON.parse(input));}
+  catch(e){throw new Error(e.message);}
+}
+window.method = _method;
+</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

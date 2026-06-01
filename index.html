@@ -619,6 +619,82 @@ html.dark-theme .section-badge-green { color: #4ade80; }
         <!-- No results -->
         <div id="no-results">No tools match your search. Try a different keyword.</div>
 
+        <!-- ── Encoding ── -->
+        <div class="home-section" data-section="encoding">
+          <div class="home-section-header">
+            <h2>Encoding &amp; Decoding</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="group-card">
+            <div class="group-card-label">Base64</div>
+            <div class="group-card-links">
+              <a href="encode/base64-encode.html">Base64 Encode</a>
+              <a href="encode/base64-decode.html">Base64 Decode</a>
+            </div>
+          </div>
+          <div class="group-card">
+            <div class="group-card-label">Hex (Base16)</div>
+            <div class="group-card-links">
+              <a href="encode/hex-encode.html">Hex Encode</a>
+              <a href="encode/hex-decode.html">Hex Decode</a>
+            </div>
+          </div>
+          <div class="group-card">
+            <div class="group-card-label">Web</div>
+            <div class="group-card-links">
+              <a href="encode/html-encode.html">HTML Encode</a>
+              <a href="encode/html-decode.html">HTML Decode</a>
+              <a href="encode/url-encode.html">URL Encode</a>
+              <a href="encode/url-decode.html">URL Decode</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Formatters ── -->
+        <div class="home-section" data-section="formatters">
+          <div class="home-section-header">
+            <h2>Formatters &amp; Validators</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="group-card">
+            <div class="group-card-label">JSON</div>
+            <div class="group-card-links">
+              <a href="format/json-formatter.html">JSON Formatter</a>
+              <a href="format/json-minifier.html">JSON Minifier</a>
+              <a href="format/json-validator.html">JSON Validator</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Converters ── -->
+        <div class="home-section" data-section="convert">
+          <div class="home-section-header">
+            <h2>String Converters</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="group-card">
+            <div class="group-card-label">Case</div>
+            <div class="group-card-links">
+              <a href="convert/case-converter.html">Case Converter</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Cryptography ── -->
+        <div class="home-section" data-section="crypto">
+          <div class="home-section-header">
+            <h2>Cryptography</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="group-card">
+            <div class="group-card-label">AES</div>
+            <div class="group-card-links">
+              <a href="crypto/aes-encrypt.html">AES Encrypt</a>
+              <a href="crypto/aes-decrypt.html">AES Decrypt</a>
+            </div>
+          </div>
+        </div>
+
         <!-- About section -->
         <div class="home-section" style="margin-top:4px">
           <div class="home-section-header">
@@ -768,7 +844,25 @@ var ALL_TOOLS = [
   {name:'BLAKE2b',       url:'hash/blake2b.html',           tag:'Hash'},
   {name:'BLAKE2b File',  url:'hash/blake2b-file.html',      tag:'Hash'},
   {name:'BLAKE2s',       url:'hash/blake2s.html',           tag:'Hash'},
-  {name:'BLAKE2s File',  url:'hash/blake2s-file.html',      tag:'Hash'}
+  {name:'BLAKE2s File',  url:'hash/blake2s-file.html',      tag:'Hash'},
+  // Encoding
+  {name:'Base64 Encode', url:'encode/base64-encode.html',   tag:'Encoding'},
+  {name:'Base64 Decode', url:'encode/base64-decode.html',   tag:'Encoding'},
+  {name:'Hex Encode',    url:'encode/hex-encode.html',      tag:'Encoding'},
+  {name:'Hex Decode',    url:'encode/hex-decode.html',      tag:'Encoding'},
+  {name:'HTML Encode',   url:'encode/html-encode.html',     tag:'Encoding'},
+  {name:'HTML Decode',   url:'encode/html-decode.html',     tag:'Encoding'},
+  {name:'URL Encode',    url:'encode/url-encode.html',      tag:'Encoding'},
+  {name:'URL Decode',    url:'encode/url-decode.html',      tag:'Encoding'},
+  // Formatters
+  {name:'JSON Formatter',url:'format/json-formatter.html',  tag:'Formatter'},
+  {name:'JSON Minifier', url:'format/json-minifier.html',   tag:'Formatter'},
+  {name:'JSON Validator',url:'format/json-validator.html',  tag:'Formatter'},
+  // Converters
+  {name:'Case Converter',url:'convert/case-converter.html', tag:'Converter'},
+  // Crypto
+  {name:'AES Encrypt',   url:'crypto/aes-encrypt.html',     tag:'Crypto'},
+  {name:'AES Decrypt',   url:'crypto/aes-decrypt.html',     tag:'Crypto'}
 ];
 
 function doSearch() {

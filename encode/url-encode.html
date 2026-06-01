@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Encoder — Percent-Encode URLs Online | YoSin Tools</title>
+<meta name="description" content="URL encode (percent-encode) any string for safe use in URLs. RFC 3986 compliant. Free, instant, browser-based.">
+<meta name="keywords" content="url encode, percent encode, url encoding, encode url, url encoder online">
+<link rel="canonical" href="https://singhyogendra.com.np/encode/url-encode.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="URL Encoder — Percent-Encode URLs Online | YoSin Tools">
+<meta property="og:description" content="URL encode (percent-encode) any string for safe use in URLs. RFC 3986 compliant. Free, instant, browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/encode/url-encode.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><span>Encoding</span><span class="sep">›</span><span>URL Encode</span></nav>
+      <h1>URL Encoder</h1>
+      <p>Percent-encode strings for safe use in URLs and query parameters. RFC 3986 compliant. Nothing uploaded.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-share="input" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Convert</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+      <section class="ys-section"><h2 class="ys-section-title">Related Tools</h2><div class="tools-grid"><a class="tool-card" href="url-decode.html"><span class="tc-name">URL Decode</span><span class="tc-desc">Reverse operation</span></a><a class="tool-card" href="html-encode.html"><span class="tc-name">HTML Encode</span><span class="tc-desc">HTML encoding</span></a><a class="tool-card" href="base64-encode.html"><span class="tc-name">Base64 Encode</span><span class="tc-desc">Base64 encoding</span></a></div></section>
+      <section class="ys-section"><h2 class="ys-section-title">Frequently Asked Questions</h2><div class="faq-list">          <details class="faq-item"><summary>What is URL encoding?</summary><div class="faq-body">URL encoding (percent-encoding) replaces unsafe ASCII characters with a % followed by two hexadecimal digits. For example, a space becomes %20 and & becomes %26.</div></details>
+          <details class="faq-item"><summary>When do I need to URL encode?</summary><div class="faq-body">You need to URL encode query parameter values, form data submitted via GET, and any part of a URL that may contain special characters like spaces, &, =, #, or non-ASCII characters.</div></details>
+</div></section>
+      <div class="seo-content"><h2>About URL Encoder</h2><p>URL encoding ensures that special characters in query strings and path segments are transmitted correctly. This tool uses <code>encodeURIComponent()</code> which encodes all characters except A–Z, a–z, 0–9, -, _, ., and ~.</p></div>
+    </main>
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Encoding</h4><ul>
+          <li><a href="base64-encode.html">Base64 Encode</a></li><li><a href="base64-decode.html">Base64 Decode</a></li>
+          <li><a href="url-encode.html">URL Encode</a></li><li><a href="url-decode.html">URL Decode</a></li>
+          <li><a href="html-encode.html">HTML Encode</a></li><li><a href="html-decode.html">HTML Decode</a></li>
+          <li><a href="hex-encode.html">Hex Encode</a></li><li><a href="hex-decode.html">Hex Decode</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2025 YoSin Tools · singhyogendra.com.np</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>
+function _method(input){
+  return encodeURIComponent(input);
+}
+window.method = _method;
+</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

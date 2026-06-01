@@ -92,4 +92,26 @@
   <url><loc>https://singhyogendra.com.np/hash/blake2s.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://singhyogendra.com.np/hash/blake2s-file.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
+  <!-- Encoding -->
+  <url><loc>https://singhyogendra.com.np/encode/base64-encode.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://singhyogendra.com.np/encode/base64-decode.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://singhyogendra.com.np/encode/url-encode.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://singhyogendra.com.np/encode/url-decode.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://singhyogendra.com.np/encode/html-encode.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/encode/html-decode.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/encode/hex-encode.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/encode/hex-decode.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Formatters -->
+  <url><loc>https://singhyogendra.com.np/format/json-formatter.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://singhyogendra.com.np/format/json-minifier.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/format/json-validator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Converters -->
+  <url><loc>https://singhyogendra.com.np/convert/case-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Cryptography -->
+  <url><loc>https://singhyogendra.com.np/crypto/aes-encrypt.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://singhyogendra.com.np/crypto/aes-decrypt.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
 </urlset>

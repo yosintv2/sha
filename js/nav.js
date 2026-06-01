@@ -1,119 +1,178 @@
 /**
  * nav.js — single source of truth for sidebar navigation.
- * To add a new tool: add an entry to NAV below. All pages update automatically.
- *
- * Item format: [label, href]
- * href is relative to the /hash/ directory. For pages outside /hash/ (e.g. root),
- * set window.NAV_BASE = 'hash/' before loading this script.
+ * Item format: [label, 'dir/file.html']
+ * Base path is auto-detected from URL depth; override with window.NAV_BASE.
  */
 (function () {
   var NAV = [
     {
       section: 'Hash',
       groups: [
-        {
-          name: 'CRC',
-          items: [['CRC', 'crc.html']]
-        },
+        { name: 'CRC', items: [['CRC', 'hash/crc.html']] },
         {
           name: 'MD',
           items: [
-            ['MD2', 'md2.html'], ['MD2 File', 'md2-file.html'],
-            ['MD4', 'md4.html'], ['MD4 File', 'md4-file.html'],
-            ['MD5', 'md5.html'], ['MD5 File', 'md5-file.html']
+            ['MD2', 'hash/md2.html'], ['MD2 File', 'hash/md2-file.html'],
+            ['MD4', 'hash/md4.html'], ['MD4 File', 'hash/md4-file.html'],
+            ['MD5', 'hash/md5.html'], ['MD5 File', 'hash/md5-file.html']
           ]
         },
-        {
-          name: 'SHA1',
-          items: [
-            ['SHA1', 'sha1.html'], ['SHA1 File', 'sha1-file.html']
-          ]
-        },
+        { name: 'SHA1', items: [['SHA1', 'hash/sha1.html'], ['SHA1 File', 'hash/sha1-file.html']] },
         {
           name: 'SHA2',
           items: [
-            ['SHA224', 'sha224.html'], ['SHA224 File', 'sha224-file.html'],
-            ['SHA256', 'sha256.html'], ['SHA256 File', 'sha256-file.html'],
-            ['Double SHA256', 'double-sha256.html']
+            ['SHA224', 'hash/sha224.html'], ['SHA224 File', 'hash/sha224-file.html'],
+            ['SHA256', 'hash/sha256.html'], ['SHA256 File', 'hash/sha256-file.html'],
+            ['Double SHA256', 'hash/double-sha256.html']
           ]
         },
         {
           name: 'SHA2-512',
           items: [
-            ['SHA384', 'sha384.html'], ['SHA384 File', 'sha384-file.html'],
-            ['SHA512', 'sha512.html'], ['SHA512 File', 'sha512-file.html'],
-            ['SHA512/224', 'sha512-224.html'], ['SHA512/224 File', 'sha512-224-file.html'],
-            ['SHA512/256', 'sha512-256.html'], ['SHA512/256 File', 'sha512-256-file.html']
+            ['SHA384', 'hash/sha384.html'], ['SHA384 File', 'hash/sha384-file.html'],
+            ['SHA512', 'hash/sha512.html'], ['SHA512 File', 'hash/sha512-file.html'],
+            ['SHA512/224', 'hash/sha512-224.html'], ['SHA512/224 File', 'hash/sha512-224-file.html'],
+            ['SHA512/256', 'hash/sha512-256.html'], ['SHA512/256 File', 'hash/sha512-256-file.html']
           ]
         },
         {
           name: 'SHA3',
           items: [
-            ['SHA3-224', 'sha3-224.html'], ['SHA3-224 File', 'sha3-224-file.html'],
-            ['SHA3-256', 'sha3-256.html'], ['SHA3-256 File', 'sha3-256-file.html'],
-            ['SHA3-384', 'sha3-384.html'], ['SHA3-384 File', 'sha3-384-file.html'],
-            ['SHA3-512', 'sha3-512.html'], ['SHA3-512 File', 'sha3-512-file.html']
+            ['SHA3-224', 'hash/sha3-224.html'], ['SHA3-224 File', 'hash/sha3-224-file.html'],
+            ['SHA3-256', 'hash/sha3-256.html'], ['SHA3-256 File', 'hash/sha3-256-file.html'],
+            ['SHA3-384', 'hash/sha3-384.html'], ['SHA3-384 File', 'hash/sha3-384-file.html'],
+            ['SHA3-512', 'hash/sha3-512.html'], ['SHA3-512 File', 'hash/sha3-512-file.html']
           ]
         },
         {
           name: 'Keccak',
           items: [
-            ['Keccak-224', 'keccak-224.html'], ['Keccak-224 File', 'keccak-224-file.html'],
-            ['Keccak-256', 'keccak-256.html'], ['Keccak-256 File', 'keccak-256-file.html'],
-            ['Keccak-384', 'keccak-384.html'], ['Keccak-384 File', 'keccak-384-file.html'],
-            ['Keccak-512', 'keccak-512.html'], ['Keccak-512 File', 'keccak-512-file.html']
+            ['Keccak-224', 'hash/keccak-224.html'], ['Keccak-224 File', 'hash/keccak-224-file.html'],
+            ['Keccak-256', 'hash/keccak-256.html'], ['Keccak-256 File', 'hash/keccak-256-file.html'],
+            ['Keccak-384', 'hash/keccak-384.html'], ['Keccak-384 File', 'hash/keccak-384-file.html'],
+            ['Keccak-512', 'hash/keccak-512.html'], ['Keccak-512 File', 'hash/keccak-512-file.html']
           ]
         },
         {
           name: 'SHAKE',
           items: [
-            ['SHAKE128', 'shake128.html'], ['SHAKE128 File', 'shake128-file.html'],
-            ['SHAKE256', 'shake256.html'], ['SHAKE256 File', 'shake256-file.html']
+            ['SHAKE128', 'hash/shake128.html'], ['SHAKE128 File', 'hash/shake128-file.html'],
+            ['SHAKE256', 'hash/shake256.html'], ['SHAKE256 File', 'hash/shake256-file.html']
           ]
         },
         {
           name: 'cSHAKE',
           items: [
-            ['cSHAKE128', 'cshake128.html'], ['cSHAKE128 File', 'cshake128-file.html'],
-            ['cSHAKE256', 'cshake256.html'], ['cSHAKE256 File', 'cshake256-file.html']
+            ['cSHAKE128', 'hash/cshake128.html'], ['cSHAKE128 File', 'hash/cshake128-file.html'],
+            ['cSHAKE256', 'hash/cshake256.html'], ['cSHAKE256 File', 'hash/cshake256-file.html']
           ]
         },
         {
           name: 'KMAC',
           items: [
-            ['KMAC128', 'kmac128.html'], ['KMAC128 File', 'kmac128-file.html'],
-            ['KMAC256', 'kmac256.html'], ['KMAC256 File', 'kmac256-file.html']
+            ['KMAC128', 'hash/kmac128.html'], ['KMAC128 File', 'hash/kmac128-file.html'],
+            ['KMAC256', 'hash/kmac256.html'], ['KMAC256 File', 'hash/kmac256-file.html']
           ]
         },
         {
           name: 'RIPEMD',
           items: [
-            ['RIPEMD-128', 'ripemd-128.html'], ['RIPEMD-128 File', 'ripemd-128-file.html'],
-            ['RIPEMD-160', 'ripemd-160.html'], ['RIPEMD-160 File', 'ripemd-160-file.html'],
-            ['RIPEMD-256', 'ripemd-256.html'], ['RIPEMD-256 File', 'ripemd-256-file.html'],
-            ['RIPEMD-320', 'ripemd-320.html'], ['RIPEMD-320 File', 'ripemd-320-file.html']
+            ['RIPEMD-128', 'hash/ripemd-128.html'], ['RIPEMD-128 File', 'hash/ripemd-128-file.html'],
+            ['RIPEMD-160', 'hash/ripemd-160.html'], ['RIPEMD-160 File', 'hash/ripemd-160-file.html'],
+            ['RIPEMD-256', 'hash/ripemd-256.html'], ['RIPEMD-256 File', 'hash/ripemd-256-file.html'],
+            ['RIPEMD-320', 'hash/ripemd-320.html'], ['RIPEMD-320 File', 'hash/ripemd-320-file.html']
           ]
         },
         {
           name: 'BLAKE',
           items: [
-            ['BLAKE2b', 'blake2b.html'], ['BLAKE2b File', 'blake2b-file.html'],
-            ['BLAKE2s', 'blake2s.html'], ['BLAKE2s File', 'blake2s-file.html']
+            ['BLAKE2b', 'hash/blake2b.html'], ['BLAKE2b File', 'hash/blake2b-file.html'],
+            ['BLAKE2s', 'hash/blake2s.html'], ['BLAKE2s File', 'hash/blake2s-file.html']
+          ]
+        }
+      ]
+    },
+    {
+      section: 'Encoding',
+      groups: [
+        {
+          name: 'Base64',
+          items: [
+            ['Base64 Encode', 'encode/base64-encode.html'],
+            ['Base64 Decode', 'encode/base64-decode.html']
+          ]
+        },
+        {
+          name: 'Hex (Base16)',
+          items: [
+            ['Hex Encode', 'encode/hex-encode.html'],
+            ['Hex Decode', 'encode/hex-decode.html']
+          ]
+        },
+        {
+          name: 'Web',
+          items: [
+            ['HTML Encode', 'encode/html-encode.html'],
+            ['HTML Decode', 'encode/html-decode.html'],
+            ['URL Encode', 'encode/url-encode.html'],
+            ['URL Decode', 'encode/url-decode.html']
+          ]
+        }
+      ]
+    },
+    {
+      section: 'Formatters',
+      groups: [
+        {
+          name: 'JSON',
+          items: [
+            ['JSON Formatter', 'format/json-formatter.html'],
+            ['JSON Minifier', 'format/json-minifier.html'],
+            ['JSON Validator', 'format/json-validator.html']
+          ]
+        }
+      ]
+    },
+    {
+      section: 'Converters',
+      groups: [
+        {
+          name: 'Case',
+          items: [['Case Converter', 'convert/case-converter.html']]
+        }
+      ]
+    },
+    {
+      section: 'Cryptography',
+      groups: [
+        {
+          name: 'AES',
+          items: [
+            ['AES Encrypt', 'crypto/aes-encrypt.html'],
+            ['AES Decrypt', 'crypto/aes-decrypt.html']
           ]
         }
       ]
     }
   ];
 
-  var LINKS = [['Home', '../index.html']];
+  function getBase() {
+    if (window.NAV_BASE !== undefined) return window.NAV_BASE;
+    var depth = location.pathname.split('/').filter(function (s) { return s.length > 0; }).length;
+    return depth >= 2 ? '../' : '';
+  }
+
+  function getHomeHref() {
+    if (window.NAV_HOME !== undefined) return window.NAV_HOME;
+    var depth = location.pathname.split('/').filter(function (s) { return s.length > 0; }).length;
+    return depth >= 2 ? '../index.html' : 'index.html';
+  }
 
   function render() {
-    var base = window.NAV_BASE || '';
-    var homeHref = window.NAV_HOME || '../index.html';
-    var currentFile = location.pathname.split('/').pop() || '';
+    var base = getBase();
+    var currentPath = location.pathname; // e.g. /hash/sha256.html
 
     var html = '';
-
     for (var s = 0; s < NAV.length; s++) {
       var sec = NAV[s];
       html += '<div class="section"><h3>' + sec.section + '</h3>';
@@ -125,9 +184,10 @@
 
         for (var i = 0; i < group.items.length; i++) {
           var item = group.items[i];
-          var href = base + item[1];
-          var isActive = item[1] === currentFile;
+          // item[1] is like 'hash/sha256.html'
+          var isActive = currentPath.endsWith('/' + item[1]);
           if (isActive) groupActive = true;
+          var href = base + item[1];
           itemsHtml += '<li' + (isActive ? ' class="active"' : '') + '><a href="' + href + '">' + item[0] + '</a></li>';
         }
 
@@ -141,7 +201,7 @@
     }
 
     html += '<div class="section"><h3>Links</h3><nav class="links"><ol>';
-    html += '<li><a href="' + homeHref + '">Home</a></li>';
+    html += '<li><a href="' + getHomeHref() + '">Home</a></li>';
     html += '</ol></nav></div>';
 
     return html;
@@ -151,18 +211,14 @@
     var container = document.querySelector('#sidebar .container');
     if (!container) return;
 
-    /* Remove existing static .section elements */
     var existing = container.querySelectorAll('.section');
     for (var i = existing.length - 1; i >= 0; i--) {
       existing[i].parentNode.removeChild(existing[i]);
     }
 
-    /* Inject dynamic nav */
     var div = document.createElement('div');
     div.innerHTML = render();
-    while (div.firstChild) {
-      container.appendChild(div.firstChild);
-    }
+    while (div.firstChild) container.appendChild(div.firstChild);
 
     /* Prevent Chrome's native <details> expand from scrolling the main page */
     var summaries = container.querySelectorAll('summary');
@@ -173,7 +229,6 @@
       }, { passive: true });
     }
 
-    /* Attach search handler (idempotent — replaces any previous listener via clone trick) */
     var input = document.getElementById('tool-search');
     if (input) {
       var fresh = input.cloneNode(true);

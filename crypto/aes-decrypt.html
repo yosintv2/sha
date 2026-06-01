@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AES Decrypt Online — AES-256 CBC/ECB Decryption Tool | YoSin Tools</title>
+<meta name="description" content="Decrypt AES-encrypted text online. Supports AES-256/192/128, CBC, ECB, CTR modes. 100% browser-based, nothing uploaded.">
+<meta name="keywords" content="AES decrypt, AES online, AES-256, AES-128, AES CBC, AES ECB, crypto tool">
+<link rel="canonical" href="https://singhyogendra.com.np/crypto/aes-decrypt.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AES Decrypt Online — AES-256 CBC/ECB Decryption Tool | YoSin Tools">
+<meta property="og:description" content="Decrypt AES-encrypted text online. Supports AES-256/192/128, CBC, ECB, CTR modes. 100% browser-based, nothing uploaded.">
+<meta property="og:url" content="https://singhyogendra.com.np/crypto/aes-decrypt.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><span>Cryptography</span><span class="sep">›</span><span>AES Decrypt</span></nav>
+      <h1>AES Decrypt</h1>
+      <p>AES Decrypt</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter Base64-encoded ciphertext to decrypt…" data-share="input"></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Decrypted plaintext appears here…" readonly></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Decrypt</a></div>
+              <div class="setting">
+                <label for="aes-key">Secret Key</label>
+                <input type="text" id="aes-key" placeholder="Enter secret key…" data-share="key">
+              </div>
+              <div class="setting">
+                <label for="aes-mode">Mode</label>
+                <select id="aes-mode" data-share="mode">
+                  <option value="CBC" selected>CBC (recommended)</option>
+                  <option value="ECB">ECB</option>
+                  <option value="CTR">CTR</option>
+                  <option value="OFB">OFB</option>
+                  <option value="CFB">CFB</option>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="aes-iv" id="iv-label">IV (hex, optional)</label>
+                <input type="text" id="aes-iv" placeholder="Leave blank for random IV" data-share="iv">
+              </div>
+              <div class="setting">
+                <label for="aes-keysize">Key Size</label>
+                <select id="aes-keysize" data-share="keysize">
+                  <option value="256" selected>AES-256</option>
+                  <option value="128">AES-128</option>
+                  <option value="192">AES-192</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="aes-encrypt.html"><span class="tc-name">AES Encrypt</span><span class="tc-desc">Reverse operation</span></a>
+          <a class="tool-card" href="../encode/base64-encode.html"><span class="tc-name">Base64 Encode</span><span class="tc-desc">Encode to Base64</span></a>
+          <a class="tool-card" href="../encode/hex-encode.html"><span class="tc-name">Hex Encode</span><span class="tc-desc">Text to hex</span></a>
+          <a class="tool-card" href="../hash/sha256.html"><span class="tc-name">SHA-256</span><span class="tc-desc">Derive a key hash</span></a>
+        </div>
+      </section>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is AES?</summary><div class="faq-body">AES (Advanced Encryption Standard) is a symmetric block cipher standardized by NIST in 2001. It encrypts data in 128-bit blocks using key sizes of 128, 192, or 256 bits. AES-256 is considered quantum-resistant for the foreseeable future.</div></details>
+          <details class="faq-item"><summary>Which mode should I use?</summary><div class="faq-body">CBC (Cipher Block Chaining) is recommended for most uses — it requires a random IV and provides good security. ECB (Electronic Codebook) is simpler but less secure because identical plaintext blocks produce identical ciphertext blocks. CTR mode turns AES into a stream cipher and is often the fastest option.</div></details>
+          <details class="faq-item"><summary>What is the IV?</summary><div class="faq-body">The IV (Initialization Vector) is a random value that ensures the same plaintext encrypted with the same key produces different ciphertext each time. In CBC mode the IV must be 16 bytes (32 hex chars). Leave blank to use a random IV — it will be prepended to the ciphertext output.</div></details>
+          <details class="faq-item"><summary>Is my data safe?</summary><div class="faq-body">Yes. All encryption and decryption happens entirely in your browser using CryptoJS. Nothing is sent to any server. Your plaintext and key never leave your device.</div></details>
+        </div>
+      </section>
+    </main>
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Cryptography</h4><ul>
+          <li><a href="aes-encrypt.html">AES Encrypt</a></li>
+          <li><a href="aes-decrypt.html">AES Decrypt</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2025 YoSin Tools · singhyogendra.com.np</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>
+++waitLoadCount;
+window.method = function(input) {
+  var key   = document.getElementById('aes-key').value;
+  var mode  = document.getElementById('aes-mode').value;
+  var ivHex = document.getElementById('aes-iv').value.trim();
+  if (!key) throw new Error('Please enter a secret key.');
+  var keyWA   = CryptoJS.enc.Utf8.parse(key);
+  var modeObj = CryptoJS.mode[mode] || CryptoJS.mode.CBC;
+  var ciphertext = input.trim();
+  var iv;
+  // Check for prepended IV (format: ivHex:ciphertext)
+  if (mode !== 'ECB' && !ivHex && ciphertext.indexOf(':') !== -1) {
+    var parts = ciphertext.split(':');
+    iv = CryptoJS.enc.Hex.parse(parts[0]);
+    ciphertext = parts[1];
+  } else if (mode === 'ECB') {
+    iv = CryptoJS.lib.WordArray.create([]);
+  } else {
+    iv = CryptoJS.enc.Hex.parse(ivHex || '00000000000000000000000000000000');
+  }
+  var cfg = { mode: modeObj, padding: CryptoJS.pad.Pkcs7, iv: iv };
+  var decrypted = CryptoJS.AES.decrypt(ciphertext, keyWA, cfg);
+  var result = decrypted.toString(CryptoJS.enc.Utf8);
+  if (!result) throw new Error('Decryption failed — wrong key, IV, or corrupted ciphertext.');
+  return result;
+};
+</script>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>
