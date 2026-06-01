@@ -127,32 +127,34 @@
 </div>
 <div id="message"></div>
 <script>
-window.method = function(input) {
-  var key   = document.getElementById('aes-key').value;
-  var mode  = document.getElementById('aes-mode').value;
-  var ivHex = document.getElementById('aes-iv').value.trim();
-  var keySize = parseInt(document.getElementById('aes-keysize').value) / 32;
-  if (!key) throw new Error('Please enter a secret key.');
-  var keyWA  = CryptoJS.enc.Utf8.parse(key);
-  var modeObj = CryptoJS.mode[mode] || CryptoJS.mode.CBC;
-  var iv;
-  if (mode === 'ECB') {
-    iv = CryptoJS.lib.WordArray.create([]);
-  } else if (ivHex) {
-    iv = CryptoJS.enc.Hex.parse(ivHex);
-  } else {
-    iv = CryptoJS.lib.WordArray.random(16);
-  }
-  var cfg = { mode: modeObj, padding: CryptoJS.pad.Pkcs7, iv: iv };
-  var encrypted = CryptoJS.AES.encrypt(input, keyWA, cfg);
-  if (mode !== 'ECB' && !ivHex) {
-    // Prepend IV to ciphertext so decrypt can extract it
-    return iv.toString(CryptoJS.enc.Hex) + ':' + encrypted.toString();
-  }
-  return encrypted.toString();
-};
+++waitLoadCount;
+delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js',onload:function(){
+  window.method = function(input) {
+    var key   = (document.getElementById('aes-key').value || '').trim();
+    var mode  = document.getElementById('aes-mode').value;
+    var ivHex = (document.getElementById('aes-iv').value || '').trim();
+    if (!key) throw new Error('Please enter a secret key.');
+    // Derive a proper 32-byte key via SHA-256 so any key length works
+    var keyWA  = CryptoJS.SHA256(key);
+    var modeObj = CryptoJS.mode[mode] || CryptoJS.mode.CBC;
+    var cfg, iv;
+    if (mode === 'ECB') {
+      cfg = { mode: modeObj, padding: CryptoJS.pad.Pkcs7 };
+    } else {
+      iv  = ivHex ? CryptoJS.enc.Hex.parse(ivHex) : CryptoJS.lib.WordArray.random(16);
+      cfg = { mode: modeObj, padding: CryptoJS.pad.Pkcs7, iv: iv };
+    }
+    var encrypted = CryptoJS.AES.encrypt(input, keyWA, cfg);
+    if (mode !== 'ECB') {
+      // Prepend IV (hex) so Decrypt can auto-extract it
+      var ivStr = ivHex || iv.toString(CryptoJS.enc.Hex);
+      return ivStr + ':' + encrypted.toString();
+    }
+    return encrypted.toString();
+  };
+  methodLoad();
+}});
 </script>
-<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js',onload:function(){methodLoad();}});</script>
 <script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
 <script src="../js/nav.js"></script>
 <script src="../js/site-init.js"></script>

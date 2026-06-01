@@ -127,33 +127,38 @@
 </div>
 <div id="message"></div>
 <script>
-window.method = function(input) {
-  var key   = document.getElementById('aes-key').value;
-  var mode  = document.getElementById('aes-mode').value;
-  var ivHex = document.getElementById('aes-iv').value.trim();
-  if (!key) throw new Error('Please enter a secret key.');
-  var keyWA   = CryptoJS.enc.Utf8.parse(key);
-  var modeObj = CryptoJS.mode[mode] || CryptoJS.mode.CBC;
-  var ciphertext = input.trim();
-  var iv;
-  // Check for prepended IV (format: ivHex:ciphertext)
-  if (mode !== 'ECB' && !ivHex && ciphertext.indexOf(':') !== -1) {
-    var parts = ciphertext.split(':');
-    iv = CryptoJS.enc.Hex.parse(parts[0]);
-    ciphertext = parts[1];
-  } else if (mode === 'ECB') {
-    iv = CryptoJS.lib.WordArray.create([]);
-  } else {
-    iv = CryptoJS.enc.Hex.parse(ivHex || '00000000000000000000000000000000');
-  }
-  var cfg = { mode: modeObj, padding: CryptoJS.pad.Pkcs7, iv: iv };
-  var decrypted = CryptoJS.AES.decrypt(ciphertext, keyWA, cfg);
-  var result = decrypted.toString(CryptoJS.enc.Utf8);
-  if (!result) throw new Error('Decryption failed — wrong key, IV, or corrupted ciphertext.');
-  return result;
-};
+++waitLoadCount;
+delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js',onload:function(){
+  window.method = function(input) {
+    var key   = (document.getElementById('aes-key').value || '').trim();
+    var mode  = document.getElementById('aes-mode').value;
+    var ivHex = (document.getElementById('aes-iv').value || '').trim();
+    if (!key) throw new Error('Please enter a secret key.');
+    // Derive key via SHA-256 (must match Encrypt)
+    var keyWA   = CryptoJS.SHA256(key);
+    var modeObj = CryptoJS.mode[mode] || CryptoJS.mode.CBC;
+    var ciphertext = input.trim();
+    var cfg, iv;
+    if (mode === 'ECB') {
+      cfg = { mode: modeObj, padding: CryptoJS.pad.Pkcs7 };
+    } else {
+      // Extract prepended IV (format: ivHex:ciphertext)
+      if (!ivHex && ciphertext.indexOf(':') !== -1) {
+        var sep = ciphertext.indexOf(':');
+        ivHex = ciphertext.substring(0, sep);
+        ciphertext = ciphertext.substring(sep + 1);
+      }
+      iv  = CryptoJS.enc.Hex.parse(ivHex || '00000000000000000000000000000000');
+      cfg = { mode: modeObj, padding: CryptoJS.pad.Pkcs7, iv: iv };
+    }
+    var decrypted = CryptoJS.AES.decrypt(ciphertext, keyWA, cfg);
+    var result = decrypted.toString(CryptoJS.enc.Utf8);
+    if (!result) throw new Error('Decryption failed — wrong key, IV, or corrupted ciphertext.');
+    return result;
+  };
+  methodLoad();
+}});
 </script>
-<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js',onload:function(){methodLoad();}});</script>
 <script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
 <script src="../js/nav.js"></script>
 <script src="../js/site-init.js"></script>
