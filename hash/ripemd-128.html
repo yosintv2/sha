@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIPEMD-128 Hash Generator Online — Free RIPEMD128 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate RIPEMD-128 hash online. 128-bit RIPEMD hash function with HMAC support. Supports UTF-8, Hex, Base64 input. Free, browser-based RIPEMD-128 calculator.">
+<meta name="keywords" content="RIPEMD-128 hash, RIPEMD128 generator, RIPEMD128 online, RIPEMD calculator, HMAC-RIPEMD128">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/ripemd-128.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RIPEMD-128 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate RIPEMD-128 hashes online. 128-bit RIPEMD hash with HMAC support. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/ripemd-128.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is RIPEMD-128?","acceptedAnswer":{"@type":"Answer","text":"RIPEMD-128 is a 128-bit cryptographic hash function from the RIPEMD family. It was designed as a drop-in replacement for MD4 and MD5 with improved security properties. However, weaknesses have since been found in RIPEMD-128, and it is no longer recommended for new security applications. Use RIPEMD-160 or SHA-256 instead."}},
+{"@type":"Question","name":"Is RIPEMD-128 secure?","acceptedAnswer":{"@type":"Answer","text":"RIPEMD-128 is considered weak by modern standards. Near-collision attacks have been demonstrated against reduced-round variants, and its 128-bit output provides only 64-bit collision resistance. It should not be used for new security-critical applications. RIPEMD-160 offers stronger guarantees."}},
+{"@type":"Question","name":"When would I use RIPEMD-128?","acceptedAnswer":{"@type":"Answer","text":"RIPEMD-128 is used only for legacy compatibility — when interfacing with existing systems that specifically require it. For all new applications, prefer RIPEMD-160, SHA-256, or SHA-3."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"RIPEMD-128","item":"https://singhyogendra.com.np/hash/ripemd-128.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>RIPEMD-128</span>
+      </nav>
+      <h1>RIPEMD-128 Hash Generator</h1>
+      <p>Calculate RIPEMD-128 hashes online. 128-bit output, HMAC support. Note: RIPEMD-128 is a legacy function — for security-critical use prefer RIPEMD-160 or SHA-256.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="ripemd-128-file.html"><span class="tc-name">RIPEMD-128 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="ripemd-160.html"><span class="tc-name">RIPEMD-160</span><span class="tc-desc">Stronger RIPEMD</span></a>
+          <a class="tool-card" href="ripemd-256.html"><span class="tc-name">RIPEMD-256</span><span class="tc-desc">256-bit RIPEMD</span></a>
+          <a class="tool-card" href="md5.html"><span class="tc-name">MD5</span><span class="tc-desc">128-bit legacy</span></a>
+          <a class="tool-card" href="sha256.html"><span class="tc-name">SHA-256</span><span class="tc-desc">Modern standard</span></a>
+        </div>
+      </section>
+      <div class="seo-content">
+        <h2>About RIPEMD-128 Hash Generator</h2>
+        <p>RIPEMD-128 was designed in 1996 as a direct replacement for MD4 and MD5, producing a 128-bit (32 hex character) digest. While stronger than MD5, RIPEMD-128 has been found to have weaknesses in reduced-round variants and is no longer recommended for new security applications. It is provided here for legacy compatibility and educational purposes.</p>
+        <h3>RIPEMD-128 vs RIPEMD-160</h3>
+        <p>RIPEMD-160 was developed alongside RIPEMD-128 specifically to provide greater security. RIPEMD-160 uses five rounds of processing (vs four for RIPEMD-128) and produces a larger 160-bit output, significantly improving collision resistance. For any practical use, prefer RIPEMD-160 over RIPEMD-128.</p>
+      </div>
+    </main>
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>RIPEMD</h4><ul><li><a href="ripemd-128.html">RIPEMD-128</a></li><li><a href="ripemd-160.html">RIPEMD-160</a></li><li><a href="ripemd-256.html">RIPEMD-256</a></li><li><a href="ripemd-320.html">RIPEMD-320</a></li></ul></div>
+        <div class="footer-col"><h4>Hash Tools</h4><ul><li><a href="md5.html">MD5</a></li><li><a href="sha256.html">SHA256</a></li><li><a href="sha3-256.html">SHA3-256</a></li></ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2025 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'../js/crypto-api.js',onload:function(){window.method=ripemd128;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

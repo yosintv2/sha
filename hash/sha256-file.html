@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHA256 File Hash Calculator — SHA-256 Checksum Online | YoSin Tools</title>
+<meta name="description" content="Calculate the SHA256 checksum of any file online. Drag and drop or select a file — all processing happens in your browser. No upload, complete privacy. Free SHA-256 file hash tool.">
+<meta name="keywords" content="SHA256 file hash, SHA-256 checksum, SHA256 file calculator, file integrity, verify download, SHA-256 file">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/sha256-file.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SHA256 File Hash Calculator | YoSin Tools">
+<meta property="og:description" content="Verify file integrity with SHA-256. Upload any file and get its SHA256 checksum instantly. 100% browser-based, no upload.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/sha256-file.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I calculate the SHA256 hash of a file?","acceptedAnswer":{"@type":"Answer","text":"Drag and drop your file onto the input zone or click to browse and select it. The SHA-256 hash is computed instantly in your browser and shown in the Output area. Click copy to copy the hash."}},
+{"@type":"Question","name":"Is my file uploaded to any server?","acceptedAnswer":{"@type":"Answer","text":"No. The file is read entirely in your browser using the HTML5 File API. Nothing is transmitted to any external server. All computation is local."}},
+{"@type":"Question","name":"SHA-256 vs MD5 for file verification — which should I use?","acceptedAnswer":{"@type":"Answer","text":"SHA-256 is strongly preferred over MD5. SHA-256 produces a 256-bit digest with no known collision attacks, making it resistant to deliberate file substitution. MD5 has known collision vulnerabilities. Most modern software distributions publish SHA-256 checksums."}},
+{"@type":"Question","name":"How do I verify a file's SHA256 checksum on the command line?","acceptedAnswer":{"@type":"Answer","text":"On Linux/macOS use: sha256sum filename or shasum -a 256 filename. On Windows use: certutil -hashfile filename SHA256. Compare the output against the expected checksum published by the software distributor."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"SHA256 File","item":"https://singhyogendra.com.np/hash/sha256-file.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+      <div class="section">
+        <h3>Hash</h3>
+        <details><summary>CRC</summary><nav><ol><li><a href="crc.html">CRC</a></li></ol></nav></details>
+        <details><summary>MD</summary><nav><ol>
+          <li><a href="md2.html">MD2</a></li><li><a href="md2-file.html">MD2 File</a></li>
+          <li><a href="md4.html">MD4</a></li><li><a href="md4-file.html">MD4 File</a></li>
+          <li><a href="md5.html">MD5</a></li><li><a href="md5-file.html">MD5 File</a></li>
+        </ol></nav></details>
+        <details><summary>SHA1</summary><nav><ol>
+          <li><a href="sha1.html">SHA1</a></li><li><a href="sha1-file.html">SHA1 File</a></li>
+        </ol></nav></details>
+        <details class="active" open><summary>SHA2</summary><nav><ol>
+          <li><a href="sha224.html">SHA224</a></li><li><a href="sha224-file.html">SHA224 File</a></li>
+          <li><a href="sha256.html">SHA256</a></li><li class="active"><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2-512</summary><nav><ol>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha384-file.html">SHA384 File</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-224-file.html">SHA512/224 File</a></li>
+          <li><a href="sha512-256.html">SHA512/256</a></li><li><a href="sha512-256-file.html">SHA512/256 File</a></li>
+        </ol></nav></details>
+      </div>
+      <div class="section"><h3>Links</h3><nav class="links"><ol><li><a href="../index.html">Home</a></li></ol></nav></div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>SHA256 File</span></nav>
+      <h1>SHA256 File Hash Calculator</h1>
+      <p>Compute the SHA-256 checksum of any file directly in your browser. Drop a file to verify integrity instantly — no upload, no server, complete privacy.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input"><div class="block block-fill">
+            <div class="block-title">File Input</div>
+            <div class="droppable-zone container" id="droppable-zone">
+              <input class="droppable-file" type="file" id="file" data-auto-update>
+              <div class="droppable-zone-wrapper">
+                <img class="droppable-zone-icon" src="../assets/images/file.svg" alt="File">
+                <div class="droppable-zone-text">Drag and drop a file here, or click to select. Processed locally — never uploaded.</div>
+              </div>
+            </div>
+          </div></div>
+          <div class="output"><div class="block block-fill">
+            <div class="block-title">Output
+              <div class="toolbar">
+                <button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button>
+                <button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button>
+              </div>
+            </div>
+            <textarea class="container" id="output" spellcheck="false" placeholder="SHA256 hash will appear here…" data-encoding-from="#output-type" readonly></textarea>
+          </div></div>
+        </div>
+        <div class="settings"><div class="block block-fill">
+          <div class="block-title">Settings</div>
+          <div class="container">
+            <div class="setting"><a class="btn" id="execute">Calculate</a></div>
+            <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+            <div class="setting">
+              <label for="output-type">Output Encoding</label>
+              <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+              </select>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="sha256.html"><span class="tc-name">SHA256 Text</span><span class="tc-desc">Hash from text</span></a>
+          <a class="tool-card" href="sha512-file.html"><span class="tc-name">SHA512 File</span><span class="tc-desc">SHA512 file hash</span></a>
+          <a class="tool-card" href="sha224-file.html"><span class="tc-name">SHA224 File</span><span class="tc-desc">SHA224 file hash</span></a>
+          <a class="tool-card" href="md5-file.html"><span class="tc-name">MD5 File</span><span class="tc-desc">MD5 file hash</span></a>
+          <a class="tool-card" href="sha1-file.html"><span class="tc-name">SHA1 File</span><span class="tc-desc">SHA1 file hash</span></a>
+        </div>
+      </section>
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>How do I verify a file's SHA256 checksum?</summary>
+            <div class="faq-body">Drop your file onto the input zone or click to select it. The SHA-256 hash appears immediately. Compare the result against the expected checksum published by the file's source. An exact match confirms the file is intact and unmodified.</div>
+          </details>
+          <details class="faq-item"><summary>Is my file sent to any server?</summary>
+            <div class="faq-body">No. The file is read entirely in your browser using the HTML5 File API. A JavaScript SHA-256 implementation computes the hash locally. Nothing is transmitted, stored, or logged anywhere.</div>
+          </details>
+          <details class="faq-item"><summary>How do I check SHA256 on Linux, macOS, or Windows?</summary>
+            <div class="faq-body">Linux/macOS: <code>sha256sum filename</code> or <code>shasum -a 256 filename</code>. Windows: <code>certutil -hashfile filename SHA256</code> or PowerShell: <code>Get-FileHash filename -Algorithm SHA256</code>. This browser tool produces identical results.</div>
+          </details>
+          <details class="faq-item"><summary>Why is SHA-256 preferred over MD5 for file verification?</summary>
+            <div class="faq-body">MD5 has known collision vulnerabilities — an attacker can craft two different files with the same MD5 hash. SHA-256 has no known collision attacks. For verifying software downloads, SHA-256 provides much stronger assurance that the file hasn't been tampered with.</div>
+          </details>
+          <details class="faq-item"><summary>What output formats are available?</summary>
+            <div class="faq-body">The SHA-256 digest can be shown as lowercase hex (64 chars, the most common format), uppercase hex, or Base64 (44 chars). Select from the Output Encoding dropdown in Settings.</div>
+          </details>
+        </div>
+      </section>
+      <div class="seo-content">
+        <h2>About SHA256 File Hash Calculator</h2>
+        <p>The YoSin Tools SHA-256 file hash calculator computes the SHA-256 checksum of any file entirely within your browser. No installation is required, no data leaves your device, and there is no practical file size limit. SHA-256 is the current standard for software distribution checksums, replacing both MD5 and SHA-1 across virtually all major software projects and Linux distributions.</p>
+        <h3>Verifying Software Downloads with SHA-256</h3>
+        <p>Most modern software releases — including Python, Node.js, Go, Ubuntu, Fedora, and Apache — publish SHA-256 checksums alongside download links. After downloading a file, drop it into this tool and compare the output against the published checksum. An exact match confirms the file arrived intact. A mismatch indicates corruption or tampering, and you should discard the file and re-download from an official source.</p>
+        <h3>How the Tool Processes Your File</h3>
+        <p>The browser reads your selected file as an ArrayBuffer using the HTML5 File API. A JavaScript implementation of the SHA-256 algorithm processes the data in chunks, allowing large files to be hashed without memory exhaustion. The 256-bit result is displayed as a 64-character hexadecimal string — identical to what <code>sha256sum</code> on Linux/macOS or <code>certutil -hashfile</code> on Windows would produce.</p>
+        <h3>SHA-256 vs SHA-1 and MD5 for File Verification</h3>
+        <p>SHA-256 offers 256-bit digest length and 128 bits of collision resistance — far beyond MD5 (128 bits, broken since 1996) and SHA-1 (160 bits, broken by SHAttered in 2017). For verifying that a file has not been tampered with in transit, SHA-256 provides the strongest assurance among commonly published checksums. If a download offers both MD5 and SHA-256, always use SHA-256.</p>
+        <h3>Privacy and Security</h3>
+        <p>Because all computation is local, this tool is safe to use with sensitive or confidential files. No file data is transmitted to any server, logged, or retained. This makes it suitable for hashing configuration files, private documents, and proprietary software packages where you need to verify integrity without exposing file contents to an external service.</p>
+      </div>
+    </main>
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>SHA2 Tools</h4><ul>
+          <li><a href="sha256.html">SHA256</a></li><li><a href="sha224.html">SHA224</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="double-sha256.html">Double SHA256</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>File Hash</h4><ul>
+          <li><a href="sha256-file.html">SHA256 File</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="md5-file.html">MD5 File</a></li><li><a href="sha1-file.html">SHA1 File</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.11.0/sha256.min.js',onload:function(){window.method=sha256;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/url-blob.js',onload:function(){methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/droppable-file.js',onload:function(){methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/file.js',onload:function(){methodLoad();}});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

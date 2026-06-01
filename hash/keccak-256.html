@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keccak-256 Hash Generator Online — Ethereum keccak256 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate Keccak-256 hash online. The original Keccak (pre-NIST) used by Ethereum for address derivation and smart contracts. Different from SHA3-256. Free, browser-based.">
+<meta name="keywords" content="Keccak-256 hash, keccak256 Ethereum, Keccak-256 generator, Keccak-256 online, Ethereum hash, keccak256 calculator">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/keccak-256.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keccak-256 Hash Generator Online — Ethereum keccak256 | YoSin Tools">
+<meta property="og:description" content="Generate Keccak-256 hashes instantly. The pre-NIST Keccak used by Ethereum. Different from SHA3-256. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/keccak-256.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is Keccak-256?","acceptedAnswer":{"@type":"Answer","text":"Keccak-256 is the original 256-bit Keccak hash function (pre-NIST standardization). It is the algorithm used by Ethereum for address derivation, transaction hashing, and smart contract operations (Solidity's keccak256() function). It uses 0x01 padding and is NOT the same as SHA3-256."}},
+{"@type":"Question","name":"Does Ethereum use SHA3-256 or Keccak-256?","acceptedAnswer":{"@type":"Answer","text":"Ethereum uses Keccak-256 (the pre-NIST original), NOT SHA3-256. NIST modified Keccak's padding when standardizing it as SHA-3. SHA3-256 uses 0x06 padding while Keccak-256 uses 0x01 padding, producing different outputs. The Ethereum Yellow Paper and EVM use Keccak-256."}},
+{"@type":"Question","name":"How is Keccak-256 used in Ethereum?","acceptedAnswer":{"@type":"Answer","text":"Ethereum uses Keccak-256 to derive account addresses (last 20 bytes of keccak256(public_key)), compute transaction hashes, generate block hashes, identify events (topic0 = keccak256(event_signature)), and in the EVM KECCAK256 (SHA3) opcode."}},
+{"@type":"Question","name":"Is Keccak-256 the same as SHA3-256?","acceptedAnswer":{"@type":"Answer","text":"No. They differ in padding. Keccak-256 uses 0x01; SHA3-256 uses 0x06. For the same input, they produce different 256-bit outputs. Always use Keccak-256 for Ethereum-related computations."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"Keccak-256","item":"https://singhyogendra.com.np/hash/keccak-256.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>Keccak-256</span>
+      </nav>
+      <h1>Keccak-256 Hash Generator</h1>
+      <p>Generate Keccak-256 hashes online. The original pre-NIST Keccak algorithm used by Ethereum (keccak256) for address derivation and smart contracts. NOT the same as SHA3-256. Supports HMAC-Keccak-256.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="keccak-256-file.html"><span class="tc-name">Keccak-256 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="sha3-256.html"><span class="tc-name">SHA3-256</span><span class="tc-desc">NIST SHA3-256</span></a>
+          <a class="tool-card" href="keccak-512.html"><span class="tc-name">Keccak-512</span><span class="tc-desc">512-bit Keccak</span></a>
+          <a class="tool-card" href="keccak-224.html"><span class="tc-name">Keccak-224</span><span class="tc-desc">224-bit Keccak</span></a>
+          <a class="tool-card" href="sha256.html"><span class="tc-name">SHA256</span><span class="tc-desc">256-bit SHA-2</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is Keccak-256?</summary>
+            <div class="faq-body">Keccak-256 is the original 256-bit Keccak hash algorithm, developed before NIST standardized it as SHA-3. Ethereum uses Keccak-256 (not SHA3-256) for all its hashing operations, including address derivation and smart contract execution.</div>
+          </details>
+          <details class="faq-item"><summary>How is Ethereum's Keccak-256 different from SHA3-256?</summary>
+            <div class="faq-body">The difference is in padding. Keccak-256 appends 0x01 before multi-rate padding; NIST's SHA3-256 appends 0x06. For the same input, they produce different 256-bit digests. Ethereum was built before the NIST standard was finalized and deliberately uses the original Keccak-256.</div>
+          </details>
+          <details class="faq-item"><summary>What does Ethereum use Keccak-256 for?</summary>
+            <div class="faq-body">Ethereum uses Keccak-256 for: account address derivation (keccak256(public_key)[-20:]), transaction and block hashes, event topic IDs (keccak256("Transfer(address,address,uint256)")), smart contract storage slot calculations, and the EVM KECCAK256 opcode.</div>
+          </details>
+          <details class="faq-item"><summary>Can I use this tool to verify Ethereum addresses?</summary>
+            <div class="faq-body">Yes, this tool computes Keccak-256 as used in Ethereum. To derive an Ethereum address, switch Input Encoding to Hex, paste the 64-byte uncompressed public key (without the 04 prefix), and take the last 40 hex characters (20 bytes) of the output.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About Keccak-256 Hash Generator</h2>
+        <p>Keccak-256 is the original 256-bit Keccak hash function, designed by Guido Bertoni, Joan Daemen, Michaël Peeters, and Gilles Van Assche. It won the NIST hash competition in 2012. Ethereum adopted Keccak-256 before NIST finalized the SHA-3 standard, which is why Ethereum's hash (Keccak-256) differs from the standardized SHA3-256 (FIPS 202).</p>
+        <h3>Keccak-256 in Ethereum</h3>
+        <p>Keccak-256 is ubiquitous in Ethereum. Every Ethereum address is derived by hashing a 64-byte public key with Keccak-256 and taking the last 20 bytes. The Solidity keccak256() builtin, the EVM KECCAK256 (SHA3) opcode, and the web3.js/ethers.js utils.keccak256() function all use the original Keccak-256, not SHA3-256. This is a frequent source of bugs when developers accidentally use a SHA3-256 library in Ethereum contexts.</p>
+        <h3>Keccak-256 vs SHA3-256</h3>
+        <p>The only difference between Keccak-256 and SHA3-256 is the padding appended before the Keccak-f permutation. Keccak-256 uses 0x01; SHA3-256 uses 0x06 (NIST added 2 domain separation bits). For the empty string, Keccak-256 produces c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 while SHA3-256 produces a7ffc6f8bf1ed76651c14756a061d662f580ff4de43b49fa82d80a4b80f8434a.</p>
+        <h3>Security Properties</h3>
+        <p>Keccak-256 provides 128-bit collision resistance and 256-bit preimage resistance. The sponge construction makes it immune to length-extension attacks. No practical attacks on Keccak-256 are known.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Keccak Tools</h4><ul>
+          <li><a href="keccak-224.html">Keccak-224</a></li>
+          <li><a href="keccak-256.html">Keccak-256</a></li>
+          <li><a href="keccak-384.html">Keccak-384</a></li>
+          <li><a href="keccak-512.html">Keccak-512</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>SHA3 / SHAKE</h4><ul>
+          <li><a href="sha3-256.html">SHA3-256</a></li>
+          <li><a href="sha3-512.html">SHA3-512</a></li>
+          <li><a href="shake256.html">SHAKE256</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js',onload:function(){window.method=keccak256;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MD4 File Hash Calculator — File Checksum Online | YoSin Tools</title>
+<meta name="description" content="Calculate the MD4 hash of any file online. Drag and drop or upload a file. All processing is done in your browser — nothing is ever uploaded to a server.">
+<meta name="keywords" content="MD4 file hash, MD4 checksum, MD4 file calculator, file integrity, NTLM hash">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/md4-file.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MD4 File Hash Calculator | YoSin Tools">
+<meta property="og:description" content="Compute the MD4 checksum of any file. Upload locally or by URL. 100% browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/md4-file.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I get the MD4 hash of a file?","acceptedAnswer":{"@type":"Answer","text":"Drag and drop your file onto the file input zone, or click to browse and select a file. The MD4 hash is calculated immediately in your browser."}},
+{"@type":"Question","name":"Is MD4 file hashing safe for verifying downloads?","acceptedAnswer":{"@type":"Answer","text":"MD4 is not recommended for security-critical verification due to known collision vulnerabilities. For download verification, prefer SHA-256 or SHA-512. Use this tool for legacy compatibility or educational purposes."}},
+{"@type":"Question","name":"Can I hash any file type?","acceptedAnswer":{"@type":"Answer","text":"Yes, any file type is supported. The tool reads the raw binary content regardless of the file format."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"MD4 File","item":"https://singhyogendra.com.np/hash/md4-file.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+      <div class="section">
+        <h3>Hash</h3>
+        <details><summary>CRC</summary><nav><ol><li><a href="crc.html">CRC</a></li></ol></nav></details>
+        <details class="active" open>
+          <summary>MD</summary>
+          <nav><ol>
+            <li><a href="md2.html">MD2</a></li><li><a href="md2-file.html">MD2 File</a></li>
+            <li><a href="md4.html">MD4</a></li><li class="active"><a href="md4-file.html">MD4 File</a></li>
+            <li><a href="md5.html">MD5</a></li><li><a href="md5-file.html">MD5 File</a></li>
+          </ol></nav>
+        </details>
+        <details><summary>SHA1</summary><nav><ol><li><a href="sha1.html">SHA1</a></li><li><a href="sha1-file.html">SHA1 File</a></li></ol></nav></details>
+        <details><summary>SHA2</summary><nav><ol>
+          <li><a href="sha224.html">SHA224</a></li><li><a href="sha224-file.html">SHA224 File</a></li>
+          <li><a href="sha256.html">SHA256</a></li><li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2-512</summary><nav><ol>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha384-file.html">SHA384 File</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-224-file.html">SHA512/224 File</a></li>
+          <li><a href="sha512-256.html">SHA512/256</a></li><li><a href="sha512-256-file.html">SHA512/256 File</a></li>
+        </ol></nav></details>
+      </div>
+      <div class="section"><h3>Links</h3><nav class="links"><ol><li><a href="../index.html">Home</a></li></ol></nav></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>MD4 File</span>
+      </nav>
+      <h1>MD4 File Hash Calculator</h1>
+      <p>Compute the MD4 checksum of any file directly in your browser. Drag and drop a file or provide a URL — no upload, no server, complete privacy.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">File Input</div>
+              <div class="droppable-zone container" id="droppable-zone">
+                <input class="droppable-file" type="file" id="file" data-auto-update>
+                <div class="droppable-zone-wrapper">
+                  <img class="droppable-zone-icon" src="../assets/images/file.svg" alt="File">
+                  <div class="droppable-zone-text">Drag and drop a file here, or click to select. Processed locally — never uploaded.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="MD4 hash will appear here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Calculate</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="md4.html"><span class="tc-name">MD4 Text</span><span class="tc-desc">Hash from text</span></a>
+          <a class="tool-card" href="md2-file.html"><span class="tc-name">MD2 File</span><span class="tc-desc">MD2 file hash</span></a>
+          <a class="tool-card" href="md5-file.html"><span class="tc-name">MD5 File</span><span class="tc-desc">MD5 file hash</span></a>
+          <a class="tool-card" href="sha1-file.html"><span class="tc-name">SHA1 File</span><span class="tc-desc">SHA1 file hash</span></a>
+          <a class="tool-card" href="crc.html"><span class="tc-name">CRC</span><span class="tc-desc">CRC checksum</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>How do I get the MD4 hash of a file?</summary>
+            <div class="faq-body">Drop your file onto the input zone or click to browse. The MD4 hash is calculated immediately in your browser and shown in the Output area. Click the copy button to copy the result.</div>
+          </details>
+          <details class="faq-item"><summary>Is my file sent to any server?</summary>
+            <div class="faq-body">No. The file is read entirely in your browser using the HTML5 File API. No data leaves your device.</div>
+          </details>
+          <details class="faq-item"><summary>Why would I use MD4 instead of MD5?</summary>
+            <div class="faq-body">MD4 is primarily useful when working with legacy systems or protocols — most notably Microsoft NTLM password hashes — that specifically require MD4. For general file integrity or security purposes, MD5 or SHA-256 is a better choice.</div>
+          </details>
+          <details class="faq-item"><summary>What output formats are available?</summary>
+            <div class="faq-body">You can output the hash as lowercase hex, uppercase hex, or Base64, making it easy to match against checksums from different sources or systems.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About MD4 File Hash Calculator</h2>
+        <p>This tool computes the MD4 hash of any file you select, entirely within your browser. The MD4 algorithm was designed by Ronald Rivest in 1990 and produces a 128-bit (32 hex character) digest. It processes data in 512-bit blocks using three rounds of bitwise operations.</p>
+        <h3>Use Cases</h3>
+        <p>The primary modern use of MD4 file hashing is in compatibility testing with legacy Windows authentication systems that rely on NT hashes (MD4 of UTF-16LE encoded passwords). Security researchers and system administrators working with NTLM or NTLMv2 authentication may need MD4 for analysis. The tool is also useful for verifying checksums from older software releases that list MD4 values.</p>
+        <h3>Privacy</h3>
+        <p>Your files are never sent anywhere. The entire computation takes place in your browser's JavaScript engine. This makes the tool safe to use with sensitive or confidential files — no data is logged, stored, or transmitted.</p>
+        <h3>Limitations</h3>
+        <p>MD4 is cryptographically broken and should not be relied upon for security purposes. If you need to verify file integrity for security reasons — for example, to confirm a downloaded binary has not been tampered with — use SHA-256 or SHA-512 instead, as they offer collision resistance that MD4 does not.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Hash Tools</h4><ul><li><a href="crc.html">CRC</a></li><li><a href="md2.html">MD2</a></li><li><a href="md4.html">MD4</a></li><li><a href="md5.html">MD5</a></li><li><a href="sha1.html">SHA1</a></li></ul></div>
+        <div class="footer-col"><h4>File Hash</h4><ul><li><a href="md2-file.html">MD2 File</a></li><li><a href="md4-file.html">MD4 File</a></li><li><a href="md5-file.html">MD5 File</a></li><li><a href="sha1-file.html">SHA1 File</a></li></ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'../js/md4.min.js',onload:function(){window.method=md4;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/url-blob.js',onload:function(){methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/droppable-file.js',onload:function(){methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/file.js',onload:function(){methodLoad();}});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

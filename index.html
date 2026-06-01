@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YoSin Tools — Free Online Hash, Encoding &amp; Crypto Tools | MD5, SHA256, CRC, BLAKE2, RIPEMD</title>
+<meta name="description" content="YoSin Tools: free browser-based online tools for MD5, SHA1, SHA256, SHA512, SHA3, Keccak, RIPEMD, BLAKE2, CRC checksums, HMAC, and more. No upload — 100% private, runs locally.">
+<meta name="keywords" content="MD5 generator, SHA256 online, SHA3 hash, Keccak hash, BLAKE2 hash, RIPEMD hash, CRC calculator, HMAC generator, checksum tool, hash online free, file hash, encoding decoding tool">
+<meta name="author" content="YoSin Tools">
+<link rel="canonical" href="https://singhyogendra.com.np/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YoSin Tools — Free Online Hash &amp; Crypto Tools">
+<meta property="og:description" content="Free browser-based tools: MD5, SHA1, SHA256, SHA512, SHA3, Keccak, RIPEMD, BLAKE2, CRC, HMAC. No uploads, no registration. Runs 100% locally.">
+<meta property="og:url" content="https://singhyogendra.com.np/">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YoSin Tools — Free Online Hash &amp; Crypto Tools">
+<meta name="twitter:description" content="MD5, SHA256, SHA3, Keccak, RIPEMD, BLAKE2, CRC checksums online. Browser-based, 100% private.">
+<meta name="twitter:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="assets/images/logo.svg">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "YoSin Tools",
+  "url": "https://singhyogendra.com.np/",
+  "description": "Free online browser-based tools for hashing, encoding, and cryptography — MD5, SHA256, SHA3, Keccak, RIPEMD, BLAKE2, CRC, HMAC and more.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://singhyogendra.com.np/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Hash Tools",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"MD5 Hash Generator","url":"https://singhyogendra.com.np/hash/md5.html"},
+    {"@type":"ListItem","position":2,"name":"SHA256 Hash Generator","url":"https://singhyogendra.com.np/hash/sha256.html"},
+    {"@type":"ListItem","position":3,"name":"SHA512 Hash Generator","url":"https://singhyogendra.com.np/hash/sha512.html"},
+    {"@type":"ListItem","position":4,"name":"SHA3-256 Hash Generator","url":"https://singhyogendra.com.np/hash/sha3-256.html"},
+    {"@type":"ListItem","position":5,"name":"Keccak-256 Hash Generator","url":"https://singhyogendra.com.np/hash/keccak-256.html"},
+    {"@type":"ListItem","position":6,"name":"RIPEMD-160 Hash Generator","url":"https://singhyogendra.com.np/hash/ripemd-160.html"},
+    {"@type":"ListItem","position":7,"name":"BLAKE2b Hash Generator","url":"https://singhyogendra.com.np/hash/blake2b.html"},
+    {"@type":"ListItem","position":8,"name":"CRC Checksum Calculator","url":"https://singhyogendra.com.np/hash/crc.html"}
+  ]
+}
+</script>
+
+<style>
+/* ── Homepage-specific styles ── */
+.hero {
+  background: linear-gradient(135deg, #1e40af 0%, #4f46e5 50%, #7c3aed 100%);
+  padding: 44px 28px 38px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-inner { position: relative; z-index: 1; max-width: 680px; }
+.hero h1 {
+  font-size: 28px; font-weight: 800; margin: 0 0 10px;
+  color: #fff; line-height: 1.15; letter-spacing: -.03em;
+}
+.hero p {
+  font-size: 14px; opacity: .85; margin: 0 0 22px;
+  line-height: 1.6; max-width: 520px;
+}
+.hero-search {
+  display: flex; gap: 8px; max-width: 440px;
+}
+.hero-search input {
+  flex: 1; padding: 11px 14px; border-radius: 9px; border: 0;
+  font-size: 14px; background: rgba(255,255,255,.18); color: #fff;
+  outline: none; backdrop-filter: blur(6px);
+  -webkit-appearance: none; appearance: none;
+}
+.hero-search input::placeholder { color: rgba(255,255,255,.55); }
+.hero-search input:focus { background: rgba(255,255,255,.28); }
+.hero-search button {
+  padding: 11px 20px; border-radius: 9px; border: 0;
+  background: #fff; color: #1e40af; font-size: 14px; font-weight: 700;
+  cursor: pointer; white-space: nowrap; transition: background .15s;
+}
+.hero-search button:hover { background: #eff6ff; }
+
+.hero-stats {
+  display: flex; gap: 22px; margin-top: 20px; flex-wrap: wrap;
+}
+.hero-stat {
+  font-size: 12.5px; opacity: .8; display: flex;
+  align-items: center; gap: 5px;
+}
+.hero-stat strong { opacity: 1; font-weight: 800; font-size: 15px; }
+
+/* Home content */
+.home-content { padding: 22px 26px; }
+.home-section { margin-bottom: 30px; }
+.home-section-header {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 13px;
+}
+.home-section-header h2 {
+  font-size: 15px; font-weight: 800; margin: 0; color: var(--text); letter-spacing: -.02em;
+}
+.section-badge {
+  font-size: 10px; font-weight: 700; padding: 2px 8px;
+  border-radius: 999px; background: rgba(59,130,246,.12);
+  color: var(--primary); text-transform: uppercase; letter-spacing: .04em;
+}
+.section-badge-green {
+  background: rgba(34,197,94,.12); color: #15803d;
+}
+html.dark-theme .section-badge-green { color: #4ade80; }
+.section-line {
+  flex: 1; height: 1px; background: var(--border);
+}
+
+/* Tool group cards */
+.group-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+  gap: 11px;
+}
+.group-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  overflow: hidden;
+  transition: border-color .16s, box-shadow .16s, transform .16s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.group-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59,130,246,.08), 0 4px 12px rgba(0,0,0,.07);
+  transform: translateY(-1px);
+}
+.group-card-header {
+  padding: 10px 14px 9px;
+  border-bottom: 1px solid var(--border);
+  background: var(--title-bg);
+  display: flex; align-items: center; gap: 8px;
+}
+.group-card-header h3 {
+  font-size: 13px; font-weight: 700; margin: 0; color: var(--text);
+}
+.group-icon {
+  width: 22px; height: 22px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 800; flex-shrink: 0; color: #fff;
+  letter-spacing: -.02em;
+}
+.icon-hash   { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.icon-lock   { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+.icon-encode { background: linear-gradient(135deg, #059669, #047857); }
+.icon-format { background: linear-gradient(135deg, #d97706, #b45309); }
+.icon-case   { background: linear-gradient(135deg, #dc2626, #b91c1c); }
+.icon-other  { background: linear-gradient(135deg, #6b7280, #4b5563); }
+
+.group-card-links {
+  padding: 7px 6px 9px;
+  display: flex; flex-direction: column; gap: 1px;
+}
+.group-card-links a {
+  display: flex; align-items: center;
+  padding: 5px 8px; font-size: 12.5px;
+  color: var(--muted); border-radius: 6px;
+  transition: background .12s, color .12s;
+}
+.group-card-links a:hover { background: rgba(59,130,246,.07); color: var(--primary); }
+.group-card-links .coming-soon {
+  font-size: 11px; font-weight: 600; color: var(--sub-muted);
+  padding: 3px 8px; border-radius: 999px; background: var(--bg);
+}
+
+/* Popular tools grid */
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.popular-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  padding: 12px 13px 11px;
+  display: flex; flex-direction: column; gap: 4px;
+  text-decoration: none;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.popular-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59,130,246,.08);
+  transform: translateY(-1px);
+}
+.popular-card .pc-label { font-size: 13px; font-weight: 700; color: var(--text); }
+.popular-card .pc-desc { font-size: 11px; color: var(--muted); }
+.popular-card .pc-tag {
+  font-size: 10px; font-weight: 700; color: var(--primary);
+  background: rgba(59,130,246,.1); border-radius: 4px;
+  padding: 1px 6px; align-self: flex-start; margin-top: 2px;
+  text-transform: uppercase; letter-spacing: .03em;
+}
+
+/* No-results */
+#no-results {
+  display: none; padding: 24px; text-align: center;
+  color: var(--muted); font-size: 14px;
+}
+
+/* Privacy badge */
+.privacy-banner {
+  margin: 0 0 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  padding: 12px 16px;
+  display: flex; align-items: center; gap: 12px;
+  font-size: 13px; color: var(--muted);
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.privacy-banner-icon {
+  font-size: 18px; flex-shrink: 0;
+}
+
+@media(max-width:1023px) {
+  .hero { padding: 28px 18px 26px; }
+  .home-content { padding: 16px 16px; }
+}
+@media(min-width:1280px) {
+  .hero h1 { font-size: 34px; }
+}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- ===== STICKY LEFT SIDEBAR ===== -->
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="index.html">
+          <img src="assets/images/logo.svg" width="22" height="22" alt="YoSin Tools Logo">
+          <h2>YoSin Tools</h2>
+        </a>
+        <div class="toolbar">
+          <button class="theme" title="Toggle dark mode">
+            <img class="light" src="assets/images/light.svg" alt="Dark mode">
+            <img class="dark"  src="assets/images/dark.svg"  alt="Light mode">
+          </button>
+        </div>
+      </header>
+
+      <div class="sidebar-search">
+        <input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off">
+      </div>
+
+      <!-- nav.js renders the full nav here -->
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div id="content">
+
+    <!-- Mobile top bar -->
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu">
+        <img src="assets/images/menu.svg" width="22" height="22" alt="Menu">
+      </button>
+      <a class="mobile-brand" href="index.html">YoSin Tools</a>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-inner">
+        <h1>YoSin Tools</h1>
+        <p>Free, fast, privacy-first online tools for hashing, checksums, and cryptography. MD5, SHA256, SHA3, Keccak, RIPEMD, BLAKE2, CRC — everything runs in your browser. Nothing ever leaves your device.</p>
+        <div class="hero-search">
+          <input type="text" id="hero-search" placeholder="Search — e.g. SHA3, RIPEMD, BLAKE2, CRC…" autocomplete="off" aria-label="Search tools">
+          <button type="button" onclick="doSearch()">Search</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>60+</strong> tools</div>
+          <div class="hero-stat"><strong>100%</strong> browser-based</div>
+          <div class="hero-stat"><strong>0</strong> uploads</div>
+          <div class="hero-stat"><strong>Free</strong> forever</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ad: below hero -->
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="home-content">
+
+        <!-- Privacy notice -->
+        <div class="privacy-banner">
+          <span class="privacy-banner-icon">🔒</span>
+          <span>All computations happen <strong>locally in your browser</strong>. No files, text, or keys are ever sent to a server. Your data stays on your device.</span>
+        </div>
+
+        <!-- Popular tools -->
+        <div class="home-section">
+          <div class="home-section-header">
+            <h2>Most Popular Tools</h2>
+            <div class="section-line"></div>
+          </div>
+          <div class="popular-grid" id="popular-grid">
+            <a class="popular-card" href="hash/md5.html">
+              <span class="pc-label">MD5</span>
+              <span class="pc-desc">128-bit hash, HMAC</span>
+              <span class="pc-tag">Hash</span>
+            </a>
+            <a class="popular-card" href="hash/sha256.html">
+              <span class="pc-label">SHA-256</span>
+              <span class="pc-desc">256-bit secure hash</span>
+              <span class="pc-tag">Hash</span>
+            </a>
+            <a class="popular-card" href="hash/sha3-256.html">
+              <span class="pc-label">SHA3-256</span>
+              <span class="pc-desc">NIST SHA-3 standard</span>
+              <span class="pc-tag">Hash</span>
+            </a>
+            <a class="popular-card" href="hash/keccak-256.html">
+              <span class="pc-label">Keccak-256</span>
+              <span class="pc-desc">Ethereum address hash</span>
+              <span class="pc-tag">Hash</span>
+            </a>
+            <a class="popular-card" href="hash/sha512.html">
+              <span class="pc-label">SHA-512</span>
+              <span class="pc-desc">512-bit high security</span>
+              <span class="pc-tag">Hash</span>
+            </a>
+            <a class="popular-card" href="hash/sha1.html">
+              <span class="pc-label">SHA-1</span>
+              <span class="pc-desc">160-bit, Git default</span>
+              <span class="pc-tag">Hash</span>
+            </a>
+            <a class="popular-card" href="hash/ripemd-160.html">
+              <span class="pc-label">RIPEMD-160</span>
+              <span class="pc-desc">Bitcoin address hash</span>
+              <span class="pc-tag">Hash</span>
+            </a>
+            <a class="popular-card" href="hash/blake2b.html">
+              <span class="pc-label">BLAKE2b</span>
+              <span class="pc-desc">Fast modern hash</span>
+              <span class="pc-tag">Hash</span>
+            </a>
+            <a class="popular-card" href="hash/crc.html">
+              <span class="pc-label">CRC</span>
+              <span class="pc-desc">CRC-32 / CRC-16 / 100+</span>
+              <span class="pc-tag">Checksum</span>
+            </a>
+            <a class="popular-card" href="hash/md5-file.html">
+              <span class="pc-label">MD5 File</span>
+              <span class="pc-desc">Verify downloads</span>
+              <span class="pc-tag">File</span>
+            </a>
+            <a class="popular-card" href="hash/sha256-file.html">
+              <span class="pc-label">SHA-256 File</span>
+              <span class="pc-desc">File checksum</span>
+              <span class="pc-tag">File</span>
+            </a>
+            <a class="popular-card" href="hash/double-sha256.html">
+              <span class="pc-label">Double SHA256</span>
+              <span class="pc-desc">Bitcoin txid hash</span>
+              <span class="pc-tag">Hash</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ad: inline -->
+        <div class="ad-wrap" style="padding:0;margin-bottom:24px"><div class="ad-container" id="ad-inline"></div></div>
+
+        <!-- CRC -->
+        <div class="home-section" data-section="crc">
+          <div class="home-section-header">
+            <h2>CRC</h2>
+            <span class="section-badge section-badge-green">1 tool</span>
+            <div class="section-line"></div>
+          </div>
+          <div class="group-grid">
+            <div class="group-card">
+              <div class="group-card-header">
+                <div class="group-icon icon-hash">CR</div>
+                <h3>CRC</h3>
+              </div>
+              <div class="group-card-links">
+                <a href="hash/crc.html">CRC (100+ models)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MD -->
+        <div class="home-section" data-section="md">
+          <div class="home-section-header">
+            <h2>MD Family</h2>
+            <span class="section-badge section-badge-green">6 tools</span>
+            <div class="section-line"></div>
+          </div>
+          <div class="group-grid">
+            <div class="group-card">
+              <div class="group-card-header">
+                <div class="group-icon icon-hash">MD</div>
+                <h3>MD2 / MD4 / MD5</h3>
+              </div>
+              <div class="group-card-links">
+                <a href="hash/md2.html">MD2</a>
+                <a href="hash/md2-file.html">MD2 File</a>
+                <a href="hash/md4.html">MD4</a>
+                <a href="hash/md4-file.html">MD4 File</a>
+                <a href="hash/md5.html">MD5</a>
+                <a href="hash/md5-file.html">MD5 File</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHA1 -->
+        <div class="home-section" data-section="sha1">
+          <div class="home-section-header">
+            <h2>SHA-1</h2>
+            <span class="section-badge section-badge-green">2 tools</span>
+            <div class="section-line"></div>
+          </div>
+          <div class="group-grid">
+            <div class="group-card">
+              <div class="group-card-header">
+                <div class="group-icon icon-hash">S1</div>
+                <h3>SHA1</h3>
+              </div>
+              <div class="group-card-links">
+                <a href="hash/sha1.html">SHA1</a>
+                <a href="hash/sha1-file.html">SHA1 File</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHA-2 -->
+        <div class="home-section" data-section="sha2">
+          <div class="home-section-header">
+            <h2>SHA-2</h2>
+            <span class="section-badge section-badge-green">14 tools</span>
+            <div class="section-line"></div>
+          </div>
+          <div class="group-grid">
+            <div class="group-card">
+              <div class="group-card-header">
+                <div class="group-icon icon-hash">S2</div>
+                <h3>SHA-256 Family</h3>
+              </div>
+              <div class="group-card-links">
+                <a href="hash/sha224.html">SHA-224</a>
+                <a href="hash/sha224-file.html">SHA-224 File</a>
+                <a href="hash/sha256.html">SHA-256</a>
+                <a href="hash/sha256-file.html">SHA-256 File</a>
+                <a href="hash/double-sha256.html">Double SHA-256</a>
+              </div>
+            </div>
+            <div class="group-card">
+              <div class="group-card-header">
+                <div class="group-icon icon-hash">S5</div>
+                <h3>SHA-512 Family</h3>
+              </div>
+              <div class="group-card-links">
+                <a href="hash/sha384.html">SHA-384</a>
+                <a href="hash/sha384-file.html">SHA-384 File</a>
+                <a href="hash/sha512.html">SHA-512</a>
+                <a href="hash/sha512-file.html">SHA-512 File</a>
+                <a href="hash/sha512-224.html">SHA-512/224</a>
+                <a href="hash/sha512-224-file.html">SHA-512/224 File</a>
+                <a href="hash/sha512-256.html">SHA-512/256</a>
+                <a href="hash/sha512-256-file.html">SHA-512/256 File</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHA-3 / Keccak -->
+        <div class="home-section" data-section="sha3">
+          <div class="home-section-header">
+            <h2>SHA-3 &amp; Keccak</h2>
+            <span class="section-badge section-badge-green">20 tools</span>
+            <div class="section-line"></div>
+          </div>
+          <div class="group-grid">
+            <div class="group-card">
+              <div class="group-card-header">
+                <div class="group-icon icon-hash">S3</div>
+                <h3>SHA-3</h3>
+              </div>
+              <div class="group-card-links">
+                <a href="hash/sha3-224.html">SHA3-224</a>
+                <a href="hash/sha3-224-file.html">SHA3-224 File</a>
+                <a href="hash/sha3-256.html">SHA3-256</a>
+                <a href="hash/sha3-256-file.html">SHA3-256 File</a>
+                <a href="hash/sha3-384.html">SHA3-384</a>
+                <a href="hash/sha3-384-file.html">SHA3-384 File</a>
+                <a href="hash/sha3-512.html">SHA3-512</a>
+                <a href="hash/sha3-512-file.html">SHA3-512 File</a>
+              </div>
+            </div>
+            <div class="group-card">
+              <div class="group-card-header">
+                <div class="group-icon icon-hash">KK</div>
+                <h3>Keccak</h3>
+              </div>
+              <div class="group-card-links">
+                <a href="hash/keccak-224.html">Keccak-224</a>
+                <a href="hash/keccak-224-file.html">Keccak-224 File</a>
+                <a href="hash/keccak-256.html">Keccak-256</a>
+                <a href="hash/keccak-256-file.html">Keccak-256 File</a>
+                <a href="hash/keccak-384.html">Keccak-384</a>
+                <a href="hash/keccak-384-file.html">Keccak-384 File</a>
+                <a href="hash/keccak-512.html">Keccak-512</a>
+                <a href="hash/keccak-512-file.html">Keccak-512 File</a>
+              </div>
+            </div>
+            <div class="group-card">
+              <div class="group-card-header">
+                <div class="group-icon icon-hash">SK</div>
+                <h3>SHAKE / cSHAKE / KMAC</h3>
+              </div>
+              <div class="group-card-links">
+                <a href="hash/shake128.html">SHAKE128</a>
+                <a href="hash/shake128-file.html">SHAKE128 File</a>
+                <a href="hash/shake256.html">SHAKE256</a>
+                <a href="hash/shake256-file.html">SHAKE256 File</a>
+                <a href="hash/cshake128.html">cSHAKE128</a>
+                <a href="hash/cshake128-file.html">cSHAKE128 File</a>
+                <a href="hash/cshake256.html">cSHAKE256</a>
+                <a href="hash/cshake256-file.html">cSHAKE256 File</a>
+                <a href="hash/kmac128.html">KMAC128</a>
+                <a href="hash/kmac128-file.html">KMAC128 File</a>
+                <a href="hash/kmac256.html">KMAC256</a>
+                <a href="hash/kmac256-file.html">KMAC256 File</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIPEMD -->
+        <div class="home-section" data-section="ripemd">
+          <div class="home-section-header">
+            <h2>RIPEMD</h2>
+            <span class="section-badge section-badge-green">8 tools</span>
+            <div class="section-line"></div>
+          </div>
+          <div class="group-grid">
+            <div class="group-card">
+              <div class="group-card-header">
+                <div class="group-icon icon-hash">RM</div>
+                <h3>RIPEMD</h3>
+              </div>
+              <div class="group-card-links">
+                <a href="hash/ripemd-128.html">RIPEMD-128</a>
+                <a href="hash/ripemd-128-file.html">RIPEMD-128 File</a>
+                <a href="hash/ripemd-160.html">RIPEMD-160</a>
+                <a href="hash/ripemd-160-file.html">RIPEMD-160 File</a>
+                <a href="hash/ripemd-256.html">RIPEMD-256</a>
+                <a href="hash/ripemd-256-file.html">RIPEMD-256 File</a>
+                <a href="hash/ripemd-320.html">RIPEMD-320</a>
+                <a href="hash/ripemd-320-file.html">RIPEMD-320 File</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BLAKE -->
+        <div class="home-section" data-section="blake">
+          <div class="home-section-header">
+            <h2>BLAKE</h2>
+            <span class="section-badge section-badge-green">4 tools</span>
+            <div class="section-line"></div>
+          </div>
+          <div class="group-grid">
+            <div class="group-card">
+              <div class="group-card-header">
+                <div class="group-icon icon-hash">BL</div>
+                <h3>BLAKE2</h3>
+              </div>
+              <div class="group-card-links">
+                <a href="hash/blake2b.html">BLAKE2b</a>
+                <a href="hash/blake2b-file.html">BLAKE2b File</a>
+                <a href="hash/blake2s.html">BLAKE2s</a>
+                <a href="hash/blake2s-file.html">BLAKE2s File</a>
+              </div>
+            </div>
+            <div class="group-card" style="opacity:.65">
+              <div class="group-card-header">
+                <div class="group-icon icon-hash">B3</div>
+                <h3>BLAKE3</h3>
+              </div>
+              <div class="group-card-links">
+                <span class="coming-soon">Coming soon</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- No results -->
+        <div id="no-results">No tools match your search. Try a different keyword.</div>
+
+        <!-- About section -->
+        <div class="home-section" style="margin-top:4px">
+          <div class="home-section-header">
+            <h2>About YoSin Tools</h2>
+            <div class="section-line"></div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:20px 22px;box-shadow:0 1px 3px rgba(0,0,0,.05)">
+            <p style="font-size:14px;line-height:1.75;color:var(--muted);margin:0 0 12px">
+              YoSin Tools is a free, open collection of browser-based developer utilities maintained by
+              <a href="https://singhyogendra.com.np" target="_blank" rel="noopener">Yogendra Singh</a>.
+              Every tool runs entirely in your browser using JavaScript — no file is ever uploaded, no data is ever sent to a server. Your computations are completely private.
+            </p>
+            <p style="font-size:14px;line-height:1.75;color:var(--muted);margin:0 0 12px">
+              The toolkit covers all major <strong>cryptographic hash functions</strong>: MD5, SHA-1, SHA-2 (SHA-224, SHA-256, SHA-384, SHA-512 and truncated variants), SHA-3, Keccak, SHAKE, cSHAKE, KMAC, RIPEMD (128/160/256/320), and BLAKE2 (b and s). Plus CRC checksums with 100+ predefined models.
+            </p>
+            <p style="font-size:14px;line-height:1.75;color:var(--muted);margin:0">
+              All tools support multiple input and output encodings — UTF-8, UTF-16, Hex, Base64, and dozens of legacy character sets. HMAC variants are available for all keyed-hash applications including JWT signing, webhook verification, and API authentication. File hashing tools let you verify download integrity without ever uploading the file.
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /.home-content -->
+    </main>
+
+    <!-- Ad: bottom -->
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+
+    <!-- Footer -->
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>MD / SHA-1 / SHA-2</h4>
+          <ul>
+            <li><a href="hash/md5.html">MD5</a></li>
+            <li><a href="hash/sha1.html">SHA-1</a></li>
+            <li><a href="hash/sha256.html">SHA-256</a></li>
+            <li><a href="hash/sha512.html">SHA-512</a></li>
+            <li><a href="hash/double-sha256.html">Double SHA-256</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>SHA-3 / Keccak</h4>
+          <ul>
+            <li><a href="hash/sha3-256.html">SHA3-256</a></li>
+            <li><a href="hash/sha3-512.html">SHA3-512</a></li>
+            <li><a href="hash/keccak-256.html">Keccak-256</a></li>
+            <li><a href="hash/shake128.html">SHAKE128</a></li>
+            <li><a href="hash/shake256.html">SHAKE256</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>RIPEMD / BLAKE</h4>
+          <ul>
+            <li><a href="hash/ripemd-160.html">RIPEMD-160</a></li>
+            <li><a href="hash/ripemd-256.html">RIPEMD-256</a></li>
+            <li><a href="hash/blake2b.html">BLAKE2b</a></li>
+            <li><a href="hash/blake2s.html">BLAKE2s</a></li>
+            <li><a href="hash/crc.html">CRC</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>File Hash</h4>
+          <ul>
+            <li><a href="hash/md5-file.html">MD5 File</a></li>
+            <li><a href="hash/sha256-file.html">SHA-256 File</a></li>
+            <li><a href="hash/sha512-file.html">SHA-512 File</a></li>
+            <li><a href="hash/sha3-256-file.html">SHA3-256 File</a></li>
+            <li><a href="hash/sha1-file.html">SHA-1 File</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>YoSin Tools</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://singhyogendra.com.np" target="_blank" rel="noopener">singhyogendra.com.np</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2025 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+
+  </div><!-- /#content -->
+</div><!-- /#app -->
+
+<div id="message"></div>
+
+<script>
+var ALL_TOOLS = [
+  {name:'CRC',           url:'hash/crc.html',               tag:'Checksum'},
+  {name:'MD2',           url:'hash/md2.html',               tag:'Hash'},
+  {name:'MD2 File',      url:'hash/md2-file.html',          tag:'Hash'},
+  {name:'MD4',           url:'hash/md4.html',               tag:'Hash'},
+  {name:'MD4 File',      url:'hash/md4-file.html',          tag:'Hash'},
+  {name:'MD5',           url:'hash/md5.html',               tag:'Hash'},
+  {name:'MD5 File',      url:'hash/md5-file.html',          tag:'Hash'},
+  {name:'SHA1',          url:'hash/sha1.html',              tag:'Hash'},
+  {name:'SHA1 File',     url:'hash/sha1-file.html',         tag:'Hash'},
+  {name:'SHA224',        url:'hash/sha224.html',            tag:'Hash'},
+  {name:'SHA224 File',   url:'hash/sha224-file.html',       tag:'Hash'},
+  {name:'SHA256',        url:'hash/sha256.html',            tag:'Hash'},
+  {name:'SHA256 File',   url:'hash/sha256-file.html',       tag:'Hash'},
+  {name:'Double SHA256', url:'hash/double-sha256.html',     tag:'Hash'},
+  {name:'SHA384',        url:'hash/sha384.html',            tag:'Hash'},
+  {name:'SHA384 File',   url:'hash/sha384-file.html',       tag:'Hash'},
+  {name:'SHA512',        url:'hash/sha512.html',            tag:'Hash'},
+  {name:'SHA512 File',   url:'hash/sha512-file.html',       tag:'Hash'},
+  {name:'SHA512/224',    url:'hash/sha512-224.html',        tag:'Hash'},
+  {name:'SHA512/224 File',url:'hash/sha512-224-file.html',  tag:'Hash'},
+  {name:'SHA512/256',    url:'hash/sha512-256.html',        tag:'Hash'},
+  {name:'SHA512/256 File',url:'hash/sha512-256-file.html',  tag:'Hash'},
+  {name:'SHA3-224',      url:'hash/sha3-224.html',          tag:'Hash'},
+  {name:'SHA3-224 File', url:'hash/sha3-224-file.html',     tag:'Hash'},
+  {name:'SHA3-256',      url:'hash/sha3-256.html',          tag:'Hash'},
+  {name:'SHA3-256 File', url:'hash/sha3-256-file.html',     tag:'Hash'},
+  {name:'SHA3-384',      url:'hash/sha3-384.html',          tag:'Hash'},
+  {name:'SHA3-384 File', url:'hash/sha3-384-file.html',     tag:'Hash'},
+  {name:'SHA3-512',      url:'hash/sha3-512.html',          tag:'Hash'},
+  {name:'SHA3-512 File', url:'hash/sha3-512-file.html',     tag:'Hash'},
+  {name:'Keccak-224',    url:'hash/keccak-224.html',        tag:'Hash'},
+  {name:'Keccak-224 File',url:'hash/keccak-224-file.html',  tag:'Hash'},
+  {name:'Keccak-256',    url:'hash/keccak-256.html',        tag:'Hash'},
+  {name:'Keccak-256 File',url:'hash/keccak-256-file.html',  tag:'Hash'},
+  {name:'Keccak-384',    url:'hash/keccak-384.html',        tag:'Hash'},
+  {name:'Keccak-384 File',url:'hash/keccak-384-file.html',  tag:'Hash'},
+  {name:'Keccak-512',    url:'hash/keccak-512.html',        tag:'Hash'},
+  {name:'Keccak-512 File',url:'hash/keccak-512-file.html',  tag:'Hash'},
+  {name:'SHAKE128',      url:'hash/shake128.html',          tag:'Hash'},
+  {name:'SHAKE128 File', url:'hash/shake128-file.html',     tag:'Hash'},
+  {name:'SHAKE256',      url:'hash/shake256.html',          tag:'Hash'},
+  {name:'SHAKE256 File', url:'hash/shake256-file.html',     tag:'Hash'},
+  {name:'cSHAKE128',     url:'hash/cshake128.html',         tag:'Hash'},
+  {name:'cSHAKE128 File',url:'hash/cshake128-file.html',    tag:'Hash'},
+  {name:'cSHAKE256',     url:'hash/cshake256.html',         tag:'Hash'},
+  {name:'cSHAKE256 File',url:'hash/cshake256-file.html',    tag:'Hash'},
+  {name:'KMAC128',       url:'hash/kmac128.html',           tag:'Hash'},
+  {name:'KMAC128 File',  url:'hash/kmac128-file.html',      tag:'Hash'},
+  {name:'KMAC256',       url:'hash/kmac256.html',           tag:'Hash'},
+  {name:'KMAC256 File',  url:'hash/kmac256-file.html',      tag:'Hash'},
+  {name:'RIPEMD-128',    url:'hash/ripemd-128.html',        tag:'Hash'},
+  {name:'RIPEMD-128 File',url:'hash/ripemd-128-file.html',  tag:'Hash'},
+  {name:'RIPEMD-160',    url:'hash/ripemd-160.html',        tag:'Hash'},
+  {name:'RIPEMD-160 File',url:'hash/ripemd-160-file.html',  tag:'Hash'},
+  {name:'RIPEMD-256',    url:'hash/ripemd-256.html',        tag:'Hash'},
+  {name:'RIPEMD-256 File',url:'hash/ripemd-256-file.html',  tag:'Hash'},
+  {name:'RIPEMD-320',    url:'hash/ripemd-320.html',        tag:'Hash'},
+  {name:'RIPEMD-320 File',url:'hash/ripemd-320-file.html',  tag:'Hash'},
+  {name:'BLAKE2b',       url:'hash/blake2b.html',           tag:'Hash'},
+  {name:'BLAKE2b File',  url:'hash/blake2b-file.html',      tag:'Hash'},
+  {name:'BLAKE2s',       url:'hash/blake2s.html',           tag:'Hash'},
+  {name:'BLAKE2s File',  url:'hash/blake2s-file.html',      tag:'Hash'}
+];
+
+function doSearch() {
+  var q = (document.getElementById('hero-search').value || '').trim().toLowerCase();
+  if (!q) return;
+  filterTools(q);
+  document.querySelector('.home-content').scrollIntoView({behavior:'smooth'});
+}
+
+document.getElementById('hero-search').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') doSearch();
+});
+
+function filterTools(q) {
+  if (!q) {
+    document.querySelectorAll('.group-card-links a').forEach(function(a){ a.style.display=''; });
+    document.querySelectorAll('.home-section').forEach(function(s){ s.style.display=''; });
+    document.getElementById('popular-grid').style.display='';
+    document.getElementById('no-results').style.display='none';
+    return;
+  }
+  var matched = 0;
+  document.querySelectorAll('.group-card-links a').forEach(function(a) {
+    var show = a.textContent.toLowerCase().indexOf(q) !== -1;
+    a.style.display = show ? '' : 'none';
+    if (show) matched++;
+  });
+  document.getElementById('no-results').style.display = matched === 0 ? 'block' : 'none';
+}
+
+/* Sidebar search */
+document.querySelector('#sidebar .container').addEventListener('input', function(e) {
+  if (e.target.id !== 'tool-search') return;
+  var q = e.target.value.toLowerCase();
+  document.querySelectorAll('#sidebar li').forEach(function(li) {
+    li.style.display = q && li.textContent.toLowerCase().indexOf(q) === -1 ? 'none' : '';
+  });
+});
+</script>
+
+<script>window.NAV_BASE = 'hash/'; window.NAV_HOME = 'index.html';</script>
+<script src="js/nav.js"></script>
+<script src="js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/googleads.js" defer></script>
+</body>
+</html>

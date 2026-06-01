@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cSHAKE128 Hash Generator Online | YoSin Tools</title>
+<meta name="description" content="Generate cSHAKE128 hash online. Customizable SHAKE128 XOF. NIST SP 800-185. Set function name, customization string, and output length. Free, browser-based.">
+<meta name="keywords" content="cSHAKE128 hash, cSHAKE128 generator, cSHAKE128 online, NIST SP 800-185, customizable SHAKE">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/cshake128.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="cSHAKE128 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate cSHAKE128 hashes with custom function name and customization string. NIST SP 800-185. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/cshake128.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is cSHAKE128?","acceptedAnswer":{"@type":"Answer","text":"cSHAKE128 (Customizable SHAKE) is a variant of SHAKE128 standardized in NIST SP 800-185. It accepts two additional parameters: a function name (N) for NIST-reserved functions, and a customization string (S) for domain separation. When both N and S are empty, cSHAKE128 behaves identically to SHAKE128."}},
+{"@type":"Question","name":"What is the purpose of the customization string in cSHAKE128?","acceptedAnswer":{"@type":"Answer","text":"The customization string (S) provides domain separation between different uses of the same cSHAKE128 invocation. For example, a protocol might use S='signing' for signature-related hashing and S='encryption' for key derivation, ensuring the two uses produce unrelated outputs even for the same input."}},
+{"@type":"Question","name":"What is the function name parameter (N) in cSHAKE128?","acceptedAnswer":{"@type":"Answer","text":"N is reserved for NIST-approved functions. KMAC, for example, sets N='KMAC'. For general application use, N should be left empty (empty string)."}},
+{"@type":"Question","name":"cSHAKE128 vs SHAKE128 — when should I use cSHAKE?","acceptedAnswer":{"@type":"Answer","text":"Use cSHAKE128 when you need domain separation — when you want the same underlying function to produce different, independent outputs for different purposes. Use SHAKE128 when domain separation is not needed."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"cSHAKE128","item":"https://singhyogendra.com.np/hash/cshake128.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>cSHAKE128</span>
+      </nav>
+      <h1>cSHAKE128 Hash Generator</h1>
+      <p>Generate cSHAKE128 (Customizable SHAKE128) hashes online. NIST SP 800-185 standard. Set function name (N), customization string (S), and output length. When N and S are empty, behaves as SHAKE128.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="output-bits">Output Bits</label>
+                <input type="number" id="output-bits" value="256" min="8" max="65536" step="8" data-remember="output-bits" data-share="output_bits" data-auto-update>
+              </div>
+              <div class="setting">
+                <label for="function-name">Function Name (N)</label>
+                <input type="text" id="function-name" placeholder="Leave empty for general use" data-remember="function-name" data-share="function_name" data-auto-update>
+              </div>
+              <div class="setting">
+                <label for="customization">Customization (S)</label>
+                <input type="text" id="customization" placeholder="Optional domain separation string" data-remember="customization" data-share="customization" data-auto-update>
+              </div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="cshake128-file.html"><span class="tc-name">cSHAKE128 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="cshake256.html"><span class="tc-name">cSHAKE256</span><span class="tc-desc">256-bit security cSHAKE</span></a>
+          <a class="tool-card" href="shake128.html"><span class="tc-name">SHAKE128</span><span class="tc-desc">Basic SHAKE128 XOF</span></a>
+          <a class="tool-card" href="kmac128.html"><span class="tc-name">KMAC128</span><span class="tc-desc">Keyed MAC from cSHAKE128</span></a>
+          <a class="tool-card" href="sha3-256.html"><span class="tc-name">SHA3-256</span><span class="tc-desc">Fixed SHA3-256</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is cSHAKE128?</summary>
+            <div class="faq-body">cSHAKE128 is a customizable variant of SHAKE128 from NIST SP 800-185. It takes two extra parameters: N (function name) and S (customization string). These enable domain separation, so the same function produces different outputs for different application contexts.</div>
+          </details>
+          <details class="faq-item"><summary>When should I use the customization string (S)?</summary>
+            <div class="faq-body">Use S to separate different uses of cSHAKE128 within a protocol. For example, set S='key_derivation' in one context and S='message_authentication' in another to ensure the two invocations produce independent outputs even for the same input.</div>
+          </details>
+          <details class="faq-item"><summary>What should I set for the function name (N)?</summary>
+            <div class="faq-body">N is reserved for NIST-approved derived functions (e.g., KMAC sets N='KMAC'). For your own applications, leave N empty and only use S for customization.</div>
+          </details>
+          <details class="faq-item"><summary>cSHAKE128 vs KMAC128?</summary>
+            <div class="faq-body">KMAC128 is built on cSHAKE128 and is designed specifically for keyed hashing (MAC). It uses N='KMAC' and encodes the key length. If you need a keyed hash, use KMAC128. For unkeyed customized hashing, use cSHAKE128 directly.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About cSHAKE128 Hash Generator</h2>
+        <p>cSHAKE128 (Customizable SHAKE-128) is an extendable output function standardized in NIST SP 800-185 (2017). It extends SHAKE128 with two additional inputs: a function name N and a customization string S. These inputs are encoded into the initial padding of the sponge function, creating domain separation between different invocations of the same underlying algorithm.</p>
+        <h3>Domain Separation</h3>
+        <p>The primary purpose of cSHAKE128 over plain SHAKE128 is domain separation. When a protocol uses a hash function for multiple purposes (key derivation, authentication, encryption key generation), using the same hash function without domain separation can lead to related outputs that weaken security. cSHAKE128 prevents this by incorporating N and S into the sponge initialization, ensuring that cSHAKE128(msg, L, "signing", "") and cSHAKE128(msg, L, "encryption", "") produce cryptographically independent outputs.</p>
+        <h3>Relationship to SHAKE128</h3>
+        <p>When both N and S are empty strings, cSHAKE128 is identical to SHAKE128. The customization is only applied when at least one is non-empty. This backward compatibility ensures that systems can transition to cSHAKE128 while maintaining compatibility with SHAKE128 for default use cases.</p>
+        <h3>KMAC128 and Other SP 800-185 Functions</h3>
+        <p>KMAC128 (Keccak Message Authentication Code) is built directly on cSHAKE128 by setting N='KMAC' and encoding the key and its length. ParallelHash and TupleHash are also defined in SP 800-185 using cSHAKE as a building block.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>cSHAKE / KMAC</h4><ul>
+          <li><a href="cshake128.html">cSHAKE128</a></li>
+          <li><a href="cshake256.html">cSHAKE256</a></li>
+          <li><a href="kmac128.html">KMAC128</a></li>
+          <li><a href="kmac256.html">KMAC256</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>SHAKE / SHA3</h4><ul>
+          <li><a href="shake128.html">SHAKE128</a></li>
+          <li><a href="shake256.html">SHAKE256</a></li>
+          <li><a href="sha3-256.html">SHA3-256</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>
+++waitLoadCount;
+delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js',onload:function(){
+  window.method=function(msg){
+    var bits=parseInt(document.getElementById('output-bits').value)||256;
+    var N=document.getElementById('function-name').value||'';
+    var S=document.getElementById('customization').value||'';
+    return cshake128(msg,bits,N,S);
+  };
+  methodLoad();
+}});
+</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

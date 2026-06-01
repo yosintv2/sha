@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLAKE2b Hash Generator Online — Free BLAKE2b Calculator | YoSin Tools</title>
+<meta name="description" content="Generate BLAKE2b hash online. 512-bit output. Faster than MD5 and SHA-256. Used in Zcash, WireGuard, libsodium. Supports UTF-8, Hex, Base64 input. Free, browser-based.">
+<meta name="keywords" content="BLAKE2b hash, BLAKE2b generator, BLAKE2b online, BLAKE2 hash, BLAKE2b calculator, Zcash hash, libsodium hash">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/blake2b.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BLAKE2b Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate BLAKE2b hashes online. 512-bit, faster than MD5 and SHA-256. Used in Zcash and WireGuard. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/blake2b.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is BLAKE2b?","acceptedAnswer":{"@type":"Answer","text":"BLAKE2b is a cryptographic hash function optimized for 64-bit platforms. It produces a 512-bit (128 hex character) digest by default and is significantly faster than MD5, SHA-1, SHA-256, and SHA-512 on 64-bit hardware. It was designed by Jean-Philippe Aumasson, Samuel Neves, Zooko Wilcox-O'Hearn, and Christian Winnerlein, published in 2012 as RFC 7693."}},
+{"@type":"Question","name":"How fast is BLAKE2b compared to SHA-256?","acceptedAnswer":{"@type":"Answer","text":"BLAKE2b is approximately 3× faster than SHA-256 on 64-bit hardware. It can hash data at 1–3 GB/s on modern CPUs compared to SHA-256's ~400 MB/s (without SHA-NI acceleration). This makes BLAKE2b ideal for checksumming large files and high-throughput applications."}},
+{"@type":"Question","name":"What is BLAKE2b used for?","acceptedAnswer":{"@type":"Answer","text":"BLAKE2b is used in: Zcash (zk-SNARK proving system), WireGuard (VPN protocol), Argon2 password hashing (winner of the Password Hashing Competition), libsodium's generic hashing, Git's SHA-256 migration, and various blockchain projects. It is also used in password hashing via Argon2."}},
+{"@type":"Question","name":"Does BLAKE2b support a key (keyed hashing)?","acceptedAnswer":{"@type":"Answer","text":"Yes. BLAKE2b natively supports keyed hashing without needing HMAC. The key (0–64 bytes) is incorporated into the initialization vector of the sponge, making it a MAC as well as a hash function. The keyed hashing feature will be available in an upcoming update to this tool."}},
+{"@type":"Question","name":"BLAKE2b vs BLAKE2s — which should I use?","acceptedAnswer":{"@type":"Answer","text":"Use BLAKE2b on 64-bit platforms (servers, desktops, modern mobile). BLAKE2b operates on 64-bit words and is faster on 64-bit hardware. Use BLAKE2s on 8–32 bit platforms (microcontrollers, embedded systems) — it operates on 32-bit words and produces a smaller 256-bit output."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"BLAKE2b","item":"https://singhyogendra.com.np/hash/blake2b.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>BLAKE2b</span>
+      </nav>
+      <h1>BLAKE2b Hash Generator</h1>
+      <p>Generate BLAKE2b hashes online. 512-bit output. Faster than MD5, SHA-1, and SHA-256 on 64-bit systems. Used in Zcash, WireGuard, and Argon2. Supports UTF-8, Hex, and Base64 input encodings.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <p style="font-size:11px;color:var(--muted);margin:10px 0 0;line-height:1.5">BLAKE2b natively supports keyed hashing. Keyed BLAKE2b (MAC mode) will be added in a future update.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="blake2b-file.html"><span class="tc-name">BLAKE2b File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="blake2s.html"><span class="tc-name">BLAKE2s</span><span class="tc-desc">256-bit, 32-bit opt.</span></a>
+          <a class="tool-card" href="sha3-512.html"><span class="tc-name">SHA3-512</span><span class="tc-desc">512-bit SHA-3</span></a>
+          <a class="tool-card" href="sha512.html"><span class="tc-name">SHA-512</span><span class="tc-desc">512-bit SHA-2</span></a>
+          <a class="tool-card" href="ripemd-160.html"><span class="tc-name">RIPEMD-160</span><span class="tc-desc">160-bit RIPEMD</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is BLAKE2b?</summary>
+            <div class="faq-body">BLAKE2b is a cryptographic hash function designed for 64-bit systems. It is based on BLAKE (a SHA-3 finalist) and was designed specifically to be faster than MD5, SHA-1, SHA-2, and SHA-3 while maintaining strong security. It produces outputs of 1–64 bytes (default 64 bytes / 512 bits). Published as RFC 7693 in 2015.</div>
+          </details>
+          <details class="faq-item"><summary>Is BLAKE2b secure?</summary>
+            <div class="faq-body">Yes. BLAKE2b has no known weaknesses. It provides 256-bit collision resistance for its full 512-bit output. Its security is based on the HAIFA construction with a 12-round version of the ChaCha stream cipher's quarter-round function (G). It has undergone extensive cryptanalysis without any meaningful weaknesses being found.</div>
+          </details>
+          <details class="faq-item"><summary>Where is BLAKE2b used?</summary>
+            <div class="faq-body">BLAKE2b is used in: Zcash (hashing in zk-SNARK computations), WireGuard VPN (key derivation), Argon2 password hashing (as the internal compression function), libsodium's <code>crypto_generichash</code>, the I2P network, and several blockchain projects. Python's hashlib includes BLAKE2b since version 3.6.</div>
+          </details>
+          <details class="faq-item"><summary>BLAKE2b vs SHA-512 — which is better?</summary>
+            <div class="faq-body">BLAKE2b is faster than SHA-512 on 64-bit hardware (no dedicated instructions needed) and provides comparable security. SHA-512 is more widely supported by legacy systems and hardware security modules (HSMs). For new software implementations, BLAKE2b is often preferred for its speed advantage.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About BLAKE2b Hash Generator</h2>
+        <p>BLAKE2b is a cryptographic hash function designed by Jean-Philippe Aumasson, Samuel Neves, Zooko Wilcox-O'Hearn, and Christian Winnerlein, published in 2012 and standardized as RFC 7693 (2015). It is based on BLAKE, a finalist in the NIST SHA-3 competition, and was optimized specifically for software performance on 64-bit platforms while maintaining a security margin comparable to SHA-3.</p>
+        <h3>Performance Characteristics</h3>
+        <p>BLAKE2b can process data at approximately 1 GB/s on a modern 64-bit CPU without any hardware acceleration. In comparison, SHA-256 (without SHA-NI) processes at ~400 MB/s and SHA-512 at ~600 MB/s. BLAKE2b achieves this through careful design: it uses 12 rounds of the BLAKE G mixing function applied to 64-bit words, minimizing memory accesses and branch instructions.</p>
+        <h3>BLAKE2b in Zcash and Blockchain</h3>
+        <p>Zcash uses BLAKE2b extensively in its zk-SNARK proving system (Groth16 and PLONK), block header hashing (Equihash), and address derivation. The Equihash proof-of-work algorithm specifically uses BLAKE2b because of its speed — miners need to evaluate millions of hashes per second, and BLAKE2b's performance advantage directly translates to energy savings.</p>
+        <h3>BLAKE2b in WireGuard VPN</h3>
+        <p>WireGuard, the modern VPN protocol, uses BLAKE2s (the 32-bit variant) for its key derivation and MAC operations. The protocol was designed to use only modern, well-analyzed primitives — BLAKE2 was chosen over HMAC-SHA2 for its speed and simpler key schedule.</p>
+        <h3>BLAKE2b as a Password Hashing Helper</h3>
+        <p>Argon2, the winner of the 2015 Password Hashing Competition, uses BLAKE2b as its internal compression function. When you hash passwords with Argon2 in any modern system (Linux PAM, PHP, Python, Rust), BLAKE2b is doing the underlying work. Argon2 is now the recommended password hashing algorithm, replacing bcrypt and scrypt in new applications.</p>
+        <h3>Keyed BLAKE2b</h3>
+        <p>Unlike HMAC, which applies a two-pass construction around a hash function, BLAKE2b natively supports keyed hashing by incorporating the key into the initialization vector. This eliminates the overhead of HMAC's double-hashing while providing equivalent security as a MAC. BLAKE2b(key, message) is a true MAC with 256-bit security.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>BLAKE</h4><ul><li><a href="blake2b.html">BLAKE2b</a></li><li><a href="blake2s.html">BLAKE2s</a></li><li><a href="blake2b-file.html">BLAKE2b File</a></li><li><a href="blake2s-file.html">BLAKE2s File</a></li></ul></div>
+        <div class="footer-col"><h4>Hash Tools</h4><ul><li><a href="sha256.html">SHA-256</a></li><li><a href="sha512.html">SHA-512</a></li><li><a href="sha3-256.html">SHA3-256</a></li><li><a href="ripemd-160.html">RIPEMD-160</a></li></ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2025 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>
+++waitLoadCount;
+delayScripts.push({src:'../js/blake2.js',onload:function(){
+  window.method=function(msg){return blakejs.blake2bHex(msg,null,64);};
+  methodLoad();
+}});
+</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

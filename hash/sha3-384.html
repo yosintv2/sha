@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHA3-384 Hash Generator Online — Free SHA3-384 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate SHA3-384 hash online. 384-bit NIST SHA-3 standard (FIPS 202). Supports HMAC-SHA3-384. Fast, free, browser-based SHA3-384 calculator.">
+<meta name="keywords" content="SHA3-384 hash, SHA3-384 generator, SHA3-384 online, SHA3-384 calculator, HMAC-SHA3-384, SHA-3 384">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/sha3-384.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SHA3-384 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate SHA3-384 hashes instantly. NIST FIPS 202 standard. Supports HMAC-SHA3-384. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/sha3-384.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is SHA3-384?","acceptedAnswer":{"@type":"Answer","text":"SHA3-384 is a member of the SHA-3 family standardized in NIST FIPS 202 (2015). It produces a 384-bit (96 hex character) digest using the Keccak sponge construction with a 832-bit rate and 768-bit capacity."}},
+{"@type":"Question","name":"How long is a SHA3-384 hash?","acceptedAnswer":{"@type":"Answer","text":"SHA3-384 produces a 384-bit digest, displayed as a 96-character hexadecimal string or 64 Base64 characters."}},
+{"@type":"Question","name":"SHA3-384 vs SHA-384 — what is the difference?","acceptedAnswer":{"@type":"Answer","text":"SHA-384 is a truncated variant of SHA-512 using the Merkle-Damgård construction. SHA3-384 uses the completely different Keccak sponge construction. Both produce 384-bit outputs but are algorithmically unrelated."}},
+{"@type":"Question","name":"What is HMAC-SHA3-384?","acceptedAnswer":{"@type":"Answer","text":"HMAC-SHA3-384 is a keyed message authentication code using SHA3-384. It produces a 384-bit tag combining a secret key with the message, providing both integrity and authenticity."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"SHA3-384","item":"https://singhyogendra.com.np/hash/sha3-384.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>SHA3-384</span>
+      </nav>
+      <h1>SHA3-384 Hash Generator</h1>
+      <p>Generate SHA3-384 hashes online instantly. NIST FIPS 202 standard, Keccak sponge construction. 384-bit (96 hex character) output. Supports UTF-8, Hex, Base64 input and HMAC-SHA3-384.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="sha3-384-file.html"><span class="tc-name">SHA3-384 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="sha3-256.html"><span class="tc-name">SHA3-256</span><span class="tc-desc">256-bit SHA-3</span></a>
+          <a class="tool-card" href="sha3-512.html"><span class="tc-name">SHA3-512</span><span class="tc-desc">512-bit SHA-3</span></a>
+          <a class="tool-card" href="sha384.html"><span class="tc-name">SHA384</span><span class="tc-desc">384-bit SHA-2</span></a>
+          <a class="tool-card" href="shake256.html"><span class="tc-name">SHAKE256</span><span class="tc-desc">Variable output XOF</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is SHA3-384?</summary>
+            <div class="faq-body">SHA3-384 is the 384-bit SHA-3 variant from NIST FIPS 202 (2015). It uses the Keccak sponge with a 832-bit rate and 768-bit capacity, producing a 96-character hexadecimal digest.</div>
+          </details>
+          <details class="faq-item"><summary>SHA3-384 vs SHA-384 — what is the difference?</summary>
+            <div class="faq-body">SHA-384 is a truncated SHA-512 using Merkle-Damgård construction. SHA3-384 uses the Keccak sponge and is immune to length-extension attacks. Both output 384 bits but are completely different algorithms.</div>
+          </details>
+          <details class="faq-item"><summary>When should I use SHA3-384?</summary>
+            <div class="faq-body">Use SHA3-384 when you need 384-bit security with FIPS 202 compliance. It is appropriate for digital signatures, TLS handshake hashing at high security levels, and certificate authorities requiring SHA-3.</div>
+          </details>
+          <details class="faq-item"><summary>Is SHA3-384 affected by length-extension attacks?</summary>
+            <div class="faq-body">No. The Keccak sponge construction absorbs more input bits than it outputs, so an attacker cannot extend the hash to include additional data without knowing the internal state.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About SHA3-384 Hash Generator</h2>
+        <p>SHA3-384 is the 384-bit member of the NIST SHA-3 family (FIPS 202, 2015). It uses the Keccak sponge construction with a 832-bit rate and 768-bit capacity. Input is absorbed in 104-byte blocks and 384 bits (48 bytes, 96 hex characters) are squeezed out as the digest.</p>
+        <h3>Keccak Sponge at 384-bit Security</h3>
+        <p>The 768-bit capacity of SHA3-384 provides a collision resistance of approximately 192 bits and preimage resistance of 384 bits. This exceeds the security requirements for most current applications and is suitable for long-term storage of sensitive data hashes.</p>
+        <h3>Comparison to SHA-384</h3>
+        <p>SHA-384 (from SHA-2) and SHA3-384 both produce 384-bit outputs but are algorithmically unrelated. SHA-384 uses the Merkle-Damgård construction (vulnerable to length-extension attacks) while SHA3-384 uses the sponge construction (immune). For new applications, SHA3-384 is recommended when SHA-3 compliance is required.</p>
+        <h3>Applications</h3>
+        <p>SHA3-384 is used in high-assurance government and military cryptography, FIPS 202-compliant digital signature schemes, and applications requiring a larger security margin than SHA3-256 provides. It is also suitable for certificate fingerprints and key derivation in high-security systems.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>SHA3 Tools</h4><ul>
+          <li><a href="sha3-224.html">SHA3-224</a></li>
+          <li><a href="sha3-256.html">SHA3-256</a></li>
+          <li><a href="sha3-384.html">SHA3-384</a></li>
+          <li><a href="sha3-512.html">SHA3-512</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Keccak/SHAKE</h4><ul>
+          <li><a href="keccak-256.html">Keccak-256</a></li>
+          <li><a href="shake128.html">SHAKE128</a></li>
+          <li><a href="shake256.html">SHAKE256</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js',onload:function(){window.method=sha3_384;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

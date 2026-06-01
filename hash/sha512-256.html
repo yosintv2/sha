@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHA512/256 Hash Generator Online — SHA-512/256 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate SHA512/256 hash online. SHA-512/256 uses the fast 64-bit SHA-512 core with a 256-bit output — faster than SHA-256 on 64-bit hardware. Browser-based, no upload.">
+<meta name="keywords" content="SHA512/256 hash, SHA-512/256 generator, SHA512 256 online, SHA-512/256 calculator, fast SHA-256 alternative">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/sha512-256.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SHA512/256 Hash Generator | YoSin Tools">
+<meta property="og:description" content="Compute SHA-512/256 — the fast SHA-512 core with 256-bit output. Better than SHA-256 on 64-bit servers. Free, browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/sha512-256.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is SHA-512/256?","acceptedAnswer":{"@type":"Answer","text":"SHA-512/256 is a variant of SHA-512 defined in FIPS 180-4. It uses the 64-bit SHA-512 core with different initialization values and truncates the output to 256 bits (64 hex characters). On 64-bit hardware it is typically faster than SHA-256 while producing the same output length."}},
+{"@type":"Question","name":"SHA-512/256 vs SHA-256 — which is faster?","acceptedAnswer":{"@type":"Answer","text":"On 64-bit CPUs, SHA-512/256 is typically 30–50% faster than SHA-256 because it uses native 64-bit operations. On 32-bit systems, SHA-256 is faster. Both produce 256-bit digests but different values for the same input."}},
+{"@type":"Question","name":"Is SHA-512/256 the same as SHA-256?","acceptedAnswer":{"@type":"Answer","text":"No. Both produce 256-bit outputs, but SHA-512/256 uses the SHA-512 computation engine with different initialization constants. They are independent algorithms that produce different digests for the same input."}},
+{"@type":"Question","name":"Where is SHA-512/256 used?","acceptedAnswer":{"@type":"Answer","text":"SHA-512/256 is used in AWS Signature Version 4 (as an alternative to SHA-256 for some services), some database systems, and high-throughput server-side hashing where 64-bit performance is critical. It is supported in OpenSSL, Java 9+, and Python's hashlib."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"SHA512/256","item":"https://singhyogendra.com.np/hash/sha512-256.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+      <div class="section">
+        <h3>Hash</h3>
+        <details><summary>CRC</summary><nav><ol><li><a href="crc.html">CRC</a></li></ol></nav></details>
+        <details><summary>MD</summary><nav><ol>
+          <li><a href="md2.html">MD2</a></li><li><a href="md2-file.html">MD2 File</a></li>
+          <li><a href="md4.html">MD4</a></li><li><a href="md4-file.html">MD4 File</a></li>
+          <li><a href="md5.html">MD5</a></li><li><a href="md5-file.html">MD5 File</a></li>
+        </ol></nav></details>
+        <details><summary>SHA1</summary><nav><ol>
+          <li><a href="sha1.html">SHA1</a></li><li><a href="sha1-file.html">SHA1 File</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2</summary><nav><ol>
+          <li><a href="sha224.html">SHA224</a></li><li><a href="sha224-file.html">SHA224 File</a></li>
+          <li><a href="sha256.html">SHA256</a></li><li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ol></nav></details>
+        <details class="active" open><summary>SHA2-512</summary><nav><ol>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha384-file.html">SHA384 File</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-224-file.html">SHA512/224 File</a></li>
+          <li class="active"><a href="sha512-256.html">SHA512/256</a></li><li><a href="sha512-256-file.html">SHA512/256 File</a></li>
+        </ol></nav></details>
+      </div>
+      <div class="section"><h3>Links</h3><nav class="links"><ol><li><a href="../index.html">Home</a></li></ol></nav></div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>SHA512/256</span></nav>
+      <h1>SHA512/256 Hash Generator</h1>
+      <p>Compute SHA-512/256 hashes online. Uses the fast 64-bit SHA-512 core with a 256-bit output — typically 30–50% faster than SHA-256 on 64-bit hardware. Supports all input encodings and HMAC.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input"><div class="block block-fill">
+            <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+            <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+          </div></div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+        <div class="settings"><div class="block block-fill">
+          <div class="block-title">Settings</div>
+          <div class="container">
+            <div class="setting"><a class="btn" id="execute">Hash</a></div>
+            <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+            <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+            <div class="setting">
+              <label for="input-type">Input Encoding</label>
+              <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+              </select>
+            </div>
+            <div class="setting">
+              <label for="output-type">Output Encoding</label>
+              <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+              </select>
+            </div>
+            <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+            <details class="setting-group" id="hmac" style="display:none" open>
+              <summary>HMAC</summary>
+              <div class="setting">
+                <label for="hmac-input-type">Encoding</label>
+                <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                </select>
+              </div>
+              <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+            </details>
+            <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+          </div>
+        </div></div>
+      </div>
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="sha512-224.html"><span class="tc-name">SHA512/224</span><span class="tc-desc">224-bit variant</span></a>
+          <a class="tool-card" href="sha512.html"><span class="tc-name">SHA512</span><span class="tc-desc">Full 512-bit</span></a>
+          <a class="tool-card" href="sha256.html"><span class="tc-name">SHA256</span><span class="tc-desc">SHA-256 core</span></a>
+          <a class="tool-card" href="sha512-256-file.html"><span class="tc-name">SHA512/256 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="sha384.html"><span class="tc-name">SHA384</span><span class="tc-desc">384-bit SHA-2</span></a>
+        </div>
+      </section>
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is SHA-512/256?</summary>
+            <div class="faq-body">SHA-512/256 uses the SHA-512 computation engine with different initialization constants and truncates the output to 256 bits (64 hex characters). Defined in FIPS 180-4, it is independent of SHA-256 — same output length, different algorithm, different digests for the same input.</div>
+          </details>
+          <details class="faq-item"><summary>Is SHA-512/256 faster than SHA-256?</summary>
+            <div class="faq-body">On 64-bit CPUs, yes — typically 30–50% faster. 64-bit processors execute SHA-512's 64-bit word operations natively. SHA-256 uses 32-bit words, requiring more operations per byte on 64-bit hardware. On 32-bit systems the advantage reverses.</div>
+          </details>
+          <details class="faq-item"><summary>SHA-512/256 vs SHA-256 — same output length, different values?</summary>
+            <div class="faq-body">Correct. Both produce 64-character hex strings (256 bits), but they are different algorithms. SHA-512/256 uses a different IV and the SHA-512 core. SHA-256 uses its own IV and core. For the same input, SHA-512/256 and SHA-256 will produce completely different digests.</div>
+          </details>
+          <details class="faq-item"><summary>Which systems support SHA-512/256?</summary>
+            <div class="faq-body">OpenSSL supports it via <code>EVP_sha512_256()</code> and <code>openssl dgst -sha512-256</code>. Java 9+ supports it as <code>SHA-512/256</code>. Python's hashlib supports it as <code>hashlib.new('sha512_256')</code>. PostgreSQL uses it internally for some operations. TLS and most web protocols use SHA-256 instead.</div>
+          </details>
+        </div>
+      </section>
+      <div class="seo-content">
+        <h2>About SHA512/256 Hash Generator</h2>
+        <p>SHA-512/256 is a truncated variant of SHA-512, defined in FIPS 180-4 alongside SHA-512/224. It computes the SHA-512 algorithm with a unique initialization vector derived from the string "SHA-512/256" using the IV generation function, then truncates the 512-bit output to 256 bits. The result is a 256-bit (64 hex character) digest that is independent of both SHA-256 and SHA-512 outputs.</p>
+        <h3>Performance on 64-bit Hardware</h3>
+        <p>The primary advantage of SHA-512/256 over SHA-256 is throughput on 64-bit hardware. Modern processors natively execute 64-bit arithmetic in single operations. SHA-512 uses eight 64-bit state variables processed in 80 rounds, while SHA-256 uses eight 32-bit variables in 64 rounds. On a typical x86-64 server, SHA-512/256 hashes data at approximately 1.3–1.7× the speed of SHA-256, while producing the same 256-bit output length.</p>
+        <h3>Security Properties</h3>
+        <p>SHA-512/256 provides 256 bits of preimage resistance and 128 bits of collision resistance — identical to SHA-256. No practical attacks against SHA-512/256 are known. The different initialization vector compared to SHA-512 means that SHA-512/256 is a domain-separated hash: even if a weakness were found in SHA-512, it would not automatically apply to SHA-512/256, and vice versa. This property makes it slightly more conservative than simple SHA-512 truncation.</p>
+        <h3>Practical Adoption</h3>
+        <p>Despite its performance advantages, SHA-512/256 has limited adoption in standard protocols. TLS, JWT, S/MIME, and most software package formats specify SHA-256 or SHA-512. SHA-512/256 is used internally by some database systems and is supported by cryptographic libraries. If you are choosing a hash function for a new system and need 256-bit output with maximum throughput on 64-bit servers, SHA-512/256 is worth considering. Otherwise SHA-256 offers better library and protocol compatibility.</p>
+        <h3>Difference from SHA-512 Truncation</h3>
+        <p>A naive approach to getting 256 bits from SHA-512 would be to take the first 32 bytes of a SHA-512 digest. SHA-512/256 is better: it uses a different IV, ensuring that the output is not recoverable from SHA-512 output and that the two algorithms are computationally independent. This domain separation is a deliberate security property specified in FIPS 180-4.</p>
+      </div>
+    </main>
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>SHA2-512 Tools</h4><ul>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha512.html">SHA512</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-256.html">SHA512/256</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>File Hash</h4><ul>
+          <li><a href="sha512-256-file.html">SHA512/256 File</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha256-file.html">SHA256 File</a></li><li><a href="md5-file.html">MD5 File</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha512/0.9.0/sha512.min.js',onload:function(){window.method=sha512_256;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIPEMD-160 Hash Generator Online — Free RIPEMD160 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate RIPEMD-160 hash online instantly. 160-bit hash used in Bitcoin address generation. Supports HMAC-RIPEMD160, UTF-8, Hex, Base64 input. Free, browser-based.">
+<meta name="keywords" content="RIPEMD-160 hash, RIPEMD160 generator, RIPEMD160 online, Bitcoin hash, RIPEMD calculator, HMAC-RIPEMD160">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/ripemd-160.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RIPEMD-160 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate RIPEMD-160 hashes online. Used in Bitcoin address generation. Supports HMAC. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/ripemd-160.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is RIPEMD-160?","acceptedAnswer":{"@type":"Answer","text":"RIPEMD-160 (RACE Integrity Primitives Evaluation Message Digest, 160-bit) is a cryptographic hash function developed in Europe in 1996 as part of the RIPE project. It produces a 160-bit (40 hex character) digest. It is widely known for its use in Bitcoin address generation, where SHA-256 output is hashed with RIPEMD-160 to produce a 20-byte public key hash."}},
+{"@type":"Question","name":"Why does Bitcoin use RIPEMD-160?","acceptedAnswer":{"@type":"Answer","text":"Bitcoin uses SHA-256 followed by RIPEMD-160 (HASH160) to derive the 20-byte public key hash used in P2PKH addresses. The combination was chosen for its security (using two independent hash algorithms) and to produce a compact 160-bit output suitable for Bitcoin's 25-byte address format."}},
+{"@type":"Question","name":"Is RIPEMD-160 secure?","acceptedAnswer":{"@type":"Answer","text":"RIPEMD-160 is considered secure as of 2025 — no practical collision attacks are known, unlike its shorter relative RIPEMD-128. It provides 80-bit collision resistance and is still used in Bitcoin and PGP fingerprints. However, for new applications, SHA-256 or SHA-3 is recommended."}},
+{"@type":"Question","name":"What is the difference between RIPEMD-128 and RIPEMD-160?","acceptedAnswer":{"@type":"Answer","text":"RIPEMD-128 produces a 128-bit digest and is no longer recommended — weaknesses have been found. RIPEMD-160 produces a larger 160-bit digest with stronger security guarantees. RIPEMD-256 and RIPEMD-320 are extended versions offering larger outputs."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"RIPEMD-160","item":"https://singhyogendra.com.np/hash/ripemd-160.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>RIPEMD-160</span>
+      </nav>
+      <h1>RIPEMD-160 Hash Generator</h1>
+      <p>Calculate RIPEMD-160 hashes online. Used in Bitcoin address generation (SHA-256 → RIPEMD-160 = HASH160). Supports HMAC-RIPEMD160, UTF-8, Hex, and Base64 input encodings.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="ripemd-160-file.html"><span class="tc-name">RIPEMD-160 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="ripemd-256.html"><span class="tc-name">RIPEMD-256</span><span class="tc-desc">256-bit RIPEMD</span></a>
+          <a class="tool-card" href="ripemd-128.html"><span class="tc-name">RIPEMD-128</span><span class="tc-desc">128-bit RIPEMD</span></a>
+          <a class="tool-card" href="sha256.html"><span class="tc-name">SHA-256</span><span class="tc-desc">Bitcoin's first hash</span></a>
+          <a class="tool-card" href="md5.html"><span class="tc-name">MD5</span><span class="tc-desc">128-bit hash</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is RIPEMD-160?</summary>
+            <div class="faq-body">RIPEMD-160 is a 160-bit cryptographic hash function designed in 1996 by Hans Dobbertin, Antoon Bosselaers, and Bart Preneel at KU Leuven (Belgium). It processes input in 512-bit blocks through two parallel lines of processing, each with five rounds of 16 operations. The two processing lines produce separate 160-bit digests that are combined into the final output.</div>
+          </details>
+          <details class="faq-item"><summary>How is RIPEMD-160 used in Bitcoin?</summary>
+            <div class="faq-body">In Bitcoin, P2PKH (pay-to-public-key-hash) addresses are derived by: (1) taking a public key, (2) hashing it with SHA-256, (3) hashing the result with RIPEMD-160. This "HASH160" produces a compact 20-byte identifier. The final Bitcoin address then adds a version byte, applies double-SHA256 for the checksum, and Base58Check-encodes the result.</div>
+          </details>
+          <details class="faq-item"><summary>Is RIPEMD-160 vulnerable?</summary>
+            <div class="faq-body">No practical collision attacks against RIPEMD-160 are known as of 2025. Unlike its shorter sibling RIPEMD-128 (which has reduced-round weaknesses), RIPEMD-160's 160-bit output and dual-pipeline design have withstood extensive cryptanalysis. It is not recommended for new designs but remains secure for Bitcoin's existing use.</div>
+          </details>
+          <details class="faq-item"><summary>RIPEMD-160 vs SHA-1 — both are 160 bits?</summary>
+            <div class="faq-body">Both produce 160-bit outputs, but SHA-1 is broken (practical collision attacks since 2017). RIPEMD-160 remains collision-resistant. For new applications requiring a 160-bit hash, RIPEMD-160 is safer than SHA-1, though SHA-256 or SHA-3 are both better modern choices.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About RIPEMD-160 Hash Generator</h2>
+        <p>RIPEMD-160 (RACE Integrity Primitives Evaluation Message Digest, 160-bit) was published in 1996 by a team at KU Leuven as a strengthened replacement for RIPEMD-128 and a European alternative to SHA-1. It processes input in 512-bit blocks through two parallel pipelines of five rounds each, producing a 160-bit (20-byte) digest shown as a 40-character hexadecimal string.</p>
+        <h3>RIPEMD-160 in Bitcoin Address Generation</h3>
+        <p>RIPEMD-160 plays a critical role in Bitcoin's security model. Every P2PKH (Legacy) and P2WPKH (SegWit) Bitcoin address derives from HASH160 = RIPEMD160(SHA256(publicKey)). The 20-byte RIPEMD-160 output serves as the "public key hash" that appears in transaction scripts. By using two independent hash functions, Bitcoin address derivation is resistant to vulnerabilities in either algorithm individually.</p>
+        <h3>RIPEMD-160 in PGP and OpenPGP</h3>
+        <p>RIPEMD-160 was previously used in PGP for key fingerprinting and is listed in RFC 4880 (OpenPGP) as an optional algorithm. While SHA-256 is now preferred for new implementations, legacy PGP keys using RIPEMD-160 fingerprints are still widely used.</p>
+        <h3>RIPEMD vs SHA Family</h3>
+        <p>Unlike SHA-1 and SHA-2 (designed by the NSA), RIPEMD was designed by a European academic consortium, making it attractive for implementations seeking algorithm diversity. While no SHA backdoor has ever been demonstrated, using both SHA-256 and RIPEMD-160 together (as Bitcoin does) provides protection against vulnerabilities in either family.</p>
+        <h3>HMAC-RIPEMD-160</h3>
+        <p>HMAC-RIPEMD-160 can be used for message authentication with a shared secret key. Enable the HMAC option in Settings and enter your key. This is rarely seen in modern protocols but may be needed for legacy system compatibility.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>RIPEMD</h4><ul><li><a href="ripemd-128.html">RIPEMD-128</a></li><li><a href="ripemd-160.html">RIPEMD-160</a></li><li><a href="ripemd-256.html">RIPEMD-256</a></li><li><a href="ripemd-320.html">RIPEMD-320</a></li></ul></div>
+        <div class="footer-col"><h4>Hash Tools</h4><ul><li><a href="md5.html">MD5</a></li><li><a href="sha256.html">SHA256</a></li><li><a href="sha512.html">SHA512</a></li><li><a href="sha3-256.html">SHA3-256</a></li><li><a href="blake2b.html">BLAKE2b</a></li></ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2025 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'../js/crypto-api.js',onload:function(){window.method=ripemd160;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

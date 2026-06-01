@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHA3-512 Hash Generator Online — Free SHA3-512 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate SHA3-512 hash online. 512-bit NIST SHA-3 standard (FIPS 202). Most secure SHA-3 variant. Supports HMAC-SHA3-512. Free, browser-based.">
+<meta name="keywords" content="SHA3-512 hash, SHA3-512 generator, SHA3-512 online, SHA3-512 calculator, HMAC-SHA3-512, SHA-3 512">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/sha3-512.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SHA3-512 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate SHA3-512 hashes instantly. Largest SHA-3 variant, 512-bit FIPS 202 standard. Supports HMAC-SHA3-512. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/sha3-512.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is SHA3-512?","acceptedAnswer":{"@type":"Answer","text":"SHA3-512 is the largest member of the SHA-3 family, standardized in NIST FIPS 202 (2015). It produces a 512-bit (128 hex character) digest using the Keccak sponge construction with a 576-bit rate and 1024-bit capacity. It provides the highest security margin of all SHA-3 variants."}},
+{"@type":"Question","name":"How many characters is a SHA3-512 hash?","acceptedAnswer":{"@type":"Answer","text":"SHA3-512 produces a 512-bit (64-byte) digest displayed as a 128-character lowercase hexadecimal string. In Base64, the same digest is 88 characters."}},
+{"@type":"Question","name":"SHA3-512 vs SHA-512 — which is more secure?","acceptedAnswer":{"@type":"Answer","text":"Both provide 512-bit output and equivalent practical security. SHA3-512 uses the Keccak sponge and is immune to length-extension attacks. SHA-512 uses Merkle-Damgård and is vulnerable to length-extension. For applications requiring maximum SHA-3 security, use SHA3-512."}},
+{"@type":"Question","name":"What is the security level of SHA3-512?","acceptedAnswer":{"@type":"Answer","text":"SHA3-512 provides 256-bit collision resistance and 512-bit preimage resistance. Its 1024-bit capacity is the highest among standard SHA-3 variants, providing the strongest security margin."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"SHA3-512","item":"https://singhyogendra.com.np/hash/sha3-512.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>SHA3-512</span>
+      </nav>
+      <h1>SHA3-512 Hash Generator</h1>
+      <p>Generate SHA3-512 hashes online instantly. The largest and most secure SHA-3 variant, NIST FIPS 202 standard. 512-bit (128 hex character) output. Supports UTF-8, Hex, Base64 input and HMAC-SHA3-512.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="sha3-512-file.html"><span class="tc-name">SHA3-512 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="sha3-256.html"><span class="tc-name">SHA3-256</span><span class="tc-desc">256-bit SHA-3</span></a>
+          <a class="tool-card" href="sha3-384.html"><span class="tc-name">SHA3-384</span><span class="tc-desc">384-bit SHA-3</span></a>
+          <a class="tool-card" href="sha512.html"><span class="tc-name">SHA512</span><span class="tc-desc">512-bit SHA-2</span></a>
+          <a class="tool-card" href="blake2b.html"><span class="tc-name">BLAKE2b</span><span class="tc-desc">512-bit BLAKE2</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is SHA3-512?</summary>
+            <div class="faq-body">SHA3-512 is the 512-bit, most secure variant of SHA-3, standardized in NIST FIPS 202. It uses the Keccak sponge with a 576-bit rate and 1024-bit capacity, producing a 128-character hexadecimal digest.</div>
+          </details>
+          <details class="faq-item"><summary>SHA3-512 vs SHA-512 — which should I choose?</summary>
+            <div class="faq-body">Both produce 512-bit digests. SHA3-512 is immune to length-extension attacks while SHA-512 is not. SHA-512 is faster on most hardware. For new FIPS 202-compliant systems, SHA3-512 is preferred. For maximum compatibility with existing infrastructure, SHA-512 is more common.</div>
+          </details>
+          <details class="faq-item"><summary>Is SHA3-512 the most secure hash algorithm available?</summary>
+            <div class="faq-body">SHA3-512 provides 256-bit collision resistance, which is considered computationally infeasible to break with any known or foreseeable classical computing technology. For post-quantum concerns, SHAKE256 with large output lengths may be considered.</div>
+          </details>
+          <details class="faq-item"><summary>How does SHA3-512 compare to BLAKE2b?</summary>
+            <div class="faq-body">Both produce 512-bit output. BLAKE2b is significantly faster than SHA3-512 (often 3-4× faster). SHA3-512 has NIST standardization (FIPS 202). BLAKE2b is preferred for performance-critical applications; SHA3-512 for FIPS compliance.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About SHA3-512 Hash Generator</h2>
+        <p>SHA3-512 is the 512-bit, highest-security member of the SHA-3 family, standardized in NIST FIPS 202 (August 2015). It uses the Keccak sponge construction with a 576-bit rate and 1024-bit capacity — the tightest rate-to-capacity ratio of any fixed-output SHA-3 variant. Input is absorbed in 72-byte blocks, producing a 512-bit (64-byte, 128 hex character) digest.</p>
+        <h3>Highest Security in SHA-3</h3>
+        <p>The 1024-bit capacity of SHA3-512 provides 512-bit preimage resistance and 256-bit collision resistance. This exceeds NIST's requirements for "beyond 2030" security under SP 800-131A and provides a substantial security margin against all known attacks including quantum computing considerations (Grover's algorithm halves preimage resistance, leaving 256-bit security).</p>
+        <h3>Length-Extension Attack Immunity</h3>
+        <p>Unlike SHA-512 (which uses Merkle-Damgård construction), SHA3-512 is immune to length-extension attacks. An attacker who knows H(m) cannot compute H(m||extension) without knowing the original message m. This property is inherent to the sponge construction and does not require HMAC for protection.</p>
+        <h3>Performance Considerations</h3>
+        <p>SHA3-512 processes input in 72-byte blocks, which is smaller than SHA-512's 128-byte blocks. This means SHA3-512 requires more permutation calls per byte of input, making it slower than SHA-512 on most hardware. For performance-critical applications requiring 512-bit output, BLAKE2b is significantly faster while maintaining strong security properties.</p>
+        <h3>HMAC-SHA3-512</h3>
+        <p>While SHA-3 is inherently resistant to length-extension attacks, HMAC-SHA3-512 is still supported for compatibility with HMAC-based systems and provides a standardized keyed authentication approach. Enable HMAC above and enter your key to compute HMAC-SHA3-512.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>SHA3 Tools</h4><ul>
+          <li><a href="sha3-224.html">SHA3-224</a></li>
+          <li><a href="sha3-256.html">SHA3-256</a></li>
+          <li><a href="sha3-384.html">SHA3-384</a></li>
+          <li><a href="sha3-512.html">SHA3-512</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Keccak/SHAKE</h4><ul>
+          <li><a href="keccak-512.html">Keccak-512</a></li>
+          <li><a href="shake256.html">SHAKE256</a></li>
+          <li><a href="blake2b.html">BLAKE2b</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js',onload:function(){window.method=sha3_512;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

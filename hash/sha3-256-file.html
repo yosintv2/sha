@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHA3-256 File Hash Calculator — SHA3-256 Checksum Online | YoSin Tools</title>
+<meta name="description" content="Calculate the SHA3-256 checksum of any file online. Drag and drop or select a file — all processing happens in your browser. No upload, complete privacy.">
+<meta name="keywords" content="SHA3-256 file hash, SHA3-256 checksum, SHA3-256 file calculator, file integrity, SHA-3 256">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/sha3-256-file.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SHA3-256 File Hash Calculator | YoSin Tools">
+<meta property="og:description" content="Verify file integrity with SHA3-256. Upload any file and get its SHA3-256 checksum instantly. 100% browser-based, no upload.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/sha3-256-file.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I calculate the SHA3-256 hash of a file?","acceptedAnswer":{"@type":"Answer","text":"Drop your file onto the input zone or click to browse and select it. The SHA3-256 hash is computed instantly in your browser and shown as a 64-character hexadecimal string."}},
+{"@type":"Question","name":"Is my file uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. All processing happens locally in your browser using the HTML5 File API. Nothing is transmitted to any server."}},
+{"@type":"Question","name":"SHA3-256 vs SHA-256 file hash — what is the difference?","acceptedAnswer":{"@type":"Answer","text":"Both produce 256-bit (64 hex character) outputs but are different algorithms. SHA3-256 uses the Keccak sponge construction and is immune to length-extension attacks. SHA-256 uses Merkle-Damgård. They produce different hashes for the same file."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"SHA3-256 File","item":"https://singhyogendra.com.np/hash/sha3-256-file.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>SHA3-256 File</span></nav>
+      <h1>SHA3-256 File Hash Calculator</h1>
+      <p>Compute the SHA3-256 checksum of any file directly in your browser. Drop a file to verify integrity instantly — no upload, no server, complete privacy. Output is a 64-character hex string.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input"><div class="block block-fill">
+            <div class="block-title">File Input</div>
+            <div class="droppable-zone container" id="droppable-zone">
+              <input class="droppable-file" type="file" id="file" data-auto-update>
+              <div class="droppable-zone-wrapper">
+                <img class="droppable-zone-icon" src="../assets/images/file.svg" alt="File">
+                <div class="droppable-zone-text">Drag and drop a file here, or click to select. Processed locally — never uploaded.</div>
+              </div>
+            </div>
+          </div></div>
+          <div class="output"><div class="block block-fill">
+            <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+            <textarea class="container" id="output" spellcheck="false" placeholder="SHA3-256 hash will appear here…" data-encoding-from="#output-type" readonly></textarea>
+          </div></div>
+        </div>
+        <div class="settings"><div class="block block-fill">
+          <div class="block-title">Settings</div>
+          <div class="container">
+            <div class="setting"><a class="btn" id="execute">Calculate</a></div>
+            <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+            <div class="setting">
+              <label for="output-type">Output Encoding</label>
+              <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+              </select>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="sha3-256.html"><span class="tc-name">SHA3-256 Text</span><span class="tc-desc">Hash from text</span></a>
+          <a class="tool-card" href="sha3-224-file.html"><span class="tc-name">SHA3-224 File</span><span class="tc-desc">224-bit SHA-3 file</span></a>
+          <a class="tool-card" href="sha3-512-file.html"><span class="tc-name">SHA3-512 File</span><span class="tc-desc">512-bit SHA-3 file</span></a>
+          <a class="tool-card" href="sha256-file.html"><span class="tc-name">SHA256 File</span><span class="tc-desc">SHA256 file hash</span></a>
+          <a class="tool-card" href="keccak-256-file.html"><span class="tc-name">Keccak-256 File</span><span class="tc-desc">Ethereum hash</span></a>
+        </div>
+      </section>
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>How do I verify a SHA3-256 file checksum?</summary>
+            <div class="faq-body">Drop your file into the input zone. The SHA3-256 hash is computed and displayed as a 64-character hex string. Compare this against the expected checksum from the file's source.</div>
+          </details>
+          <details class="faq-item"><summary>Is SHA3-256 file hash the same as SHA-256 file hash?</summary>
+            <div class="faq-body">No. SHA3-256 and SHA-256 are completely different algorithms and will produce different results for the same file. SHA3-256 uses the Keccak sponge construction; SHA-256 uses Merkle-Damgård.</div>
+          </details>
+          <details class="faq-item"><summary>Is my file sent to any server?</summary>
+            <div class="faq-body">No. Everything is processed locally in your browser. Nothing is transmitted anywhere.</div>
+          </details>
+        </div>
+      </section>
+      <div class="seo-content">
+        <h2>About SHA3-256 File Hash Calculator</h2>
+        <p>The YoSin Tools SHA3-256 file hash calculator computes the SHA3-256 checksum of any file entirely within your browser. SHA3-256 is the 256-bit NIST FIPS 202 SHA-3 variant built on the Keccak sponge construction. All file processing is local — no data leaves your device.</p>
+        <h3>SHA3-256 vs SHA-256 for Files</h3>
+        <p>Both produce 64 hex character outputs. SHA3-256 uses the Keccak sponge (FIPS 202, 2015) while SHA-256 uses the Merkle-Damgård construction (FIPS 180-4, 2001). They will produce different checksums for the same file. Use whichever matches the checksum published by the software source.</p>
+        <h3>Privacy</h3>
+        <p>All computation happens in your browser. No file data is transmitted to any server. This tool is safe for sensitive files.</p>
+      </div>
+    </main>
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>SHA3 Tools</h4><ul>
+          <li><a href="sha3-224.html">SHA3-224</a></li><li><a href="sha3-256.html">SHA3-256</a></li>
+          <li><a href="sha3-384.html">SHA3-384</a></li><li><a href="sha3-512.html">SHA3-512</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>File Hash</h4><ul>
+          <li><a href="sha3-256-file.html">SHA3-256 File</a></li><li><a href="sha3-512-file.html">SHA3-512 File</a></li>
+          <li><a href="sha256-file.html">SHA256 File</a></li><li><a href="md5-file.html">MD5 File</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js',onload:function(){window.method=sha3_256;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/url-blob.js',onload:function(){methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/droppable-file.js',onload:function(){methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/file.js',onload:function(){methodLoad();}});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHA1 Hash Generator Online — Free SHA-1 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate SHA1 (SHA-1) hash online instantly. Supports UTF-8, UTF-16, Hex, Base64 input encodings and HMAC-SHA1. Fast, free, and 100% browser-based SHA1 calculator.">
+<meta name="keywords" content="SHA1 hash, SHA-1 generator, SHA1 online, SHA1 calculator, HMAC-SHA1, SHA1 checksum">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/sha1.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SHA1 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate SHA-1 hashes instantly. Supports UTF-8, Hex, Base64 input and HMAC-SHA1. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/sha1.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is SHA1?","acceptedAnswer":{"@type":"Answer","text":"SHA-1 (Secure Hash Algorithm 1) is a cryptographic hash function designed by the NSA and published by NIST in 1995. It produces a 160-bit (40 hex character) digest. SHA-1 is no longer considered secure for cryptographic use, but remains common in legacy systems and non-security integrity checks."}},
+{"@type":"Question","name":"What is the output length of SHA1?","acceptedAnswer":{"@type":"Answer","text":"SHA-1 produces a 160-bit (20-byte) digest, typically shown as a 40-character lowercase hexadecimal string."}},
+{"@type":"Question","name":"Is SHA1 secure?","acceptedAnswer":{"@type":"Answer","text":"SHA-1 is no longer considered cryptographically secure. Google demonstrated a practical SHA-1 collision (SHAttered) in 2017. Major browsers have deprecated SHA-1 certificates. For security use, SHA-256 or SHA-3 should be used instead."}},
+{"@type":"Question","name":"What is HMAC-SHA1?","acceptedAnswer":{"@type":"Answer","text":"HMAC-SHA1 is a keyed message authentication code using SHA-1. It is still widely used in protocols like OAuth 1.0, some TLS configurations, and various legacy authentication systems because the keyed construction is more resistant to attack than plain SHA-1."}},
+{"@type":"Question","name":"What is SHA1 still used for?","acceptedAnswer":{"@type":"Answer","text":"SHA-1 is still used in Git for commit and object identification, some legacy TLS cipher suites, older code signing workflows, and various checksum lists published before the move to SHA-256."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"SHA1","item":"https://singhyogendra.com.np/hash/sha1.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+      <div class="section">
+        <h3>Hash</h3>
+        <details><summary>CRC</summary><nav><ol><li><a href="crc.html">CRC</a></li></ol></nav></details>
+        <details>
+          <summary>MD</summary>
+          <nav><ol>
+            <li><a href="md2.html">MD2</a></li><li><a href="md2-file.html">MD2 File</a></li>
+            <li><a href="md4.html">MD4</a></li><li><a href="md4-file.html">MD4 File</a></li>
+            <li><a href="md5.html">MD5</a></li><li><a href="md5-file.html">MD5 File</a></li>
+          </ol></nav>
+        </details>
+        <details class="active" open>
+          <summary>SHA1</summary>
+          <nav><ol>
+            <li class="active"><a href="sha1.html">SHA1</a></li>
+            <li><a href="sha1-file.html">SHA1 File</a></li>
+          </ol></nav>
+        </details>
+        <details><summary>SHA2</summary><nav><ol>
+          <li><a href="sha224.html">SHA224</a></li><li><a href="sha224-file.html">SHA224 File</a></li>
+          <li><a href="sha256.html">SHA256</a></li><li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2-512</summary><nav><ol>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha384-file.html">SHA384 File</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-224-file.html">SHA512/224 File</a></li>
+          <li><a href="sha512-256.html">SHA512/256</a></li><li><a href="sha512-256-file.html">SHA512/256 File</a></li>
+        </ol></nav></details>
+      </div>
+      <div class="section"><h3>Links</h3><nav class="links"><ol><li><a href="../index.html">Home</a></li></ol></nav></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>SHA1</span>
+      </nav>
+      <h1>SHA1 Hash Generator</h1>
+      <p>Calculate SHA-1 hashes instantly online. Supports UTF-8, UTF-16, Hex, and Base64 input encodings. Enable HMAC-SHA1 with a secret key for message authentication codes.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="sha1-file.html"><span class="tc-name">SHA1 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="md5.html"><span class="tc-name">MD5</span><span class="tc-desc">128-bit hash</span></a>
+          <a class="tool-card" href="md4.html"><span class="tc-name">MD4</span><span class="tc-desc">128-bit hash</span></a>
+          <a class="tool-card" href="md2.html"><span class="tc-name">MD2</span><span class="tc-desc">128-bit hash</span></a>
+          <a class="tool-card" href="crc.html"><span class="tc-name">CRC</span><span class="tc-desc">Cyclic checksum</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is SHA1?</summary>
+            <div class="faq-body">SHA-1 (Secure Hash Algorithm 1) was designed by the NSA and published by NIST in 1995. It produces a 160-bit (40 hex character) digest and was the dominant hash algorithm for over a decade. Practical collision attacks were demonstrated in 2017, ending its use in security-critical applications.</div>
+          </details>
+          <details class="faq-item"><summary>SHA1 vs MD5 — which is better?</summary>
+            <div class="faq-body">SHA-1 produces a larger 160-bit digest (vs MD5's 128-bit), making it slightly more collision-resistant. Both are broken for cryptographic security. For non-security checksums, either works. For security purposes, use SHA-256 or SHA-3.</div>
+          </details>
+          <details class="faq-item"><summary>Is SHA1 still used in Git?</summary>
+            <div class="faq-body">Yes. Git uses SHA-1 to identify commits, blobs, trees, and tags. A migration to SHA-256 (Git 2.29+) is underway, but SHA-1 remains the default in most repositories. In Git's threat model, SHA-1 collisions require an attacker to control repository writes, so the practical risk is limited.</div>
+          </details>
+          <details class="faq-item"><summary>What is HMAC-SHA1?</summary>
+            <div class="faq-body">HMAC-SHA1 combines SHA-1 with a secret key using the HMAC construction. It remains secure for message authentication even though SHA-1 itself is broken, because HMAC's security relies on the PRF properties of the hash, not just collision resistance. It is used in OAuth 1.0 and many legacy protocols.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About SHA1 Hash Generator</h2>
+        <p>SHA-1 (Secure Hash Algorithm 1) was published by NIST in 1995 as Federal Information Processing Standard 180-1. It produces a 160-bit (20-byte) message digest by processing input in 512-bit blocks through 80 rounds of bitwise operations across four stages. For over a decade it was the most widely used cryptographic hash function in TLS certificates, code signing, and software distribution.</p>
+        <h3>The SHAttered Collision</h3>
+        <p>In February 2017, researchers at Google and CWI Amsterdam published "SHAttered" — the first practical SHA-1 collision. They produced two different PDF files with identical SHA-1 hashes, requiring approximately 9.2 × 10¹⁸ SHA-1 computations. This definitively ended SHA-1's use in X.509 certificates and code signing. All major browsers now reject SHA-1 TLS certificates.</p>
+        <h3>SHA1 in Git</h3>
+        <p>Git identifies every object (commit, tree, blob, tag) by its SHA-1 hash. Despite the SHAttered attack, Git's use is considered acceptable because generating a collision requires controlling the contents of both files — an attacker who can already write to your repository does not need a collision attack. Git is actively migrating to SHA-256 as a long-term solution.</p>
+        <h3>HMAC-SHA1</h3>
+        <p>HMAC-SHA1 remains secure for message authentication. OAuth 1.0, many TOTP (time-based one-time password) implementations, and various legacy APIs still use HMAC-SHA1. The HMAC construction's security does not require collision resistance — it relies on SHA-1 behaving as a pseudorandom function when keyed, a property that has not been broken.</p>
+        <h3>When to Use SHA1 Today</h3>
+        <p>Use SHA-1 only for legacy compatibility — matching checksums published before 2017, interoperating with systems that require it, or working with Git internals. For all new applications, SHA-256 (from the SHA-2 family) or SHA3-256 is the recommended choice.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Hash Tools</h4><ul><li><a href="crc.html">CRC</a></li><li><a href="md2.html">MD2</a></li><li><a href="md4.html">MD4</a></li><li><a href="md5.html">MD5</a></li><li><a href="sha1.html">SHA1</a></li></ul></div>
+        <div class="footer-col"><h4>File Hash</h4><ul><li><a href="md2-file.html">MD2 File</a></li><li><a href="md4-file.html">MD4 File</a></li><li><a href="md5-file.html">MD5 File</a></li><li><a href="sha1-file.html">SHA1 File</a></li></ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'../js/crypto-api.js',onload:function(){window.method=sha1;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLAKE2s Hash Generator Online — Free BLAKE2s Calculator | YoSin Tools</title>
+<meta name="description" content="Generate BLAKE2s hash online. 256-bit output optimized for 32-bit platforms. Used in WireGuard VPN. Supports UTF-8, Hex, Base64 input. Free, browser-based.">
+<meta name="keywords" content="BLAKE2s hash, BLAKE2s generator, BLAKE2s online, BLAKE2 hash, BLAKE2s calculator, WireGuard hash">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/blake2s.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BLAKE2s Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate BLAKE2s hashes online. 256-bit, optimized for 32-bit systems. Used in WireGuard VPN. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/blake2s.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is BLAKE2s?","acceptedAnswer":{"@type":"Answer","text":"BLAKE2s is a cryptographic hash function optimized for 8–32 bit platforms. It produces a 256-bit (64 hex character) digest by default. It is based on the same ChaCha-derived design as BLAKE2b but uses 32-bit words and 10 rounds instead of 12. Published as RFC 7693."}},
+{"@type":"Question","name":"BLAKE2s vs BLAKE2b — when to use which?","acceptedAnswer":{"@type":"Answer","text":"Use BLAKE2s on 32-bit platforms (ARM microcontrollers, embedded systems) — it is faster there because it works with 32-bit word operations. Use BLAKE2b on 64-bit platforms (servers, desktops, modern smartphones) — it is faster and produces a larger 512-bit output."}},
+{"@type":"Question","name":"Where is BLAKE2s used?","acceptedAnswer":{"@type":"Answer","text":"WireGuard VPN uses BLAKE2s for key derivation (PRF) and MAC operations in its Noise_IKpsk2 handshake. Noise Protocol Framework implementations also use BLAKE2s. Python 3.6+ hashlib includes BLAKE2s."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"BLAKE2s","item":"https://singhyogendra.com.np/hash/blake2s.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>BLAKE2s</span>
+      </nav>
+      <h1>BLAKE2s Hash Generator</h1>
+      <p>Generate BLAKE2s hashes online. 256-bit output optimized for 32-bit platforms. Used in WireGuard VPN and embedded systems. Supports UTF-8, Hex, and Base64 input encodings.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <p style="font-size:11px;color:var(--muted);margin:10px 0 0;line-height:1.5">BLAKE2s natively supports keyed hashing. Key support will be added in a future update.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="blake2s-file.html"><span class="tc-name">BLAKE2s File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="blake2b.html"><span class="tc-name">BLAKE2b</span><span class="tc-desc">512-bit, 64-bit opt.</span></a>
+          <a class="tool-card" href="sha256.html"><span class="tc-name">SHA-256</span><span class="tc-desc">256-bit SHA-2</span></a>
+          <a class="tool-card" href="sha3-256.html"><span class="tc-name">SHA3-256</span><span class="tc-desc">256-bit SHA-3</span></a>
+          <a class="tool-card" href="ripemd-256.html"><span class="tc-name">RIPEMD-256</span><span class="tc-desc">256-bit RIPEMD</span></a>
+        </div>
+      </section>
+      <div class="seo-content">
+        <h2>About BLAKE2s Hash Generator</h2>
+        <p>BLAKE2s is designed for 8–32 bit platforms and produces a 256-bit (32 hex character) output. While BLAKE2b is faster on 64-bit systems, BLAKE2s is faster on 32-bit and embedded hardware because it works with 32-bit word operations. It uses 10 rounds of the G mixing function applied to a 16-word (512-bit) state.</p>
+        <h3>BLAKE2s in WireGuard VPN</h3>
+        <p>WireGuard VPN uses BLAKE2s as its hash function for key derivation and MAC operations, alongside Curve25519 (key exchange), ChaCha20-Poly1305 (symmetric encryption), and SipHash (DDoS prevention). The choice of BLAKE2s over HMAC-SHA256 was motivated by its speed advantage on ARM processors commonly used in VPN gateways and routers.</p>
+        <h3>BLAKE2s vs SHA-256</h3>
+        <p>Both produce 256-bit outputs but through different constructions. BLAKE2s uses the HAIFA construction with ChaCha-derived mixing, while SHA-256 uses the Merkle-Damgård construction with bitwise operations. BLAKE2s is immune to length-extension attacks (a known weakness of SHA-256/SHA-512 in the Merkle-Damgård construction). For practical security, both are equally secure for hash applications.</p>
+      </div>
+    </main>
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>BLAKE</h4><ul><li><a href="blake2b.html">BLAKE2b</a></li><li><a href="blake2s.html">BLAKE2s</a></li><li><a href="blake2b-file.html">BLAKE2b File</a></li><li><a href="blake2s-file.html">BLAKE2s File</a></li></ul></div>
+        <div class="footer-col"><h4>Hash Tools</h4><ul><li><a href="sha256.html">SHA-256</a></li><li><a href="sha3-256.html">SHA3-256</a></li><li><a href="ripemd-160.html">RIPEMD-160</a></li></ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2025 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>
+++waitLoadCount;
+delayScripts.push({src:'../js/blake2.js',onload:function(){
+  window.method=function(msg){return blakejs.blake2sHex(msg,null,32);};
+  methodLoad();
+}});
+</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

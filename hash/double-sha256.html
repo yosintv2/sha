@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Double SHA256 Hash Generator — SHA256(SHA256) Online | YoSin Tools</title>
+<meta name="description" content="Calculate Double SHA256 (SHA256 applied twice) hash online. Used in Bitcoin transaction IDs and block headers. Supports UTF-8, UTF-16, Hex, Base64 input — 100% browser-based.">
+<meta name="keywords" content="double SHA256, SHA256 twice, Bitcoin hash, double SHA-256 online, SHA256d calculator">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/double-sha256.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Double SHA256 Hash Generator | YoSin Tools">
+<meta property="og:description" content="Compute SHA256(SHA256(x)) — the Bitcoin double-hash — instantly in your browser. Supports all input encodings.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/double-sha256.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is Double SHA256?","acceptedAnswer":{"@type":"Answer","text":"Double SHA256 (also written SHA256d or SHA-256d) applies the SHA-256 hash function twice: first to the input, then to the resulting 32-byte digest. The result is a 256-bit hash. It is used in Bitcoin to compute transaction IDs (TXID), block hashes, and as the Proof-of-Work function."}},
+{"@type":"Question","name":"Why does Bitcoin use Double SHA256 instead of SHA256?","acceptedAnswer":{"@type":"Answer","text":"Satoshi Nakamoto chose Double SHA256 as a defense against length-extension attacks — a known weakness of Merkle-Damgård hash functions like SHA-256. Hashing twice neutralizes this attack vector without adding significant computational cost."}},
+{"@type":"Question","name":"What is the output of Double SHA256?","acceptedAnswer":{"@type":"Answer","text":"Double SHA256 produces a 256-bit (64 hex character) output, identical in length to a single SHA-256 hash. The value is SHA256(SHA256(input))."}},
+{"@type":"Question","name":"How is a Bitcoin TXID calculated?","acceptedAnswer":{"@type":"Answer","text":"A Bitcoin transaction ID (TXID) is the Double SHA256 hash of the serialized transaction data, displayed in little-endian byte order. This means the raw Double SHA256 output has its bytes reversed before being displayed as the TXID."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"Double SHA256","item":"https://singhyogendra.com.np/hash/double-sha256.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+      <div class="section">
+        <h3>Hash</h3>
+        <details><summary>CRC</summary><nav><ol><li><a href="crc.html">CRC</a></li></ol></nav></details>
+        <details><summary>MD</summary><nav><ol>
+          <li><a href="md2.html">MD2</a></li><li><a href="md2-file.html">MD2 File</a></li>
+          <li><a href="md4.html">MD4</a></li><li><a href="md4-file.html">MD4 File</a></li>
+          <li><a href="md5.html">MD5</a></li><li><a href="md5-file.html">MD5 File</a></li>
+        </ol></nav></details>
+        <details><summary>SHA1</summary><nav><ol>
+          <li><a href="sha1.html">SHA1</a></li><li><a href="sha1-file.html">SHA1 File</a></li>
+        </ol></nav></details>
+        <details class="active" open><summary>SHA2</summary><nav><ol>
+          <li><a href="sha224.html">SHA224</a></li><li><a href="sha224-file.html">SHA224 File</a></li>
+          <li><a href="sha256.html">SHA256</a></li><li><a href="sha256-file.html">SHA256 File</a></li>
+          <li class="active"><a href="double-sha256.html">Double SHA256</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2-512</summary><nav><ol>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha384-file.html">SHA384 File</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-224-file.html">SHA512/224 File</a></li>
+          <li><a href="sha512-256.html">SHA512/256</a></li><li><a href="sha512-256-file.html">SHA512/256 File</a></li>
+        </ol></nav></details>
+      </div>
+      <div class="section"><h3>Links</h3><nav class="links"><ol><li><a href="../index.html">Home</a></li></ol></nav></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>Double SHA256</span>
+      </nav>
+      <h1>Double SHA256 Hash Generator</h1>
+      <p>Compute SHA256(SHA256(input)) — the double-hash used in Bitcoin transaction IDs, block headers, and Proof-of-Work. Supports all input encodings including Hex and Base64.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="sha256.html"><span class="tc-name">SHA256</span><span class="tc-desc">Single SHA-256</span></a>
+          <a class="tool-card" href="sha256-file.html"><span class="tc-name">SHA256 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="sha512.html"><span class="tc-name">SHA512</span><span class="tc-desc">512-bit SHA-2</span></a>
+          <a class="tool-card" href="sha224.html"><span class="tc-name">SHA224</span><span class="tc-desc">224-bit SHA-2</span></a>
+          <a class="tool-card" href="sha1.html"><span class="tc-name">SHA1</span><span class="tc-desc">Legacy 160-bit</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is Double SHA256?</summary>
+            <div class="faq-body">Double SHA256 (SHA256d) applies SHA-256 twice: <code>SHA256(SHA256(input))</code>. The first application hashes the input normally. The second application hashes the 32-byte result. The final output is a 256-bit (64 hex character) digest.</div>
+          </details>
+          <details class="faq-item"><summary>Why does Bitcoin use Double SHA256?</summary>
+            <div class="faq-body">Bitcoin uses Double SHA256 to defend against length-extension attacks — a weakness of Merkle-Damgård hash functions where an attacker can compute <code>H(m || extra)</code> from <code>H(m)</code> without knowing <code>m</code>. Hashing the output a second time prevents this. Satoshi chose this construction over HMAC for simplicity.</div>
+          </details>
+          <details class="faq-item"><summary>How is a Bitcoin transaction ID computed?</summary>
+            <div class="faq-body">A Bitcoin TXID is the Double SHA256 of the raw serialized transaction bytes, displayed with bytes reversed (little-endian). To verify a TXID, enter the transaction hex, select Hex input encoding, compute Double SHA256, and reverse the byte order of the result.</div>
+          </details>
+          <details class="faq-item"><summary>Double SHA256 vs SHA256 — when does it matter?</summary>
+            <div class="faq-body">For general data integrity and digital signatures, single SHA-256 is sufficient and standard. Double SHA256 is specifically a Bitcoin protocol requirement. Using it outside of Bitcoin contexts adds computational cost with no security benefit, since length-extension attacks are not relevant to most use cases.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About Double SHA256 Hash Generator</h2>
+        <p>Double SHA256 (commonly written SHA256d or SHA-256d) is a hash construction that applies the SHA-256 algorithm twice in sequence: <code>hash = SHA256(SHA256(input))</code>. The output is a 256-bit (64 hex character) digest, identical in length to a single SHA-256 hash. This construction was introduced by Bitcoin in 2009 and is used throughout the Bitcoin protocol for transaction IDs, block hashes, addresses, and Proof-of-Work.</p>
+        <h3>Bitcoin's Use of Double SHA256</h3>
+        <p>Bitcoin applies Double SHA256 to three primary operations. Transaction IDs (TXIDs) are the Double SHA256 of the raw serialized transaction bytes, displayed in reversed byte order. Block hashes are the Double SHA256 of the 80-byte block header. The Merkle root of a block is built by repeatedly Double-SHA256-hashing pairs of transaction IDs up the tree. Proof-of-Work mining consists of finding a block header nonce such that the Double SHA256 output begins with a required number of zero bits.</p>
+        <h3>Why Hashing Twice?</h3>
+        <p>Satoshi Nakamoto chose Double SHA256 as protection against length-extension attacks. In a standard Merkle-Damgård hash like SHA-256, an attacker who knows <code>H(m)</code> can compute <code>H(m || padding || extra)</code> without knowing <code>m</code>. This is exploited in certain MAC forgery attacks. Applying SHA-256 a second time destroys the internal state information needed for an extension, neutralizing the attack. An alternative defense is HMAC, but Double SHA256 is simpler for permissionless use without a secret key.</p>
+        <h3>Computing Bitcoin TXIDs</h3>
+        <p>To compute a raw Bitcoin TXID: serialize the transaction in the standard Bitcoin binary format, apply Double SHA256 to the bytes, then reverse the byte order of the 32-byte result. The reversed hex string is the displayed TXID. Note that block explorers display TXIDs in reversed order — this is a historical quirk of the original Bitcoin client. If you paste a raw transaction hex into this tool with Hex input encoding, you get the inner digest; reverse the bytes to match explorer output.</p>
+        <h3>Double SHA256 vs Single SHA256</h3>
+        <p>For all non-Bitcoin use cases — TLS certificates, code signing, package checksums, JWT tokens — single SHA-256 is the correct and standard choice. Double SHA256 is not a stronger general-purpose hash; it doubles computation time while providing no meaningful security improvement for use cases where length-extension attacks are not a concern. Use Double SHA256 specifically when working with Bitcoin protocol data.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>SHA2 Tools</h4><ul>
+          <li><a href="sha224.html">SHA224</a></li>
+          <li><a href="sha256.html">SHA256</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+          <li><a href="sha384.html">SHA384</a></li>
+          <li><a href="sha512.html">SHA512</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>File Hash</h4><ul>
+          <li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="md5-file.html">MD5 File</a></li>
+          <li><a href="sha1-file.html">SHA1 File</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.11.0/sha256.min.js',onload:function(){window.method=double_sha256;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

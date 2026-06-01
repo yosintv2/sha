@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MD5 File Hash Calculator — MD5 Checksum Online | YoSin Tools</title>
+<meta name="description" content="Calculate the MD5 checksum of any file online. Drag and drop or upload a file — all processing happens in your browser, nothing is uploaded to a server.">
+<meta name="keywords" content="MD5 file hash, MD5 checksum, MD5 file calculator, file integrity, verify download">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/md5-file.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MD5 File Hash Calculator | YoSin Tools">
+<meta property="og:description" content="Verify file integrity with MD5. Upload any file and get its MD5 checksum instantly. 100% browser-based, no upload.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/md5-file.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I verify a file's MD5 checksum?","acceptedAnswer":{"@type":"Answer","text":"Drop your file onto the input zone or click to select it. The MD5 hash is computed instantly. Compare this value against the expected MD5 provided by the file's source to confirm the file is intact."}},
+{"@type":"Question","name":"Is my file uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The file is read entirely in your browser using the HTML5 File API. Nothing is transmitted to any server."}},
+{"@type":"Question","name":"What is the difference between MD5 and SHA-256 for file verification?","acceptedAnswer":{"@type":"Answer","text":"Both can detect accidental corruption. SHA-256 is significantly stronger against deliberate tampering (collision attacks), so it is preferred for security-critical verification. MD5 is still fine for detecting accidental download corruption when the checksum is published by a trusted source."}},
+{"@type":"Question","name":"Can I hash large files?","acceptedAnswer":{"@type":"Answer","text":"Yes. The tool processes files of any size using streaming, so even multi-gigabyte files can be hashed without loading the entire file into memory at once."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"MD5 File","item":"https://singhyogendra.com.np/hash/md5-file.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+      <div class="section">
+        <h3>Hash</h3>
+        <details><summary>CRC</summary><nav><ol><li><a href="crc.html">CRC</a></li></ol></nav></details>
+        <details class="active" open>
+          <summary>MD</summary>
+          <nav><ol>
+            <li><a href="md2.html">MD2</a></li><li><a href="md2-file.html">MD2 File</a></li>
+            <li><a href="md4.html">MD4</a></li><li><a href="md4-file.html">MD4 File</a></li>
+            <li><a href="md5.html">MD5</a></li><li class="active"><a href="md5-file.html">MD5 File</a></li>
+          </ol></nav>
+        </details>
+        <details><summary>SHA1</summary><nav><ol><li><a href="sha1.html">SHA1</a></li><li><a href="sha1-file.html">SHA1 File</a></li></ol></nav></details>
+        <details><summary>SHA2</summary><nav><ol>
+          <li><a href="sha224.html">SHA224</a></li><li><a href="sha224-file.html">SHA224 File</a></li>
+          <li><a href="sha256.html">SHA256</a></li><li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2-512</summary><nav><ol>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha384-file.html">SHA384 File</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-224-file.html">SHA512/224 File</a></li>
+          <li><a href="sha512-256.html">SHA512/256</a></li><li><a href="sha512-256-file.html">SHA512/256 File</a></li>
+        </ol></nav></details>
+      </div>
+      <div class="section"><h3>Links</h3><nav class="links"><ol><li><a href="../index.html">Home</a></li></ol></nav></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>MD5 File</span>
+      </nav>
+      <h1>MD5 File Hash Calculator</h1>
+      <p>Compute the MD5 checksum of any file in your browser. Upload a local file or fetch from a URL to verify file integrity — no server, no upload, complete privacy.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">File Input</div>
+              <div class="droppable-zone container" id="droppable-zone">
+                <input class="droppable-file" type="file" id="file" data-auto-update>
+                <div class="droppable-zone-wrapper">
+                  <img class="droppable-zone-icon" src="../assets/images/file.svg" alt="File">
+                  <div class="droppable-zone-text">Drag and drop a file here, or click to select. Processed locally — never uploaded.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="MD5 hash will appear here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Calculate</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="md5.html"><span class="tc-name">MD5 Text</span><span class="tc-desc">Hash from text</span></a>
+          <a class="tool-card" href="sha1-file.html"><span class="tc-name">SHA1 File</span><span class="tc-desc">SHA1 file hash</span></a>
+          <a class="tool-card" href="md4-file.html"><span class="tc-name">MD4 File</span><span class="tc-desc">MD4 file hash</span></a>
+          <a class="tool-card" href="md2-file.html"><span class="tc-name">MD2 File</span><span class="tc-desc">MD2 file hash</span></a>
+          <a class="tool-card" href="crc.html"><span class="tc-name">CRC</span><span class="tc-desc">CRC checksum</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>How do I verify a file's MD5 checksum?</summary>
+            <div class="faq-body">Drop your file onto the input zone or click to select it. The MD5 hash is computed instantly. Compare the result against the expected MD5 provided by the file's source. A match confirms the file was not corrupted in transit.</div>
+          </details>
+          <details class="faq-item"><summary>Is my file sent to any server?</summary>
+            <div class="faq-body">No. The entire computation happens inside your browser. The HTML5 File API reads the file locally and a JavaScript MD5 implementation processes it. Nothing is transmitted.</div>
+          </details>
+          <details class="faq-item"><summary>MD5 vs SHA-256 — which should I use for file verification?</summary>
+            <div class="faq-body">For simply checking that a file wasn't corrupted during download, both work fine. SHA-256 is strongly preferred when you also need to guard against deliberate tampering, since MD5 collision attacks exist. Most modern software distributions now publish SHA-256 checksums.</div>
+          </details>
+          <details class="faq-item"><summary>Can I hash files from a URL?</summary>
+            <div class="faq-body">Switch the Input Type to URL and paste the direct file URL. The tool will fetch and hash it if the server's CORS policy allows it. Otherwise, download the file first and use the file input.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About MD5 File Hash Calculator</h2>
+        <p>The YoSin Tools MD5 file calculator lets you instantly verify the integrity of any file using the MD5 algorithm — entirely within your browser. There is no file size limit beyond your device's available memory, and no data ever leaves your machine.</p>
+        <h3>Verifying Downloaded Files</h3>
+        <p>Software publishers often list MD5 checksums alongside their download links. After downloading a file, use this tool to compute its MD5 hash and compare the result with the published value. An exact match confirms the file is complete and unmodified. A mismatch means the file is corrupted or has been tampered with, and you should discard it and re-download.</p>
+        <h3>How the Tool Processes Your File</h3>
+        <p>The browser's File API reads your selected file as a binary ArrayBuffer. The data is passed through a pure JavaScript implementation of the MD5 algorithm — the same algorithm used by system tools like <code>md5sum</code> on Linux or <code>certutil</code> on Windows. The 128-bit result is displayed as a 32-character hexadecimal string.</p>
+        <h3>Output Formats</h3>
+        <p>Results can be displayed as lowercase hex (the most common format), uppercase hex, or Base64. This flexibility makes it easy to compare against checksums from any source, regardless of the formatting convention they use.</p>
+        <h3>When to Use SHA-256 Instead</h3>
+        <p>If the software you are verifying provides both MD5 and SHA-256 checksums, prefer SHA-256. It provides a much stronger guarantee against deliberate file substitution attacks. Use our SHA1 File tool or a SHA-256 tool when available.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Hash Tools</h4><ul><li><a href="crc.html">CRC</a></li><li><a href="md2.html">MD2</a></li><li><a href="md4.html">MD4</a></li><li><a href="md5.html">MD5</a></li><li><a href="sha1.html">SHA1</a></li></ul></div>
+        <div class="footer-col"><h4>File Hash</h4><ul><li><a href="md2-file.html">MD2 File</a></li><li><a href="md4-file.html">MD4 File</a></li><li><a href="md5-file.html">MD5 File</a></li><li><a href="sha1-file.html">SHA1 File</a></li></ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'../js/md5.min.js',onload:function(){window.method=md5;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/url-blob.js',onload:function(){methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/droppable-file.js',onload:function(){methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/file.js',onload:function(){methodLoad();}});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

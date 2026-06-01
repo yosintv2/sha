@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHA224 Hash Generator Online — Free SHA-224 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate SHA224 (SHA-224) hash online instantly. Supports UTF-8, UTF-16, Hex, Base64 input encodings and HMAC-SHA224. Fast, free, and 100% browser-based SHA-224 calculator.">
+<meta name="keywords" content="SHA224 hash, SHA-224 generator, SHA224 online, SHA224 calculator, HMAC-SHA224, SHA-224 checksum">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/sha224.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SHA224 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate SHA-224 hashes instantly. Supports UTF-8, Hex, Base64 input and HMAC-SHA224. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/sha224.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is SHA-224?","acceptedAnswer":{"@type":"Answer","text":"SHA-224 is a truncated variant of SHA-256 from the SHA-2 family. It produces a 224-bit (56 hex character) digest using a different set of initial hash values than SHA-256. It was designed for use cases requiring a shorter digest than SHA-256 while maintaining strong security."}},
+{"@type":"Question","name":"What is the output length of SHA-224?","acceptedAnswer":{"@type":"Answer","text":"SHA-224 produces a 224-bit (28-byte) digest, displayed as a 56-character lowercase hexadecimal string."}},
+{"@type":"Question","name":"SHA-224 vs SHA-256 — which should I use?","acceptedAnswer":{"@type":"Answer","text":"SHA-256 is generally preferred as it is more widely supported. SHA-224 is used when a shorter digest is specifically required — for example, in some DSA signature schemes that pair with a 224-bit elliptic curve."}},
+{"@type":"Question","name":"Is SHA-224 secure?","acceptedAnswer":{"@type":"Answer","text":"Yes, SHA-224 has no known practical attacks. It offers 112 bits of collision resistance, which exceeds the recommended minimum of 112 bits for security through 2030 per NIST guidelines."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"SHA224","item":"https://singhyogendra.com.np/hash/sha224.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+      <div class="section">
+        <h3>Hash</h3>
+        <details><summary>CRC</summary><nav><ol><li><a href="crc.html">CRC</a></li></ol></nav></details>
+        <details><summary>MD</summary><nav><ol>
+          <li><a href="md2.html">MD2</a></li><li><a href="md2-file.html">MD2 File</a></li>
+          <li><a href="md4.html">MD4</a></li><li><a href="md4-file.html">MD4 File</a></li>
+          <li><a href="md5.html">MD5</a></li><li><a href="md5-file.html">MD5 File</a></li>
+        </ol></nav></details>
+        <details><summary>SHA1</summary><nav><ol>
+          <li><a href="sha1.html">SHA1</a></li><li><a href="sha1-file.html">SHA1 File</a></li>
+        </ol></nav></details>
+        <details class="active" open><summary>SHA2</summary><nav><ol>
+          <li class="active"><a href="sha224.html">SHA224</a></li><li><a href="sha224-file.html">SHA224 File</a></li>
+          <li><a href="sha256.html">SHA256</a></li><li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2-512</summary><nav><ol>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha384-file.html">SHA384 File</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-224-file.html">SHA512/224 File</a></li>
+          <li><a href="sha512-256.html">SHA512/256</a></li><li><a href="sha512-256-file.html">SHA512/256 File</a></li>
+        </ol></nav></details>
+      </div>
+      <div class="section"><h3>Links</h3><nav class="links"><ol><li><a href="../index.html">Home</a></li></ol></nav></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>SHA224</span>
+      </nav>
+      <h1>SHA224 Hash Generator</h1>
+      <p>Calculate SHA-224 hashes instantly online. Supports UTF-8, UTF-16, Hex, and Base64 input encodings. Enable HMAC-SHA224 with a secret key for message authentication.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="sha256.html"><span class="tc-name">SHA256</span><span class="tc-desc">256-bit SHA-2</span></a>
+          <a class="tool-card" href="sha224-file.html"><span class="tc-name">SHA224 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="sha512.html"><span class="tc-name">SHA512</span><span class="tc-desc">512-bit SHA-2</span></a>
+          <a class="tool-card" href="sha1.html"><span class="tc-name">SHA1</span><span class="tc-desc">Legacy 160-bit</span></a>
+          <a class="tool-card" href="md5.html"><span class="tc-name">MD5</span><span class="tc-desc">128-bit hash</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is SHA-224?</summary>
+            <div class="faq-body">SHA-224 is a 224-bit truncation of SHA-256 from the SHA-2 family. It uses a different set of initial hash values and truncates the final state to produce a 56 hex character output. It was added to FIPS 180-2 in 2004 as a complement to the 224-bit DSA variant.</div>
+          </details>
+          <details class="faq-item"><summary>SHA-224 vs SHA-256 — which should I use?</summary>
+            <div class="faq-body">SHA-256 is preferred in most cases due to broader support and slightly more collision resistance. Use SHA-224 when your protocol specifically requires a 224-bit output — for example, certain TLS cipher suites paired with P-224 elliptic curves or DSA-2048/224.</div>
+          </details>
+          <details class="faq-item"><summary>How secure is SHA-224?</summary>
+            <div class="faq-body">SHA-224 provides 112 bits of collision resistance and 224 bits of preimage resistance. NIST considers 112-bit security acceptable through 2030. No practical attacks against SHA-224 are known.</div>
+          </details>
+          <details class="faq-item"><summary>Does SHA-224 support HMAC?</summary>
+            <div class="faq-body">Yes. HMAC-SHA224 is defined in RFC 4231. Enable the HMAC toggle above and enter your secret key to compute HMAC-SHA224 values.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About SHA224 Hash Generator</h2>
+        <p>SHA-224 is a cryptographic hash function from the SHA-2 family, producing a 224-bit (56-character hexadecimal) digest. It was introduced in a change notice to FIPS 180-2 in 2004 and is standardized in FIPS 180-4. SHA-224 is computed identically to SHA-256 but uses a different set of initial hash values derived from the square roots of the 9th through 16th prime numbers, and the final 256-bit state is truncated by discarding the last 32 bits.</p>
+        <h3>When to Use SHA-224</h3>
+        <p>SHA-224 is used when a protocol or standard specifically requires a 224-bit output. Common scenarios include TLS cipher suites using the P-224 elliptic curve, Digital Signature Algorithm (DSA) with 2048-bit modulus and 224-bit subgroup, and certain certificate formats that require matching hash and key sizes. For general-purpose hashing where the output size is not constrained, SHA-256 is recommended as it has wider library and hardware support.</p>
+        <h3>SHA-224 vs SHA-256</h3>
+        <p>The key difference is output size: SHA-224 produces 224 bits (56 hex characters) while SHA-256 produces 256 bits (64 hex characters). Both share the same internal Merkle-Damgård construction and the same round function. SHA-224 cannot be derived from a SHA-256 hash — they use different initialization constants and produce independent outputs.</p>
+        <h3>HMAC-SHA224</h3>
+        <p>HMAC-SHA224 is defined in RFC 4231 alongside HMAC-SHA256, HMAC-SHA384, and HMAC-SHA512. It produces a 224-bit authentication code from a message and a secret key. Use cases include message authentication in protocols that pair with 224-bit key material. Enable the HMAC toggle in the Settings panel and enter your secret key to compute HMAC-SHA224 values.</p>
+        <h3>Security of SHA-224</h3>
+        <p>SHA-224 provides 112 bits of collision resistance. NIST guidelines (SP 800-57) consider 112-bit security acceptable for protecting data through 2030. No practical collision or preimage attacks against SHA-224 are known. If you are choosing between SHA-224 and SHA-256 for a new system, SHA-256 is generally preferred for its longer-term security margin and wider adoption.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>SHA2 Tools</h4><ul>
+          <li><a href="sha224.html">SHA224</a></li>
+          <li><a href="sha256.html">SHA256</a></li>
+          <li><a href="sha384.html">SHA384</a></li>
+          <li><a href="sha512.html">SHA512</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>File Hash</h4><ul>
+          <li><a href="sha224-file.html">SHA224 File</a></li>
+          <li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="md5-file.html">MD5 File</a></li>
+          <li><a href="sha1-file.html">SHA1 File</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.11.0/sha256.min.js',onload:function(){window.method=sha224;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

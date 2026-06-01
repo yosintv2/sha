@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MD5 Hash Generator Online — Free MD5 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate MD5 hash online instantly. Supports UTF-8, UTF-16, Hex, Base64 input encodings and HMAC-MD5. Fast, free, and 100% browser-based MD5 calculator.">
+<meta name="keywords" content="MD5 hash, MD5 generator, MD5 online, MD5 calculator, HMAC-MD5, MD5 checksum">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/md5.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MD5 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate MD5 hashes instantly. Supports UTF-8, Hex, Base64 input and HMAC-MD5. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/md5.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is MD5?","acceptedAnswer":{"@type":"Answer","text":"MD5 (Message Digest 5) is a widely used cryptographic hash function that produces a 128-bit (32 hex character) hash value. It was designed by Ronald Rivest in 1991 as an improvement over MD4."}},
+{"@type":"Question","name":"Is MD5 still safe to use?","acceptedAnswer":{"@type":"Answer","text":"MD5 is not safe for cryptographic security — collision attacks are practical and fast. However, it is still widely used for non-security integrity checks such as verifying file downloads, generating cache keys, and checksumming data in databases."}},
+{"@type":"Question","name":"What is HMAC-MD5?","acceptedAnswer":{"@type":"Answer","text":"HMAC-MD5 is a keyed-hash message authentication code using MD5 as the underlying function. It is used to verify both data integrity and authenticity when a shared secret key is available."}},
+{"@type":"Question","name":"What is the output length of MD5?","acceptedAnswer":{"@type":"Answer","text":"MD5 always produces a 128-bit output, typically shown as a 32-character lowercase hexadecimal string."}},
+{"@type":"Question","name":"Can I reverse an MD5 hash?","acceptedAnswer":{"@type":"Answer","text":"MD5 is a one-way function — you cannot mathematically reverse it. However, common values can be looked up in rainbow tables. This is why MD5 must never be used for password storage."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"MD5","item":"https://singhyogendra.com.np/hash/md5.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+      <div class="section">
+        <h3>Hash</h3>
+        <details><summary>CRC</summary><nav><ol><li><a href="crc.html">CRC</a></li></ol></nav></details>
+        <details class="active" open>
+          <summary>MD</summary>
+          <nav><ol>
+            <li><a href="md2.html">MD2</a></li><li><a href="md2-file.html">MD2 File</a></li>
+            <li><a href="md4.html">MD4</a></li><li><a href="md4-file.html">MD4 File</a></li>
+            <li class="active"><a href="md5.html">MD5</a></li><li><a href="md5-file.html">MD5 File</a></li>
+          </ol></nav>
+        </details>
+        <details><summary>SHA1</summary><nav><ol><li><a href="sha1.html">SHA1</a></li><li><a href="sha1-file.html">SHA1 File</a></li></ol></nav></details>
+        <details><summary>SHA2</summary><nav><ol>
+          <li><a href="sha224.html">SHA224</a></li><li><a href="sha224-file.html">SHA224 File</a></li>
+          <li><a href="sha256.html">SHA256</a></li><li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2-512</summary><nav><ol>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha384-file.html">SHA384 File</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-224-file.html">SHA512/224 File</a></li>
+          <li><a href="sha512-256.html">SHA512/256</a></li><li><a href="sha512-256-file.html">SHA512/256 File</a></li>
+        </ol></nav></details>
+      </div>
+      <div class="section"><h3>Links</h3><nav class="links"><ol><li><a href="../index.html">Home</a></li></ol></nav></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>MD5</span>
+      </nav>
+      <h1>MD5 Hash Generator</h1>
+      <p>Calculate MD5 hashes instantly online. Supports UTF-8, UTF-16, Hex, and Base64 input encodings. Enable HMAC-MD5 with a secret key for message authentication.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="md5-file.html"><span class="tc-name">MD5 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="sha1.html"><span class="tc-name">SHA1</span><span class="tc-desc">160-bit hash</span></a>
+          <a class="tool-card" href="md4.html"><span class="tc-name">MD4</span><span class="tc-desc">128-bit hash</span></a>
+          <a class="tool-card" href="md2.html"><span class="tc-name">MD2</span><span class="tc-desc">128-bit hash</span></a>
+          <a class="tool-card" href="crc.html"><span class="tc-name">CRC</span><span class="tc-desc">Cyclic checksum</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is MD5?</summary>
+            <div class="faq-body">MD5 (Message Digest 5) is a widely used hash function designed by Ronald Rivest in 1991 as a successor to MD4. It produces a 128-bit (32 hex character) digest and processes input in 512-bit blocks through four rounds of non-linear operations.</div>
+          </details>
+          <details class="faq-item"><summary>Is MD5 secure for passwords?</summary>
+            <div class="faq-body">No. MD5 must never be used for password storage. It is fast (making brute-force attacks easy), has known collision vulnerabilities, and rainbow tables exist for billions of common MD5 hashes. Use bcrypt, Argon2, or scrypt for passwords.</div>
+          </details>
+          <details class="faq-item"><summary>What is MD5 still good for?</summary>
+            <div class="faq-body">MD5 remains useful for non-security purposes: verifying file integrity after download (when the checksum is delivered over a separate secure channel), generating database cache keys, checksumming large datasets for deduplication, and legacy system compatibility.</div>
+          </details>
+          <details class="faq-item"><summary>What is HMAC-MD5?</summary>
+            <div class="faq-body">HMAC-MD5 applies a secret key to the MD5 hash using the HMAC construction (RFC 2104). It is used in protocols like older TLS cipher suites and some network authentication schemes to verify both integrity and authenticity of messages.</div>
+          </details>
+          <details class="faq-item"><summary>Can I reverse an MD5 hash?</summary>
+            <div class="faq-body">MD5 is mathematically one-way — the original input cannot be recovered from the hash alone. However, common inputs (like dictionary words or short strings) can be found using rainbow tables or brute-force lookups, which is why MD5 is unsuitable for passwords.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About MD5 Hash Generator</h2>
+        <p>MD5 (Message Digest 5) was designed by Ronald Rivest in 1991 and published as RFC 1321. It is one of the most widely recognized hash functions in computing history, producing a 128-bit digest from any input. Despite being cryptographically broken for security purposes, it remains extremely common in file integrity verification and legacy systems.</p>
+        <h3>How MD5 Works</h3>
+        <p>MD5 pads the input to a length that is 64 bytes short of a multiple of 512 bits, then appends a 64-bit representation of the original message length. The padded message is processed in 512-bit blocks, each passing through four rounds of 16 operations using non-linear functions, modular addition, and left-rotation. The result is four 32-bit state values concatenated to form the 128-bit digest.</p>
+        <h3>MD5 for File Integrity</h3>
+        <p>When a file is distributed, the publisher often includes an MD5 checksum alongside it. After downloading, you run the same MD5 algorithm on the file and compare the result. If the hashes match, the file has not been corrupted in transit. This use case is still valid as long as you obtain the expected hash through a separate, trusted channel — MD5's collision vulnerability only matters if an attacker can forge a matching file, which requires deliberate effort.</p>
+        <h3>Input and Output Options</h3>
+        <p>This tool supports UTF-8 (the most common choice), UTF-16LE, UTF-16BE, Hex, and Base64 input encodings. Output can be lowercase hex, uppercase hex, or Base64. The share link feature lets you create a URL that pre-fills the input so you can share a specific hash calculation with others.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Hash Tools</h4><ul><li><a href="crc.html">CRC</a></li><li><a href="md2.html">MD2</a></li><li><a href="md4.html">MD4</a></li><li><a href="md5.html">MD5</a></li><li><a href="sha1.html">SHA1</a></li></ul></div>
+        <div class="footer-col"><h4>File Hash</h4><ul><li><a href="md2-file.html">MD2 File</a></li><li><a href="md4-file.html">MD4 File</a></li><li><a href="md5-file.html">MD5 File</a></li><li><a href="sha1-file.html">SHA1 File</a></li></ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'../js/md5.min.js',onload:function(){window.method=md5;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

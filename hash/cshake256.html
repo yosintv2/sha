@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cSHAKE256 Hash Generator Online | YoSin Tools</title>
+<meta name="description" content="Generate cSHAKE256 hash online. Customizable SHAKE256 XOF, 256-bit security. NIST SP 800-185. Set function name, customization string, and output length. Free, browser-based.">
+<meta name="keywords" content="cSHAKE256 hash, cSHAKE256 generator, cSHAKE256 online, NIST SP 800-185, customizable SHAKE">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/cshake256.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="cSHAKE256 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate cSHAKE256 hashes with custom function name and customization string. 256-bit security. NIST SP 800-185. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/cshake256.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is cSHAKE256?","acceptedAnswer":{"@type":"Answer","text":"cSHAKE256 (Customizable SHAKE-256) is a variant of SHAKE256 from NIST SP 800-185. It provides 256-bit security with domain separation via function name (N) and customization string (S) parameters. KMAC256 is built on cSHAKE256."}},
+{"@type":"Question","name":"cSHAKE256 vs cSHAKE128 — which should I use?","acceptedAnswer":{"@type":"Answer","text":"Use cSHAKE256 when you need 256-bit security (collision resistance of 2^128). cSHAKE128 provides 128-bit security but is faster. For long-term security, post-quantum applications, and high-value data protection, prefer cSHAKE256."}},
+{"@type":"Question","name":"When both N and S are empty, what does cSHAKE256 produce?","acceptedAnswer":{"@type":"Answer","text":"When both N and S are empty strings, cSHAKE256 is identical to SHAKE256. The customization mechanism only activates when at least one parameter is non-empty."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"cSHAKE256","item":"https://singhyogendra.com.np/hash/cshake256.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>cSHAKE256</span>
+      </nav>
+      <h1>cSHAKE256 Hash Generator</h1>
+      <p>Generate cSHAKE256 (Customizable SHAKE256) hashes online. NIST SP 800-185, 256-bit security. Set function name (N), customization string (S), and output length. KMAC256 is built on cSHAKE256.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="output-bits">Output Bits</label>
+                <input type="number" id="output-bits" value="512" min="8" max="65536" step="8" data-remember="output-bits" data-share="output_bits" data-auto-update>
+              </div>
+              <div class="setting">
+                <label for="function-name">Function Name (N)</label>
+                <input type="text" id="function-name" placeholder="Leave empty for general use" data-remember="function-name" data-share="function_name" data-auto-update>
+              </div>
+              <div class="setting">
+                <label for="customization">Customization (S)</label>
+                <input type="text" id="customization" placeholder="Optional domain separation string" data-remember="customization" data-share="customization" data-auto-update>
+              </div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="cshake256-file.html"><span class="tc-name">cSHAKE256 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="cshake128.html"><span class="tc-name">cSHAKE128</span><span class="tc-desc">128-bit security cSHAKE</span></a>
+          <a class="tool-card" href="shake256.html"><span class="tc-name">SHAKE256</span><span class="tc-desc">Basic SHAKE256 XOF</span></a>
+          <a class="tool-card" href="kmac256.html"><span class="tc-name">KMAC256</span><span class="tc-desc">Keyed MAC from cSHAKE256</span></a>
+          <a class="tool-card" href="sha3-512.html"><span class="tc-name">SHA3-512</span><span class="tc-desc">Fixed SHA3-512</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is cSHAKE256?</summary>
+            <div class="faq-body">cSHAKE256 is a customizable XOF from NIST SP 800-185, providing 256-bit security. It extends SHAKE256 with N (function name) and S (customization string) for domain separation.</div>
+          </details>
+          <details class="faq-item"><summary>What is the customization string used for?</summary>
+            <div class="faq-body">The customization string S provides domain separation between different uses of cSHAKE256 within the same protocol, ensuring independent outputs for different purposes.</div>
+          </details>
+          <details class="faq-item"><summary>How does cSHAKE256 relate to KMAC256?</summary>
+            <div class="faq-body">KMAC256 is built on cSHAKE256 by setting N='KMAC' and encoding the key. KMAC256 is designed for keyed hashing (MAC) use cases.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About cSHAKE256 Hash Generator</h2>
+        <p>cSHAKE256 (Customizable SHAKE-256) is the higher-security customizable XOF from NIST SP 800-185 (2017). It uses SHAKE256 as its base, providing 256-bit security and variable output length, with additional domain separation through the function name (N) and customization string (S) parameters.</p>
+        <h3>SP 800-185 Functions</h3>
+        <p>NIST SP 800-185 defines four functions based on cSHAKE: cSHAKE128, cSHAKE256, KMAC128, KMAC256, ParallelHash128, ParallelHash256, TupleHash128, and TupleHash256. cSHAKE256 is the foundation for the higher-security variants of each.</p>
+        <h3>Use in Post-Quantum Cryptography</h3>
+        <p>cSHAKE256 and its derived functions are used in NIST post-quantum cryptography schemes. The ability to produce variable-length outputs with domain separation makes cSHAKE256 a versatile primitive for constructing complex protocols.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>cSHAKE / KMAC</h4><ul>
+          <li><a href="cshake128.html">cSHAKE128</a></li>
+          <li><a href="cshake256.html">cSHAKE256</a></li>
+          <li><a href="kmac128.html">KMAC128</a></li>
+          <li><a href="kmac256.html">KMAC256</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>SHAKE / SHA3</h4><ul>
+          <li><a href="shake128.html">SHAKE128</a></li>
+          <li><a href="shake256.html">SHAKE256</a></li>
+          <li><a href="sha3-512.html">SHA3-512</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>
+++waitLoadCount;
+delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js',onload:function(){
+  window.method=function(msg){
+    var bits=parseInt(document.getElementById('output-bits').value)||512;
+    var N=document.getElementById('function-name').value||'';
+    var S=document.getElementById('customization').value||'';
+    return cshake256(msg,bits,N,S);
+  };
+  methodLoad();
+}});
+</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MD2 Hash Generator Online — Free MD2 Calculator | YoSin Tools</title>
+<meta name="description" content="Calculate MD2 hash online. Supports UTF-8, UTF-16, Hex, Base64 input encodings and HMAC-MD2. Free, instant, browser-based MD2 hash generator.">
+<meta name="keywords" content="MD2 hash, MD2 calculator, MD2 online, MD2 generator, MD2 checksum">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/md2.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MD2 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate MD2 hashes online. Supports UTF-8, Hex, Base64 and HMAC. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/md2.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is MD2?","acceptedAnswer":{"@type":"Answer","text":"MD2 (Message Digest 2) is a cryptographic hash function designed by Ronald Rivest in 1989. It produces a 128-bit (16-byte) hash value. MD2 is considered cryptographically broken and is no longer recommended for security-sensitive applications."}},
+{"@type":"Question","name":"What is the output length of MD2?","acceptedAnswer":{"@type":"Answer","text":"MD2 always produces a 128-bit (16-byte) hash value, which is typically displayed as a 32-character hexadecimal string."}},
+{"@type":"Question","name":"Is MD2 the same as MD5?","acceptedAnswer":{"@type":"Answer","text":"No. MD2, MD4, and MD5 are related but different algorithms. MD2 was the first in the series (1989), followed by MD4 (1990) and MD5 (1991). All three produce 128-bit digests but use different internal mechanisms. MD5 is significantly faster and more widely used."}},
+{"@type":"Question","name":"What is HMAC-MD2?","acceptedAnswer":{"@type":"Answer","text":"HMAC-MD2 is a keyed-hash message authentication code that uses MD2 as the underlying hash function. Enable HMAC in Settings and enter a secret key to compute HMAC-MD2."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"MD2","item":"https://singhyogendra.com.np/hash/md2.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <!-- ===== STICKY LEFT SIDEBAR ===== -->
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html">
+          <img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools">
+          <h2>YoSin Tools</h2>
+        </a>
+        <div class="toolbar">
+          <button class="theme" title="Toggle dark mode">
+            <img class="light" src="../assets/images/light.svg" alt="Dark mode">
+            <img class="dark"  src="../assets/images/dark.svg"  alt="Light mode">
+          </button>
+        </div>
+      </header>
+      <div class="sidebar-search">
+        <input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off">
+      </div>
+      <div class="section">
+        <h3>Hash</h3>
+        <details><summary>CRC</summary><nav><ol><li><a href="crc.html">CRC</a></li></ol></nav></details>
+        <details class="active" open>
+          <summary>MD</summary>
+          <nav><ol>
+            <li class="active"><a href="md2.html">MD2</a></li>
+            <li><a href="md2-file.html">MD2 File</a></li>
+            <li><a href="md4.html">MD4</a></li>
+            <li><a href="md4-file.html">MD4 File</a></li>
+            <li><a href="md5.html">MD5</a></li>
+            <li><a href="md5-file.html">MD5 File</a></li>
+          </ol></nav>
+        </details>
+        <details><summary>SHA1</summary><nav><ol>
+          <li><a href="sha1.html">SHA1</a></li>
+          <li><a href="sha1-file.html">SHA1 File</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2</summary><nav><ol>
+          <li><a href="sha224.html">SHA224</a></li><li><a href="sha224-file.html">SHA224 File</a></li>
+          <li><a href="sha256.html">SHA256</a></li><li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2-512</summary><nav><ol>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha384-file.html">SHA384 File</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-224-file.html">SHA512/224 File</a></li>
+          <li><a href="sha512-256.html">SHA512/256</a></li><li><a href="sha512-256-file.html">SHA512/256 File</a></li>
+        </ol></nav></details>
+      </div>
+      <div class="section"><h3>Links</h3><nav class="links"><ol>
+        <li><a href="../index.html">Home</a></li>
+      </ol></nav></div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu">
+        <img src="../assets/images/menu.svg" width="22" height="22" alt="Menu">
+      </button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span>
+        <span>Hash</span><span class="sep">›</span><span>MD2</span>
+      </nav>
+      <h1>MD2 Hash Generator</h1>
+      <p>Generate MD2 hash values online. Supports UTF-8, UTF-16, Hex, and Base64 input encodings. Also supports HMAC-MD2 with a secret key.</p>
+    </header>
+
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input
+                <div class="toolbar">
+                  <button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button>
+                </div>
+              </div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…"
+                data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output
+                <div class="toolbar">
+                  <button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button>
+                  <button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button>
+                </div>
+              </div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…"
+                data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link
+                <div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div>
+              </summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option>
+                  <option value="hex_upper">Hex (Upper Case)</option>
+                  <option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting">
+                <label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label>
+              </div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting">
+                  <label for="hmac-key">Key</label>
+                  <input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update>
+                </div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="md2-file.html"><span class="tc-name">MD2 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="md4.html"><span class="tc-name">MD4</span><span class="tc-desc">128-bit hash</span></a>
+          <a class="tool-card" href="md5.html"><span class="tc-name">MD5</span><span class="tc-desc">128-bit hash</span></a>
+          <a class="tool-card" href="sha1.html"><span class="tc-name">SHA1</span><span class="tc-desc">160-bit hash</span></a>
+          <a class="tool-card" href="crc.html"><span class="tc-name">CRC</span><span class="tc-desc">Cyclic checksum</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is MD2?</summary>
+            <div class="faq-body">MD2 (Message Digest 2) is a cryptographic hash function designed by Ronald Rivest in 1989 and published as RFC 1319. It produces a 128-bit (16-byte) hash digest. MD2 is the predecessor to MD4 and MD5 and is considered cryptographically broken today.</div>
+          </details>
+          <details class="faq-item"><summary>What is the output length of MD2?</summary>
+            <div class="faq-body">MD2 always produces a 128-bit output, displayed as a 32-character lowercase hexadecimal string (or 24 characters in Base64).</div>
+          </details>
+          <details class="faq-item"><summary>Is MD2 safe to use for passwords?</summary>
+            <div class="faq-body">No. MD2 is cryptographically broken and must not be used for passwords, digital signatures, or any security-critical application. Use bcrypt, Argon2, or SHA-256 for security purposes.</div>
+          </details>
+          <details class="faq-item"><summary>How does MD2 differ from MD4 and MD5?</summary>
+            <div class="faq-body">MD2 (1989) was designed for 8-bit processors and uses a different internal structure than MD4 and MD5. MD4 (1990) and MD5 (1991) are optimized for 32-bit processors and are significantly faster. All three produce 128-bit digests.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About MD2 Hash</h2>
+        <p>The MD2 (Message Digest 2) algorithm was designed by Ronald Rivest and published as RFC 1319 in 1992. It was optimized for 8-bit computers and processes data in 16-byte blocks, producing a 128-bit message digest. While historically significant as one of the earliest standardized hash functions, MD2 is no longer suitable for cryptographic security.</p>
+        <h3>How MD2 Works</h3>
+        <p>MD2 pads the message to a multiple of 16 bytes, appends a 16-byte checksum, then initializes a 48-byte state buffer and processes the padded message in 16-byte chunks using a substitution table derived from the digits of pi. The final 16 bytes of the state are the digest.</p>
+        <h3>When to Use MD2</h3>
+        <p>MD2 is primarily of historical and academic interest today. It may still appear in legacy systems or old digital certificates. If you need to verify or replicate an MD2 hash from a legacy system, this tool provides an accurate implementation. For any new project, choose a modern hash function such as SHA-256 or SHA-3.</p>
+        <h3>MD2 vs MD4 vs MD5</h3>
+        <p>All three algorithms were designed by Ronald Rivest and produce 128-bit digests. MD2 is the slowest and was designed for 8-bit systems. MD4 improved performance for 32-bit processors. MD5 further refined the design and became widely adopted. All three are now considered insecure for cryptographic purposes, though MD5 remains widely used for non-security integrity checks.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Hash Tools</h4><ul>
+          <li><a href="crc.html">CRC</a></li><li><a href="md2.html">MD2</a></li><li><a href="md4.html">MD4</a></li><li><a href="md5.html">MD5</a></li><li><a href="sha1.html">SHA1</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>File Hash</h4><ul>
+          <li><a href="md2-file.html">MD2 File</a></li><li><a href="md4-file.html">MD4 File</a></li><li><a href="md5-file.html">MD5 File</a></li><li><a href="sha1-file.html">SHA1 File</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+
+<script>
+++waitLoadCount;
+delayScripts.push({src:'../js/crypto-api.js',onload:function(){window.method=md2;methodLoad();}});
+</script>
+<script>
+++waitLoadCount;
+delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});
+</script>
+<script>
+delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});
+</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

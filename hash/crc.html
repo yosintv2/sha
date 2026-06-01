@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRC Checksum Calculator Online — CRC-32, CRC-16, CRC-8 | YoSin Tools</title>
+<meta name="description" content="Free online CRC checksum calculator. Supports CRC-32, CRC-16, CRC-8, CRC-64 and 100+ predefined models plus custom polynomial. Calculate from text, file, or URL.">
+<meta name="keywords" content="CRC calculator, CRC-32, CRC-16, CRC-8, CRC-64, checksum, hash, online tool">
+<meta name="author" content="YoSin Tools">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/crc.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CRC Checksum Calculator Online | YoSin Tools">
+<meta property="og:description" content="Calculate CRC checksums online — CRC-32, CRC-16, CRC-8, CRC-64 and 100+ models. Free, fast, and works in your browser.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/crc.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is CRC?","acceptedAnswer":{"@type":"Answer","text":"CRC (Cyclic Redundancy Check) is an error-detecting code used to detect accidental changes to digital data. It is widely used in network communications and storage devices."}},
+    {"@type":"Question","name":"What is the difference between CRC-8, CRC-16, and CRC-32?","acceptedAnswer":{"@type":"Answer","text":"The number refers to the bit-width of the checksum. CRC-8 produces an 8-bit result, CRC-16 produces a 16-bit result, and CRC-32 produces a 32-bit result. A wider checksum detects more error patterns."}},
+    {"@type":"Question","name":"Can I use a custom CRC polynomial?","acceptedAnswer":{"@type":"Answer","text":"Yes. Select 'Custom' from the Model dropdown to enter your own Width, Poly, Init, Xorout, Refin, and Refout values."}},
+    {"@type":"Question","name":"Does this tool process my file on a server?","acceptedAnswer":{"@type":"Answer","text":"No. All processing happens entirely in your browser using JavaScript. Your file is never uploaded to any server."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+    {"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+    {"@type":"ListItem","position":3,"name":"CRC","item":"https://singhyogendra.com.np/hash/crc.html"}
+  ]
+}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <!-- ===== STICKY LEFT SIDEBAR ===== -->
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html">
+          <img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools Logo">
+          <h2>YoSin Tools</h2>
+        </a>
+        <div class="toolbar">
+          <button class="theme" title="Toggle dark mode">
+            <img class="light" src="../assets/images/light.svg" alt="Dark mode">
+            <img class="dark"  src="../assets/images/dark.svg"  alt="Light mode">
+          </button>
+        </div>
+      </header>
+
+      <div class="sidebar-search">
+        <input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off">
+      </div>
+
+      <div class="section">
+        <h3>Hash</h3>
+        <details class="active" open>
+          <summary>CRC</summary>
+          <nav><ol>
+            <li class="active"><a href="crc.html">CRC</a></li>
+          </ol></nav>
+        </details>
+        <details>
+          <summary>MD</summary>
+          <nav><ol>
+            <li><a href="md2.html">MD2</a></li>
+            <li><a href="md2-file.html">MD2 File</a></li>
+            <li><a href="md4.html">MD4</a></li>
+            <li><a href="md4-file.html">MD4 File</a></li>
+            <li><a href="md5.html">MD5</a></li>
+            <li><a href="md5-file.html">MD5 File</a></li>
+          </ol></nav>
+        </details>
+        <details>
+          <summary>SHA1</summary>
+          <nav><ol>
+            <li><a href="sha1.html">SHA1</a></li>
+            <li><a href="sha1-file.html">SHA1 File</a></li>
+          </ol></nav>
+        </details>
+        <details><summary>SHA2</summary><nav><ol>
+          <li><a href="sha224.html">SHA224</a></li><li><a href="sha224-file.html">SHA224 File</a></li>
+          <li><a href="sha256.html">SHA256</a></li><li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2-512</summary><nav><ol>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha384-file.html">SHA384 File</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-224-file.html">SHA512/224 File</a></li>
+          <li><a href="sha512-256.html">SHA512/256</a></li><li><a href="sha512-256-file.html">SHA512/256 File</a></li>
+        </ol></nav></details>
+      </div>
+
+      <div class="section">
+        <h3>Links</h3>
+        <nav class="links"><ol>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="https://singhyogendra.com.np" target="_blank" rel="noopener">singhyogendra.com.np</a></li>
+        </ol></nav>
+      </div>
+    </div><!-- /.container -->
+  </div><!-- /#sidebar -->
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div id="content">
+
+    <!-- Mobile top bar -->
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu">
+        <img src="../assets/images/menu.svg" width="22" height="22" alt="Menu">
+      </button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+
+    <!-- Page header -->
+    <header>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">›</span>
+        <span>Hash</span>
+        <span class="sep">›</span>
+        <span>CRC</span>
+      </nav>
+      <h1>CRC Checksum Calculator</h1>
+      <p>Calculate cyclic redundancy check (CRC) values online. Supports CRC-32, CRC-16, CRC-8, CRC-64, and 100+ predefined models — plus fully custom polynomials. Input text, upload a file, or provide a URL.</p>
+    </header>
+
+    <!-- Ad: below header -->
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <!-- ===== TOOL ===== -->
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input
+                <div class="toolbar">
+                  <button class="icon" data-toggle="fullscreen">
+                    <img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen">
+                    <img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit full screen">
+                  </button>
+                </div>
+              </div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…"
+                data-remember="input" data-share="input"
+                data-encoding-from="#input-type" data-auto-update></textarea>
+              <div class="droppable-zone container" id="droppable-zone" style="display:none;">
+                <input class="droppable-file" type="file" id="file" data-auto-update>
+                <div class="droppable-zone-wrapper">
+                  <img class="droppable-zone-icon" src="../assets/images/file.svg" alt="File">
+                  <div class="droppable-zone-text">Drag and drop a file here, or click to select. Processed locally — never uploaded.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output
+                <div class="toolbar">
+                  <button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied">
+                    <img src="../assets/images/copy.svg" alt="Copy">
+                  </button>
+                  <button class="icon" data-toggle="fullscreen">
+                    <img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen">
+                    <img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit full screen">
+                  </button>
+                </div>
+              </div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…"
+                data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link
+                <div class="toolbar">
+                  <button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied">
+                    <img src="../assets/images/copy.svg" alt="Copy">
+                  </button>
+                </div>
+              </summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div><!-- /.layout-block -->
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Calculate</a></div>
+              <div class="setting">
+                <label class="switcher">
+                  <input type="checkbox" value="1" id="auto-update" checked>
+                  <div class="toggle"></div><span>Auto Update</span>
+                </label>
+              </div>
+              <div class="setting">
+                <label class="switcher">
+                  <input type="checkbox" value="1" id="remember-input">
+                  <div class="toggle"></div><span>Remember Input</span>
+                </label>
+              </div>
+              <div class="setting">
+                <label for="file-type">Input Type</label>
+                <select id="file-type" data-remember="source" data-share="source" data-auto-update
+                  data-url-placeholder="Enter a URL — the tool will try to download it. If blocked by CORS you may need to download manually.">
+                  <option value="text">Text</option>
+                  <option value="file">File</option>
+                  <option value="url">URL</option>
+                </select>
+              </div>
+              <div class="setting text-only">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary">
+                    <option value="hex">Hex</option>
+                    <option value="base64" data-load-encoding="base64">Base64</option>
+                  </optgroup>
+                  <optgroup label="Text">
+                    <option value="utf-8" selected>UTF-8</option>
+                    <option value="utf-16le" data-load-encoding="1">UTF-16LE</option>
+                    <option value="utf-16be" data-load-encoding="1">UTF-16BE</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option>
+                  <option value="hex_upper">Hex (Upper Case)</option>
+                  <option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="model">Model</label>
+                <select id="model" data-remember="model" data-option="model" data-share="model">
+                  <optgroup label="Common">
+                    <option value="custom">Custom</option>
+                    <option value="crc_7_mmc">CRC-7/MMC</option>
+                    <option value="crc_8_smbus">CRC-8/SMBUS (CRC-8)</option>
+                    <option value="crc_16_arc">CRC-16/ARC (CRC-16)</option>
+                    <option value="crc_24_openpgp">CRC-24/OPENPGP</option>
+                    <option value="crc_32_iso_hdlc" selected>CRC-32/ISO-HDLC (CRC-32, PKZIP)</option>
+                    <option value="crc_64_ecma_182">CRC-64/ECMA-182</option>
+                  </optgroup>
+                  <optgroup label="All CRC models">
+                    <option value="crc_3_gsm">CRC-3/GSM</option>
+                    <option value="crc_3_rohc">CRC-3/ROHC</option>
+                    <option value="crc_4_g_704">CRC-4/G-704</option>
+                    <option value="crc_5_usb">CRC-5/USB</option>
+                    <option value="crc_8_autosar">CRC-8/AUTOSAR</option>
+                    <option value="crc_8_bluetooth">CRC-8/BLUETOOTH</option>
+                    <option value="crc_8_dvb_s2">CRC-8/DVB-S2</option>
+                    <option value="crc_8_maxim_dow">CRC-8/MAXIM-DOW</option>
+                    <option value="crc_10_atm">CRC-10/ATM</option>
+                    <option value="crc_12_dect">CRC-12/DECT</option>
+                    <option value="crc_16_cdma2000">CRC-16/CDMA2000</option>
+                    <option value="crc_16_ibm_3740">CRC-16/IBM-3740</option>
+                    <option value="crc_16_kermit">CRC-16/KERMIT</option>
+                    <option value="crc_16_modbus">CRC-16/MODBUS</option>
+                    <option value="crc_16_xmodem">CRC-16/XMODEM</option>
+                    <option value="crc_32_bzip2">CRC-32/BZIP2</option>
+                    <option value="crc_32_iscsi">CRC-32/ISCSI (CRC-32C)</option>
+                    <option value="crc_32_mpeg_2">CRC-32/MPEG-2</option>
+                    <option value="crc_64_go_iso">CRC-64/GO-ISO</option>
+                    <option value="crc_64_redis">CRC-64/REDIS</option>
+                    <option value="crc_64_xz">CRC-64/XZ</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="setting" id="custom-block" style="display:none">
+                <div class="setting"><label for="width">Width</label><input type="number" id="width" data-option="width" data-remember="width" data-share="width" value="32" min="1"></div>
+                <div class="setting"><label for="poly">Poly (Hex)</label><input type="text" id="poly" data-option="poly" data-remember="poly" data-share="poly" value="04C11DB7"></div>
+                <div class="setting"><label for="init">Init (Hex)</label><input type="text" id="init" data-option="init" data-remember="init" data-share="init" value="FFFFFFFF"></div>
+                <div class="setting"><label for="xorout">Xorout (Hex)</label><input type="text" id="xorout" data-option="xorout" data-remember="xorout" data-share="xorout" value="FFFFFFFF"></div>
+                <div class="setting">
+                  <label class="switcher"><input type="checkbox" value="1" id="refin" data-option="refin" data-remember="refin" data-share="refin" checked><div class="toggle"></div><span>Refin</span></label>
+                </div>
+                <div class="setting">
+                  <label class="switcher"><input type="checkbox" value="1" id="refout" data-option="refout" data-remember="refout" data-share="refout" checked><div class="toggle"></div><span>Refout</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.settings -->
+      </div><!-- /.layout -->
+
+      <!-- Ad: inline content -->
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <!-- Related tools -->
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="md5.html"><span class="tc-name">MD5</span><span class="tc-desc">128-bit hash</span></a>
+          <a class="tool-card" href="sha1.html"><span class="tc-name">SHA1</span><span class="tc-desc">160-bit hash</span></a>
+          <a class="tool-card" href="md4.html"><span class="tc-name">MD4</span><span class="tc-desc">128-bit hash</span></a>
+          <a class="tool-card" href="md2.html"><span class="tc-name">MD2</span><span class="tc-desc">128-bit hash</span></a>
+          <a class="tool-card" href="md5-file.html"><span class="tc-name">MD5 File</span><span class="tc-desc">File checksum</span></a>
+          <a class="tool-card" href="sha1-file.html"><span class="tc-name">SHA1 File</span><span class="tc-desc">File checksum</span></a>
+        </div>
+      </section>
+
+      <!-- Ad: before FAQ -->
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <!-- FAQ -->
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is CRC?</summary>
+            <div class="faq-body">CRC (Cyclic Redundancy Check) is an error-detecting algorithm widely used in digital networks and storage to detect accidental changes to raw data. It works by treating the input as a polynomial and dividing it by a generator polynomial — the remainder is the CRC value.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What is the difference between CRC-8, CRC-16, and CRC-32?</summary>
+            <div class="faq-body">The number indicates the bit width of the checksum. CRC-8 produces an 8-bit (1-byte) result, CRC-16 a 16-bit result, and CRC-32 a 32-bit result. Wider checksums detect a greater variety of errors but require more storage and computation.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What is CRC-32 used for?</summary>
+            <div class="faq-body">CRC-32 is one of the most widely used checksum algorithms. It is used in Ethernet frames, ZIP files, PNG images, gzip compression, and many other formats to verify data integrity.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use a custom CRC polynomial?</summary>
+            <div class="faq-body">Yes. Select "Custom" from the Model dropdown to enter your own Width, Poly, Init, Xorout, Refin, and Refout parameters. This lets you implement any CRC variant, including proprietary ones.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Is my file uploaded to a server?</summary>
+            <div class="faq-body">No. All processing is done entirely in your browser. Your file, text, or URL data is never sent to any external server. The calculation is performed using client-side JavaScript.</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- SEO content -->
+      <div class="seo-content">
+        <h2>About the CRC Calculator</h2>
+        <p>YoSin Tools provides a free, fast, and fully browser-based CRC calculator that supports more than 100 standardized CRC models along with a fully customizable polynomial engine. Whether you need to verify file integrity, debug embedded communications, or simply learn about cyclic redundancy checks, this tool has you covered.</p>
+        <h3>Supported CRC Models</h3>
+        <p>The tool supports all models defined in the CRC RevEng catalog, including the most popular variants:</p>
+        <ul>
+          <li><strong>CRC-32/ISO-HDLC</strong> — the standard CRC-32 used in ZIP, PNG, Ethernet, and gzip</li>
+          <li><strong>CRC-32C (CRC-32/ISCSI)</strong> — used in iSCSI and newer protocols</li>
+          <li><strong>CRC-16/MODBUS</strong> — widely used in industrial automation</li>
+          <li><strong>CRC-8/DVB-S2</strong> — used in satellite broadcasting standards</li>
+          <li><strong>CRC-64/XZ</strong> — a 64-bit variant used in the XZ compression format</li>
+        </ul>
+        <h3>How to Use</h3>
+        <p>Enter your text in the Input box, or switch the Input Type to File to upload a local file, or to URL to fetch a remote resource. Select your desired CRC model from the dropdown and the result appears instantly in the Output box. You can copy the result with one click or share it via the generated share link.</p>
+        <h3>Custom Polynomials</h3>
+        <p>For advanced users, the Custom model lets you specify every parameter of the CRC algorithm: the polynomial width (1–82 bits), the generator polynomial in hexadecimal, the initial register value, the final XOR value, and whether the input and output should be bit-reflected. This covers virtually every CRC algorithm ever defined.</p>
+        <h3>Why CRC over MD5 or SHA?</h3>
+        <p>CRC is designed for fast error detection in hardware and communication protocols, not for cryptographic security. It is much faster than MD5 or SHA-1 but is not suitable for security purposes because it can be intentionally forged. Use CRC when you need speed and simplicity; use SHA-256 or SHA-512 when you need collision resistance.</p>
+      </div>
+    </main>
+
+    <!-- Ad: bottom -->
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+
+    <!-- Footer -->
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Hash Tools</h4>
+          <ul>
+            <li><a href="crc.html">CRC</a></li>
+            <li><a href="md5.html">MD5</a></li>
+            <li><a href="sha1.html">SHA1</a></li>
+            <li><a href="md4.html">MD4</a></li>
+            <li><a href="md2.html">MD2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>File Hash</h4>
+          <ul>
+            <li><a href="md5-file.html">MD5 File</a></li>
+            <li><a href="sha1-file.html">SHA1 File</a></li>
+            <li><a href="md4-file.html">MD4 File</a></li>
+            <li><a href="md2-file.html">MD2 File</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>YoSin Tools</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="https://singhyogendra.com.np" target="_blank" rel="noopener">Website</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+
+  </div><!-- /#content -->
+</div><!-- /#app -->
+
+<div id="message"></div>
+
+<script>
+++waitLoadCount;
+delayScripts.push({src:'../js/crc.js',onload:function(){window.method=withOptions(crc,['model','width','poly','init','xorout','refin','refout']);methodLoad();}});
+</script>
+<script>
+++waitLoadCount;
+delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});
+</script>
+<script>
+delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});
+</script>
+<script>
+++waitLoadCount;
+delayScripts.push({src:'../js/file-loader.js',onload:function(){methodLoad();}});
+</script>
+
+<!-- Sidebar search (simple filter) -->
+<script>
+document.getElementById('tool-search').addEventListener('input',function(){
+  var q=this.value.toLowerCase();
+  document.querySelectorAll('#sidebar li').forEach(function(li){
+    var t=li.textContent.toLowerCase();
+    li.style.display=q&&t.indexOf(q)===-1?'none':'';
+  });
+});
+</script>
+
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

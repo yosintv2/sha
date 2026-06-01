@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KMAC256 Hash Generator Online — Free KMAC256 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate KMAC256 (Keccak MAC, 256-bit security) online. NIST SP 800-185. Keyed hash with configurable output length and customization. Free, browser-based.">
+<meta name="keywords" content="KMAC256 hash, KMAC256 generator, KMAC256 online, Keccak MAC 256, NIST SP 800-185">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/kmac256.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KMAC256 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate KMAC256 Keccak MACs online. 256-bit security keyed hash. NIST SP 800-185. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/kmac256.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is KMAC256?","acceptedAnswer":{"@type":"Answer","text":"KMAC256 is a 256-bit security variant of KMAC (Keccak Message Authentication Code) from NIST SP 800-185. It is built on cSHAKE256 and provides 256-bit collision resistance and 256-bit preimage resistance, making it suitable for post-quantum and high-security applications."}},
+{"@type":"Question","name":"When should I use KMAC256 instead of KMAC128?","acceptedAnswer":{"@type":"Answer","text":"Use KMAC256 when you require 256-bit security — for post-quantum resistance, long-lived keys (20+ years), or high-value data protection. For typical web authentication, KMAC128 provides adequate security at higher throughput."}},
+{"@type":"Question","name":"What output length should I use for KMAC256?","acceptedAnswer":{"@type":"Answer","text":"For a standard MAC tag, 256 bits (32 bytes) is common. For key derivation, use the exact key length needed. KMAC256 supports any output length up to 2^2040 bits."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"KMAC256","item":"https://singhyogendra.com.np/hash/kmac256.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>KMAC256</span>
+      </nav>
+      <h1>KMAC256 Hash Generator</h1>
+      <p>Generate KMAC256 hashes online. Keccak MAC with 256-bit security, built on cSHAKE256. NIST SP 800-185. Configure key, output bit length, and customization string for domain separation.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="kmac-key">Key</label>
+                <input type="text" id="kmac-key" placeholder="KMAC key (any length)" data-remember="kmac-key" data-share="kmac_key" data-auto-update>
+              </div>
+              <div class="setting">
+                <label for="output-bits">Output Bits</label>
+                <input type="number" id="output-bits" value="512" min="8" max="65536" step="8" data-remember="output-bits" data-share="output_bits" data-auto-update>
+              </div>
+              <div class="setting">
+                <label for="customization">Customization (S)</label>
+                <input type="text" id="customization" placeholder="Optional domain separation string" data-remember="customization" data-share="customization" data-auto-update>
+              </div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="kmac256-file.html"><span class="tc-name">KMAC256 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="kmac128.html"><span class="tc-name">KMAC128</span><span class="tc-desc">128-bit security</span></a>
+          <a class="tool-card" href="cshake256.html"><span class="tc-name">cSHAKE256</span><span class="tc-desc">Unkeyed variant</span></a>
+          <a class="tool-card" href="shake256.html"><span class="tc-name">SHAKE256</span><span class="tc-desc">XOF without key</span></a>
+          <a class="tool-card" href="sha3-512.html"><span class="tc-name">SHA3-512</span><span class="tc-desc">Fixed SHA-3</span></a>
+        </div>
+      </section>
+      <div class="seo-content">
+        <h2>About KMAC256 Hash Generator</h2>
+        <p>KMAC256 is the 256-bit security variant of KMAC (Keccak Message Authentication Code), standardized in NIST SP 800-185. It is built on cSHAKE256 using N='KMAC', providing a keyed hash function with 256-bit collision resistance. KMAC256 supports variable output length, making it suitable for MACs, key derivation, and PRF applications requiring the highest security margin.</p>
+        <h3>Post-Quantum Considerations</h3>
+        <p>KMAC256 provides 256-bit classical security. Against quantum adversaries using Grover's algorithm, the effective security is approximately 128 bits for key search. For post-quantum resilience with a 128-bit quantum security level, KMAC256 with a 256-bit key is recommended over KMAC128.</p>
+        <h3>Variable Output Length Applications</h3>
+        <p>KMAC256's variable output is particularly useful for deriving multiple keys of different lengths from a single master key (e.g., 128-bit AES key, 256-bit HMAC key) by varying the context or output length parameter, all from a single KMAC256 computation per context.</p>
+      </div>
+    </main>
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>KMAC / cSHAKE</h4><ul><li><a href="kmac128.html">KMAC128</a></li><li><a href="kmac256.html">KMAC256</a></li><li><a href="cshake128.html">cSHAKE128</a></li><li><a href="cshake256.html">cSHAKE256</a></li></ul></div>
+        <div class="footer-col"><h4>SHAKE / SHA3</h4><ul><li><a href="shake256.html">SHAKE256</a></li><li><a href="sha3-256.html">SHA3-256</a></li><li><a href="sha3-512.html">SHA3-512</a></li></ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2025 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>
+++waitLoadCount;
+delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js',onload:function(){
+  window.method=function(msg){
+    var key=document.getElementById('kmac-key').value||'';
+    var bits=parseInt(document.getElementById('output-bits').value)||512;
+    var S=document.getElementById('customization').value||'';
+    return kmac256(key,msg,bits,S);
+  };
+  methodLoad();
+}});
+</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keccak-224 Hash Generator Online — Free Keccak-224 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate Keccak-224 hash online. Original Keccak (pre-NIST), 224-bit output. Different from SHA3-224. Supports HMAC-Keccak-224. Free, browser-based.">
+<meta name="keywords" content="Keccak-224 hash, Keccak-224 generator, Keccak-224 online, Keccak-224 calculator, HMAC-Keccak-224">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/keccak-224.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keccak-224 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate Keccak-224 hashes instantly. Original pre-NIST Keccak algorithm, different from SHA3-224. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/keccak-224.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is Keccak-224?","acceptedAnswer":{"@type":"Answer","text":"Keccak-224 is the original 224-bit Keccak hash function developed by Bertoni, Daemen, Peeters, and Van Assche. It uses 0x01 padding, unlike SHA3-224 which uses 0x06 padding added by NIST. They produce different outputs for the same input."}},
+{"@type":"Question","name":"Keccak-224 vs SHA3-224 — what is the difference?","acceptedAnswer":{"@type":"Answer","text":"SHA3-224 is Keccak-224 with NIST-mandated domain separation padding (0x06 instead of 0x01). They produce different hashes for the same input. Keccak-224 is the original pre-standardization algorithm."}},
+{"@type":"Question","name":"Is Keccak-224 used in any major systems?","acceptedAnswer":{"@type":"Answer","text":"The 256-bit Keccak variant (Keccak-256) is widely used in Ethereum. Keccak-224 is less commonly used but shares the same sponge construction."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"Keccak-224","item":"https://singhyogendra.com.np/hash/keccak-224.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>Keccak-224</span>
+      </nav>
+      <h1>Keccak-224 Hash Generator</h1>
+      <p>Generate Keccak-224 hashes online. The original pre-NIST Keccak algorithm with 0x01 padding, producing 224-bit output. Note: Keccak-224 differs from SHA3-224. Supports HMAC-Keccak-224.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="keccak-224-file.html"><span class="tc-name">Keccak-224 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="keccak-256.html"><span class="tc-name">Keccak-256</span><span class="tc-desc">Ethereum hash</span></a>
+          <a class="tool-card" href="sha3-224.html"><span class="tc-name">SHA3-224</span><span class="tc-desc">NIST SHA3-224</span></a>
+          <a class="tool-card" href="keccak-512.html"><span class="tc-name">Keccak-512</span><span class="tc-desc">512-bit Keccak</span></a>
+          <a class="tool-card" href="sha256.html"><span class="tc-name">SHA256</span><span class="tc-desc">256-bit SHA-2</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is Keccak-224?</summary>
+            <div class="faq-body">Keccak-224 is the original 224-bit Keccak hash function, designed by Bertoni, Daemen, Peeters, and Van Assche. It was submitted to the NIST hash competition and won, but NIST modified the padding before standardizing it as SHA3-224.</div>
+          </details>
+          <details class="faq-item"><summary>How does Keccak-224 differ from SHA3-224?</summary>
+            <div class="faq-body">The only difference is padding. Keccak-224 appends 0x01 before the standard multi-rate padding; SHA3-224 appends 0x06. This means they produce different digests for the same input.</div>
+          </details>
+          <details class="faq-item"><summary>Is Keccak-224 the same as what Ethereum uses?</summary>
+            <div class="faq-body">Ethereum uses Keccak-256, not Keccak-224. The Ethereum Virtual Machine and Solidity use keccak256() which is the 256-bit variant.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About Keccak-224 Hash Generator</h2>
+        <p>Keccak-224 is the original 224-bit variant of the Keccak hash function, designed by Guido Bertoni, Joan Daemen, Michaël Peeters, and Gilles Van Assche. It was the winning submission of the NIST hash function competition (2012). When NIST standardized it as SHA-3 (FIPS 202), they added domain separation padding, creating SHA3-224 as a distinct algorithm from Keccak-224.</p>
+        <h3>Keccak vs SHA-3</h3>
+        <p>The original Keccak specification uses 0x01 padding before the multi-rate padding (bit pattern: 1 followed by zeros and ending with 1). NIST's SHA-3 standard uses 0x06 padding (appending the bits "01" as a domain suffix). This seemingly minor change means Keccak-224 and SHA3-224 produce completely different outputs for identical inputs.</p>
+        <h3>Applications</h3>
+        <p>Keccak-224 is used in systems that require compatibility with the original pre-NIST Keccak specification. The 256-bit variant (Keccak-256) is most widely known due to its use in Ethereum. For new applications, using SHA3-224 (the NIST standard) is generally preferred unless explicit Keccak compatibility is required.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Keccak Tools</h4><ul>
+          <li><a href="keccak-224.html">Keccak-224</a></li>
+          <li><a href="keccak-256.html">Keccak-256</a></li>
+          <li><a href="keccak-384.html">Keccak-384</a></li>
+          <li><a href="keccak-512.html">Keccak-512</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>SHA3 Tools</h4><ul>
+          <li><a href="sha3-256.html">SHA3-256</a></li>
+          <li><a href="sha3-512.html">SHA3-512</a></li>
+          <li><a href="shake128.html">SHAKE128</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js',onload:function(){window.method=keccak224;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

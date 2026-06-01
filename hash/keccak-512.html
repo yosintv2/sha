@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keccak-512 Hash Generator Online — Free Keccak-512 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate Keccak-512 hash online. Original pre-NIST Keccak, 512-bit output. Different from SHA3-512. Supports HMAC-Keccak-512. Free, browser-based.">
+<meta name="keywords" content="Keccak-512 hash, Keccak-512 generator, Keccak-512 online, Keccak-512 calculator, HMAC-Keccak-512">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/keccak-512.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keccak-512 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate Keccak-512 hashes instantly. Original pre-NIST Keccak, 512-bit output. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/keccak-512.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is Keccak-512?","acceptedAnswer":{"@type":"Answer","text":"Keccak-512 is the original 512-bit Keccak hash function (pre-NIST). It produces a 128-character hexadecimal digest and uses 0x01 padding, unlike SHA3-512 which uses 0x06 padding."}},
+{"@type":"Question","name":"Keccak-512 vs SHA3-512?","acceptedAnswer":{"@type":"Answer","text":"They differ only in padding (0x01 vs 0x06), producing different 512-bit outputs for the same input. SHA3-512 is the NIST-standardized version from FIPS 202."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"Keccak-512","item":"https://singhyogendra.com.np/hash/keccak-512.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>Keccak-512</span>
+      </nav>
+      <h1>Keccak-512 Hash Generator</h1>
+      <p>Generate Keccak-512 hashes online. The original pre-NIST Keccak, 512-bit (128 hex character) output. Note: Keccak-512 differs from SHA3-512. Supports HMAC-Keccak-512.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="keccak-512-file.html"><span class="tc-name">Keccak-512 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="keccak-256.html"><span class="tc-name">Keccak-256</span><span class="tc-desc">Ethereum hash</span></a>
+          <a class="tool-card" href="sha3-512.html"><span class="tc-name">SHA3-512</span><span class="tc-desc">NIST SHA3-512</span></a>
+          <a class="tool-card" href="keccak-384.html"><span class="tc-name">Keccak-384</span><span class="tc-desc">384-bit Keccak</span></a>
+          <a class="tool-card" href="sha512.html"><span class="tc-name">SHA512</span><span class="tc-desc">512-bit SHA-2</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is Keccak-512?</summary>
+            <div class="faq-body">Keccak-512 is the largest output variant of the original Keccak hash function, producing a 512-bit (128 hex character) digest. It uses 0x01 padding, unlike SHA3-512 (0x06 padding).</div>
+          </details>
+          <details class="faq-item"><summary>Keccak-512 vs SHA3-512 — what's the difference?</summary>
+            <div class="faq-body">Padding only: 0x01 for Keccak-512, 0x06 for SHA3-512. They produce completely different digests for the same input.</div>
+          </details>
+          <details class="faq-item"><summary>How secure is Keccak-512?</summary>
+            <div class="faq-body">Keccak-512 provides 256-bit collision resistance and 512-bit preimage resistance. The sponge construction makes it immune to length-extension attacks. No practical attacks are known.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About Keccak-512 Hash Generator</h2>
+        <p>Keccak-512 is the 512-bit variant of the original Keccak hash function (pre-NIST standardization). It uses the Keccak sponge with a 576-bit rate and 1024-bit capacity — the same parameters as SHA3-512 — but applies 0x01 padding instead of NIST's 0x06. This produces a completely different 512-bit (128 hex character) digest from SHA3-512 for the same input.</p>
+        <h3>Keccak-512 vs SHA3-512</h3>
+        <p>The sole algorithmic difference is one byte of padding. Keccak-512 appends 0x01 before the multi-rate padding; SHA3-512 appends 0x06 (encoding NIST's 2-bit domain suffix "01"). Despite this minor difference, the outputs are completely unrelated. Always use the variant that matches your system's specification.</p>
+        <h3>Use Cases</h3>
+        <p>Keccak-512 is used in legacy systems built before the NIST SHA-3 standard was finalized, or in systems that require explicit compatibility with the original Keccak competition submission. For new applications, SHA3-512 (the NIST standard) is generally preferred.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Keccak Tools</h4><ul>
+          <li><a href="keccak-224.html">Keccak-224</a></li>
+          <li><a href="keccak-256.html">Keccak-256</a></li>
+          <li><a href="keccak-384.html">Keccak-384</a></li>
+          <li><a href="keccak-512.html">Keccak-512</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>SHA3 Tools</h4><ul>
+          <li><a href="sha3-512.html">SHA3-512</a></li>
+          <li><a href="sha3-256.html">SHA3-256</a></li>
+          <li><a href="blake2b.html">BLAKE2b</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js',onload:function(){window.method=keccak512;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHA256 Hash Generator Online — Free SHA-256 Calculator | YoSin Tools</title>
+<meta name="description" content="Generate SHA256 (SHA-256) hash online instantly. Supports UTF-8, UTF-16, Hex, Base64 input encodings and HMAC-SHA256. Fast, free, and 100% browser-based SHA-256 calculator.">
+<meta name="keywords" content="SHA256 hash, SHA-256 generator, SHA256 online, SHA256 calculator, HMAC-SHA256, SHA-256 checksum">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/sha256.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SHA256 Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate SHA-256 hashes instantly. Supports UTF-8, Hex, Base64 input and HMAC-SHA256. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/sha256.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is SHA-256?","acceptedAnswer":{"@type":"Answer","text":"SHA-256 (Secure Hash Algorithm 256-bit) is a member of the SHA-2 family, designed by the NSA and published by NIST in 2001. It produces a 256-bit (64 hex character) digest and is currently the most widely used secure hash algorithm, powering TLS certificates, Bitcoin, code signing, and package verification."}},
+{"@type":"Question","name":"What is the output length of SHA-256?","acceptedAnswer":{"@type":"Answer","text":"SHA-256 produces a 256-bit (32-byte) digest, displayed as a 64-character lowercase hexadecimal string."}},
+{"@type":"Question","name":"Is SHA-256 secure?","acceptedAnswer":{"@type":"Answer","text":"Yes. SHA-256 has no known practical attacks. It is the current industry standard for cryptographic hashing and is approved by NIST for use in federal systems through at least 2030."}},
+{"@type":"Question","name":"What is HMAC-SHA256?","acceptedAnswer":{"@type":"Answer","text":"HMAC-SHA256 is a keyed message authentication code using SHA-256. It is used in JWT signatures, AWS request signing, webhook verification, and many other authentication protocols where both integrity and authenticity must be verified."}},
+{"@type":"Question","name":"SHA-256 vs SHA-512 — which should I use?","acceptedAnswer":{"@type":"Answer","text":"SHA-256 is faster on 32-bit systems and sufficient for most applications. SHA-512 is faster on 64-bit systems and produces a larger digest. For most web and software use cases, SHA-256 is the standard choice."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"SHA256","item":"https://singhyogendra.com.np/hash/sha256.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+      <div class="section">
+        <h3>Hash</h3>
+        <details><summary>CRC</summary><nav><ol><li><a href="crc.html">CRC</a></li></ol></nav></details>
+        <details><summary>MD</summary><nav><ol>
+          <li><a href="md2.html">MD2</a></li><li><a href="md2-file.html">MD2 File</a></li>
+          <li><a href="md4.html">MD4</a></li><li><a href="md4-file.html">MD4 File</a></li>
+          <li><a href="md5.html">MD5</a></li><li><a href="md5-file.html">MD5 File</a></li>
+        </ol></nav></details>
+        <details><summary>SHA1</summary><nav><ol>
+          <li><a href="sha1.html">SHA1</a></li><li><a href="sha1-file.html">SHA1 File</a></li>
+        </ol></nav></details>
+        <details class="active" open><summary>SHA2</summary><nav><ol>
+          <li><a href="sha224.html">SHA224</a></li><li><a href="sha224-file.html">SHA224 File</a></li>
+          <li class="active"><a href="sha256.html">SHA256</a></li><li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ol></nav></details>
+        <details><summary>SHA2-512</summary><nav><ol>
+          <li><a href="sha384.html">SHA384</a></li><li><a href="sha384-file.html">SHA384 File</a></li>
+          <li><a href="sha512.html">SHA512</a></li><li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="sha512-224.html">SHA512/224</a></li><li><a href="sha512-224-file.html">SHA512/224 File</a></li>
+          <li><a href="sha512-256.html">SHA512/256</a></li><li><a href="sha512-256-file.html">SHA512/256 File</a></li>
+        </ol></nav></details>
+      </div>
+      <div class="section"><h3>Links</h3><nav class="links"><ol><li><a href="../index.html">Home</a></li></ol></nav></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>SHA256</span>
+      </nav>
+      <h1>SHA256 Hash Generator</h1>
+      <p>Calculate SHA-256 hashes instantly online. Supports UTF-8, UTF-16, Hex, and Base64 input encodings. Enable HMAC-SHA256 for JWT signing, webhook verification, and API authentication codes.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="hmac-enabled" data-remember="hmac-enabled" data-share="hmac_enabled" data-auto-update><div class="toggle"></div><span>Enable HMAC</span></label></div>
+              <details class="setting-group" id="hmac" style="display:none" open>
+                <summary>HMAC</summary>
+                <div class="setting">
+                  <label for="hmac-input-type">Encoding</label>
+                  <select data-toggle="encoding" id="hmac-input-type" data-remember="hmac-input-type" data-share="hmac_input_type" data-auto-update>
+                    <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                    <optgroup label="Text"><option value="utf-8" selected>UTF-8</option></optgroup>
+                  </select>
+                </div>
+                <div class="setting"><label for="hmac-key">Key</label><input type="text" id="hmac-key" data-remember="hmac-key" data-share="hmac_key" data-encoding-from="#hmac-input-type" data-auto-update></div>
+              </details>
+              <script>++waitLoadCount;delayScripts.push({src:'../js/hmac.js'});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="sha256-file.html"><span class="tc-name">SHA256 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="sha224.html"><span class="tc-name">SHA224</span><span class="tc-desc">224-bit SHA-2</span></a>
+          <a class="tool-card" href="sha512.html"><span class="tc-name">SHA512</span><span class="tc-desc">512-bit SHA-2</span></a>
+          <a class="tool-card" href="double-sha256.html"><span class="tc-name">Double SHA256</span><span class="tc-desc">SHA256(SHA256(x))</span></a>
+          <a class="tool-card" href="sha1.html"><span class="tc-name">SHA1</span><span class="tc-desc">Legacy 160-bit</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is SHA-256?</summary>
+            <div class="faq-body">SHA-256 is a member of the SHA-2 family, producing a 256-bit (64 hex character) digest. It was designed by the NSA and standardized by NIST in 2001. It is currently the most widely used hash algorithm for certificates, blockchain, and software distribution.</div>
+          </details>
+          <details class="faq-item"><summary>How many characters is a SHA-256 hash?</summary>
+            <div class="faq-body">A SHA-256 hash is 256 bits long, displayed as 64 hexadecimal characters (e.g., <code>e3b0c44298fc1c149afb...</code>). In Base64 format, the same digest is 44 characters.</div>
+          </details>
+          <details class="faq-item"><summary>SHA-256 vs SHA-512 — which should I choose?</summary>
+            <div class="faq-body">SHA-256 is optimized for 32-bit systems and is the default in TLS, code signing, and most protocols. SHA-512 is faster on 64-bit systems and offers a larger digest. For most applications SHA-256 is the right choice; SHA-512 is preferred for high-security storage like password hashing helpers and certificate chains.</div>
+          </details>
+          <details class="faq-item"><summary>What is HMAC-SHA256 used for?</summary>
+            <div class="faq-body">HMAC-SHA256 is used to authenticate messages using a shared secret. Common uses: JWT (JSON Web Token) HS256 signatures, AWS SigV4 request signing, GitHub webhook payload verification, and TOTP/HOTP one-time passwords (RFC 6238/4226).</div>
+          </details>
+          <details class="faq-item"><summary>Is SHA-256 used in Bitcoin?</summary>
+            <div class="faq-body">Yes. Bitcoin uses Double-SHA256 (SHA256 applied twice) to hash block headers and transaction IDs. The Proof-of-Work mining algorithm also hashes block headers with Double-SHA256, searching for outputs beginning with a required number of zero bits.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About SHA256 Hash Generator</h2>
+        <p>SHA-256 (Secure Hash Algorithm 256) is a cryptographic hash function from the SHA-2 family, published by NIST as FIPS 180-4. It produces a 256-bit (32-byte) digest from input of any length, displayed as a 64-character hexadecimal string. SHA-256 is the most widely deployed hash algorithm in the world, underpinning TLS certificates, code signing, software package verification, blockchain networks, and modern authentication protocols.</p>
+        <h3>How SHA-256 Works</h3>
+        <p>SHA-256 pads the input to a multiple of 512 bits and processes it in 512-bit blocks. Each block goes through 64 rounds of bitwise operations using eight 32-bit state variables (A through H) and a schedule of 64 derived message words. The constants used are derived from the fractional parts of cube roots of the first 64 prime numbers, ensuring no hidden structure. The final eight state values are concatenated to form the 256-bit output.</p>
+        <h3>SHA-256 in TLS and Web Security</h3>
+        <p>Every HTTPS connection negotiated today uses SHA-256 in certificate signature verification and the TLS handshake's Finished message. All major Certificate Authorities have issued SHA-256 certificates since 2016, replacing the deprecated SHA-1. When you see a padlock in your browser, SHA-256 is part of what makes that connection trustworthy.</p>
+        <h3>HMAC-SHA256</h3>
+        <p>HMAC-SHA256 adds a secret key to the hashing process, producing a keyed message authentication code. It is the standard algorithm for JWT HS256 tokens (used by Auth0, Firebase, and most REST APIs), AWS Signature Version 4 request signing, GitHub webhook payload authentication, and RFC 6238 TOTP one-time passwords. Enable the HMAC option above and enter your secret key to compute HMAC-SHA256.</p>
+        <h3>SHA-256 in Blockchain</h3>
+        <p>Bitcoin and many derived cryptocurrencies apply SHA-256 twice (Double SHA-256) to transaction IDs and block headers. Proof-of-Work mining consists of repeatedly hashing a block header (varying the nonce field) until the output begins with a required number of zero bits. This requires an enormous number of hash computations, making the ledger tamper-resistant.</p>
+        <h3>SHA-256 vs SHA-1 and MD5</h3>
+        <p>SHA-256 produces a 256-bit digest compared to SHA-1's 160 bits and MD5's 128 bits. Unlike SHA-1 (which was broken by SHAttered in 2017) and MD5 (broken since 1996), no practical collision attacks exist against SHA-256. It is NIST-approved for use in federal systems through 2030 and beyond under the SHA-2 standard.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>SHA2 Tools</h4><ul>
+          <li><a href="sha224.html">SHA224</a></li>
+          <li><a href="sha256.html">SHA256</a></li>
+          <li><a href="sha384.html">SHA384</a></li>
+          <li><a href="sha512.html">SHA512</a></li>
+          <li><a href="double-sha256.html">Double SHA256</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>File Hash</h4><ul>
+          <li><a href="sha256-file.html">SHA256 File</a></li>
+          <li><a href="sha512-file.html">SHA512 File</a></li>
+          <li><a href="md5-file.html">MD5 File</a></li>
+          <li><a href="sha1-file.html">SHA1 File</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>++waitLoadCount;delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.11.0/sha256.min.js',onload:function(){window.method=sha256;methodLoad();}});</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>

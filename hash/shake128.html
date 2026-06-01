@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHAKE128 XOF Hash Generator Online | YoSin Tools</title>
+<meta name="description" content="Generate SHAKE128 variable-length hash online. Extendable output function (XOF). Default 256-bit output. NIST FIPS 202. Free, browser-based SHAKE128 calculator.">
+<meta name="keywords" content="SHAKE128 hash, SHAKE128 generator, SHAKE128 online, SHAKE128 XOF, FIPS 202, extendable output function">
+<link rel="canonical" href="https://singhyogendra.com.np/hash/shake128.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SHAKE128 XOF Hash Generator Online | YoSin Tools">
+<meta property="og:description" content="Generate SHAKE128 variable-length hashes. Extendable output function (XOF), NIST FIPS 202. Configure output bit length. Free and browser-based.">
+<meta property="og:url" content="https://singhyogendra.com.np/hash/shake128.html">
+<meta property="og:site_name" content="YoSin Tools">
+<meta property="og:image" content="https://singhyogendra.com.np/assets/images/logo.png">
+<link rel="icon" href="../assets/images/logo.svg">
+<link rel="stylesheet" href="../css/style.css">
+<script>if(localStorage.getItem('DARK')==='1')document.documentElement.classList.add('dark-theme')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is SHAKE128?","acceptedAnswer":{"@type":"Answer","text":"SHAKE128 is an Extendable Output Function (XOF) from NIST FIPS 202. Unlike fixed-output hash functions, SHAKE128 can produce a hash of any length. It uses the Keccak sponge with a 1344-bit rate and 256-bit capacity. The 128 in the name refers to its security level (128-bit) regardless of output length."}},
+{"@type":"Question","name":"What does XOF mean?","acceptedAnswer":{"@type":"Answer","text":"XOF stands for Extendable Output Function. Unlike traditional hash functions with a fixed output length (e.g., SHA-256 always produces 256 bits), an XOF can produce any desired number of output bits. SHAKE128 and SHAKE256 are the two XOFs in FIPS 202."}},
+{"@type":"Question","name":"What output length should I use for SHAKE128?","acceptedAnswer":{"@type":"Answer","text":"For a hash equivalent to SHA-256's 256-bit output, use 256 bits. For a general-purpose hash, 256 bits is typical. The security level of SHAKE128 is limited to 128 bits (collision resistance) regardless of output length. For 256-bit security, use SHAKE256 instead."}},
+{"@type":"Question","name":"SHAKE128 vs SHAKE256 — what's the difference?","acceptedAnswer":{"@type":"Answer","text":"SHAKE128 has 128-bit security (1344-bit rate) while SHAKE256 has 256-bit security (1088-bit rate). SHAKE128 is faster due to its larger rate. Use SHAKE128 when 128-bit security is sufficient, SHAKE256 when 256-bit security is required."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://singhyogendra.com.np/"},
+{"@type":"ListItem","position":2,"name":"Hash","item":"https://singhyogendra.com.np/hash/"},
+{"@type":"ListItem","position":3,"name":"SHAKE128","item":"https://singhyogendra.com.np/hash/shake128.html"}
+]}
+</script>
+<script>var delayScripts=[];var waitLoadCount=0;</script>
+</head>
+<body>
+<div id="app">
+
+  <div id="sidebar">
+    <div class="mask"></div>
+    <div class="container">
+      <header>
+        <a href="../index.html"><img src="../assets/images/logo.svg" width="22" height="22" alt="YoSin Tools"><h2>YoSin Tools</h2></a>
+        <div class="toolbar"><button class="theme" title="Toggle dark mode"><img class="light" src="../assets/images/light.svg" alt="Dark"><img class="dark" src="../assets/images/dark.svg" alt="Light"></button></div>
+      </header>
+      <div class="sidebar-search"><input type="text" id="tool-search" placeholder="Search tools…" autocomplete="off"></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="top-nav">
+      <button id="sidebar-toggler" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu"><img src="../assets/images/menu.svg" width="22" height="22" alt="Menu"></button>
+      <a class="mobile-brand" href="../index.html">YoSin Tools</a>
+    </div>
+    <header>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a><span class="sep">›</span><span>Hash</span><span class="sep">›</span><span>SHAKE128</span>
+      </nav>
+      <h1>SHAKE128 Hash Generator</h1>
+      <p>Generate SHAKE128 variable-length hashes online. SHAKE128 is an Extendable Output Function (XOF) from NIST FIPS 202, producing any desired number of output bits at 128-bit security level. Configure the output length below.</p>
+    </header>
+    <div class="ad-wrap-header"><div class="ad-container" id="ad-below-header"></div></div>
+
+    <main>
+      <div class="layout">
+        <div class="layout-block">
+          <div class="input">
+            <div class="block block-fill">
+              <div class="block-title">Input<div class="toolbar"><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="input" spellcheck="false" placeholder="Enter text here…" data-remember="input" data-share="input" data-encoding-from="#input-type" data-auto-update></textarea>
+            </div>
+          </div>
+          <div class="output">
+            <div class="block block-fill">
+              <div class="block-title">Output<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#output" data-message="Output copied"><img src="../assets/images/copy.svg" alt="Copy"></button><button class="icon" data-toggle="fullscreen"><img class="fullscreen-icon" src="../assets/images/fullscreen.svg" alt="Full screen"><img class="fullscreen-icon-exit" src="../assets/images/fullscreen-exit.svg" alt="Exit"></button></div></div>
+              <textarea class="container" id="output" spellcheck="false" placeholder="Output here…" data-encoding-from="#output-type" readonly></textarea>
+            </div>
+            <details class="block text-only" data-toggle="copyblock">
+              <summary class="block-title">Share Link<div class="toolbar"><button class="icon" data-toggle="copy" data-clipboard-target="#share-link" data-message="Share link copied"><img src="../assets/images/copy.svg" alt="Copy"></button></div></summary>
+              <input id="share-link" type="text" placeholder="Share link" readonly>
+            </details>
+          </div>
+        </div>
+
+        <div class="settings">
+          <div class="block block-fill">
+            <div class="block-title">Settings</div>
+            <div class="container">
+              <div class="setting"><a class="btn" id="execute">Hash</a></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="auto-update" checked><div class="toggle"></div><span>Auto Update</span></label></div>
+              <div class="setting"><label class="switcher"><input type="checkbox" value="1" id="remember-input"><div class="toggle"></div><span>Remember Input</span></label></div>
+              <div class="setting">
+                <label for="output-bits">Output Bits</label>
+                <input type="number" id="output-bits" value="256" min="8" max="65536" step="8" data-remember="output-bits" data-share="output_bits" data-auto-update>
+              </div>
+              <div class="setting">
+                <label for="input-type">Input Encoding</label>
+                <select data-toggle="encoding" id="input-type" data-remember="input-type" data-share="input_type" data-auto-update>
+                  <optgroup label="Binary"><option value="hex">Hex</option><option value="base64" data-load-encoding="base64">Base64</option></optgroup>
+                  <optgroup label="Text"><option value="utf-8" selected>UTF-8</option><option value="utf-16le" data-load-encoding="1">UTF-16LE</option><option value="utf-16be" data-load-encoding="1">UTF-16BE</option></optgroup>
+                </select>
+              </div>
+              <div class="setting">
+                <label for="output-type">Output Encoding</label>
+                <select data-toggle="encoding" id="output-type" data-remember="output-type" data-share="output_type" data-auto-update data-type="hex">
+                  <option value="hex">Hex (Lower Case)</option><option value="hex_upper">Hex (Upper Case)</option><option value="base64" data-load-encoding="base64">Base64</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-inline"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Related Hash Tools</h2>
+        <div class="tools-grid">
+          <a class="tool-card" href="shake128-file.html"><span class="tc-name">SHAKE128 File</span><span class="tc-desc">Hash from file</span></a>
+          <a class="tool-card" href="shake256.html"><span class="tc-name">SHAKE256</span><span class="tc-desc">256-bit security XOF</span></a>
+          <a class="tool-card" href="cshake128.html"><span class="tc-name">cSHAKE128</span><span class="tc-desc">Customizable SHAKE128</span></a>
+          <a class="tool-card" href="sha3-256.html"><span class="tc-name">SHA3-256</span><span class="tc-desc">Fixed 256-bit SHA-3</span></a>
+          <a class="tool-card" href="sha256.html"><span class="tc-name">SHA256</span><span class="tc-desc">256-bit SHA-2</span></a>
+        </div>
+      </section>
+
+      <div class="ad-wrap"><div class="ad-container" id="ad-before-faq"></div></div>
+
+      <section class="ys-section">
+        <h2 class="ys-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary>What is SHAKE128?</summary>
+            <div class="faq-body">SHAKE128 is an Extendable Output Function (XOF) from NIST FIPS 202 (2015). It uses the Keccak sponge with 1344-bit rate and 256-bit capacity, providing 128-bit security regardless of how many output bits you request.</div>
+          </details>
+          <details class="faq-item"><summary>Why would I use SHAKE128 instead of SHA-256?</summary>
+            <div class="faq-body">SHAKE128 lets you produce any output length — useful for key derivation, stream ciphers, and protocols needing variable-length pseudorandom output. If you need exactly 256 bits and SHA-2 compatibility, use SHA-256 instead.</div>
+          </details>
+          <details class="faq-item"><summary>What is the minimum output bits for SHAKE128?</summary>
+            <div class="faq-body">The minimum is 8 bits (1 byte). Practical use cases typically use at least 128 or 256 bits. The security level is capped at 128 bits collision resistance regardless of output length.</div>
+          </details>
+          <details class="faq-item"><summary>Does SHAKE128 support HMAC?</summary>
+            <div class="faq-body">Traditional HMAC is defined for hash functions, but XOFs like SHAKE128 are used differently. For keyed authentication with SHAKE128, use KMAC128 (NIST SP 800-185), which is specifically designed for this purpose.</div>
+          </details>
+        </div>
+      </section>
+
+      <div class="seo-content">
+        <h2>About SHAKE128 Hash Generator</h2>
+        <p>SHAKE128 (Secure Hash Algorithm and Keccak, 128-bit security) is one of two Extendable Output Functions (XOFs) standardized in NIST FIPS 202 (August 2015). Unlike traditional hash functions such as SHA-256 (fixed 256-bit output), SHAKE128 can produce an arbitrary number of output bits by continuing the sponge squeezing phase. This makes it a versatile primitive for key derivation, stream cipher construction, and protocol design.</p>
+        <h3>How SHAKE128 Works</h3>
+        <p>SHAKE128 uses the Keccak sponge with a 1344-bit rate and 256-bit capacity. Input is absorbed in 168-byte blocks. During squeezing, 168 bytes of output are produced per permutation call, and the process continues until the requested number of bits is generated. This allows SHAKE128 to serve as a pseudorandom generator seeded by the input.</p>
+        <h3>Security Level</h3>
+        <p>SHAKE128 provides 128-bit collision resistance and 128-bit preimage security. These security levels hold regardless of how many output bits are requested. If you need 256-bit security (e.g., collision resistance of 2^128), use SHAKE256 instead, which provides 256-bit collision resistance.</p>
+        <h3>Applications</h3>
+        <p>SHAKE128 is used in: post-quantum cryptography schemes (CRYSTALS-Kyber, CRYSTALS-Dilithium use SHAKE for key generation and hashing), key derivation functions (KDFs), masked implementations of cryptographic algorithms, and protocols where variable-length output is needed from a single primitive.</p>
+        <h3>SHAKE128 vs cSHAKE128</h3>
+        <p>cSHAKE128 (customizable SHAKE) is a generalization of SHAKE128 that accepts a function name (N) and customization string (S). When both N and S are empty strings, cSHAKE128 is identical to SHAKE128. For domain-separated usages, use cSHAKE128.</p>
+      </div>
+    </main>
+
+    <div class="ad-wrap-bottom"><div class="ad-container" id="ad-bottom"></div></div>
+    <footer id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>SHAKE/cSHAKE</h4><ul>
+          <li><a href="shake128.html">SHAKE128</a></li>
+          <li><a href="shake256.html">SHAKE256</a></li>
+          <li><a href="cshake128.html">cSHAKE128</a></li>
+          <li><a href="cshake256.html">cSHAKE256</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>SHA3 / Keccak</h4><ul>
+          <li><a href="sha3-256.html">SHA3-256</a></li>
+          <li><a href="sha3-512.html">SHA3-512</a></li>
+          <li><a href="keccak-256.html">Keccak-256</a></li>
+          <li><a href="kmac128.html">KMAC128</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>YoSin Tools</h4><ul><li><a href="../index.html">Home</a></li></ul></div>
+      </div>
+      <p class="footer-copy">&copy; 2024 YoSin Tools · singhyogendra.com.np · All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+<div id="message"></div>
+<script>
+++waitLoadCount;
+delayScripts.push({src:'https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.9.3/sha3.min.js',onload:function(){
+  window.method=function(msg){
+    var bits=parseInt(document.getElementById('output-bits').value)||256;
+    return shake128(msg,bits);
+  };
+  methodLoad();
+}});
+</script>
+<script>++waitLoadCount;delayScripts.push({src:'../js/encoding.js',onload:function(){methodLoad();}});</script>
+<script>delayScripts.push({src:'../js/clipboard.min.js',onload:function(){new ClipboardJS('[data-toggle="copy"]').on('success',function(e){showMessage(e.trigger.getAttribute('data-message'));});},delay:100});</script>
+<script src="../js/nav.js"></script>
+<script src="../js/site-init.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/googleads.js" defer></script>
+</body>
+</html>
