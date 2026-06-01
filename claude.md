@@ -66,4 +66,4 @@ YoSin Tools is a suite of 100% client-side browser-based developer utilities foc
 
 ### 5. Others
 - QR Code Generator
-- Syntax Highlighter
+- Syntax Highlightergit branch -M main
